@@ -1,123 +1,86 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import Image from "next/image"
 import { useInView } from "react-intersection-observer"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
 import { Loader } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { contactSchema, type ContactFormData } from "@/lib/validations/contact"
+import {
+  STUDIO_MAP,
+  PROJECT_TYPE_MAP,
+  type StudioId,
+  type ProjectType,
+} from "@/lib/constants"
 
-type FormErrors = {
-  [key: string]: string
-}
+const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE"
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    project: "",
-    message: "",
-    studio: "",
-    dateRange: "",
-  })
-
-  const [errors, setErrors] = useState<FormErrors>({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<null | "success" | "error">(null)
-  const [errorMessage, setErrorMessage] = useState<string>("")
+  const [errorMessage, setErrorMessage] = useState("")
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      project: undefined,
+      message: "",
+      studio: "",
+      dateRange: "",
+      privacy: undefined as unknown as true,
+    },
+  })
 
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   })
 
-  const validateForm = () => {
-    const newErrors: FormErrors = {}
-
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required"
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required"
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Email is invalid"
-    }
-
-    if (!formData.project) {
-      newErrors.project = "Please select a project type"
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required"
-    }
-
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-
-    // Clear error when field is edited
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }))
-    }
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-
-    if (!validateForm()) return
-
-    setIsSubmitting(true)
+  const onSubmit = async (data: ContactFormData) => {
     setSubmitStatus(null)
     setErrorMessage("")
 
     try {
-      // Send the form data to our API route
-      const response = await fetch("/api/send-email", {
+      const { privacy, ...formFields } = data
+
+      const payload = {
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: "Ny bokningsförfrågan via Hydra Studios",
+        from_name: formFields.name,
+        ...formFields,
+        studio: formFields.studio
+          ? STUDIO_MAP[formFields.studio as StudioId]
+          : "Ingen preferens",
+        project: PROJECT_TYPE_MAP[formFields.project as ProjectType],
+        botcheck: "",
+      }
+
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       })
 
       const result = await response.json()
+      if (!result.success) throw new Error(result.message)
 
-      if (!response.ok) {
-        // Handle validation errors from the server
-        if (response.status === 400 && result.errors) {
-          setErrors(result.errors)
-          throw new Error("Please correct the errors in the form.")
-        } else {
-          throw new Error(result.message || "Failed to send your message.")
-        }
-      }
-
-      // Success!
       setSubmitStatus("success")
-
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        project: "",
-        message: "",
-        studio: "",
-        dateRange: "",
-      })
+      reset()
     } catch (error) {
       console.error("Error submitting form:", error)
       setSubmitStatus("error")
-      setErrorMessage(error instanceof Error ? error.message : "An unexpected error occurred.")
-    } finally {
-      setIsSubmitting(false)
+      setErrorMessage(
+        error instanceof Error ? error.message : "An unexpected error occurred.",
+      )
     }
   }
 
@@ -147,7 +110,7 @@ export default function ContactSection() {
             <div className="lg:col-span-2 bg-[#1A1A1A] p-6 rounded">
               <div className="mb-8">
                 <Image
-                  src="https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/6d5cb651361b0b1fed8b748fa0258f74b8dbdc18/png/hydra-logo-icon-texture-variant@2.png"
+                  src="/images/png/hydra-logo-icon-texture-variant@2.png"
                   alt="Hydra Studios"
                   width={80}
                   height={80}
@@ -271,7 +234,17 @@ export default function ContactSection() {
 
             {/* Contact Form */}
             <div className="lg:col-span-3 bg-[#1A1A1A] p-6 rounded">
-              <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
+                {/* Honeypot anti-spam field */}
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  className="hidden"
+                  style={{ display: "none" }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-white/90 mb-2">
@@ -281,10 +254,7 @@ export default function ContactSection() {
                       <input
                         type="text"
                         id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
+                        {...register("name")}
                         aria-required="true"
                         aria-invalid={!!errors.name}
                         aria-describedby={errors.name ? "name-error" : undefined}
@@ -296,7 +266,7 @@ export default function ContactSection() {
                       />
                       {errors.name && (
                         <p id="name-error" className="text-red-500 text-xs mt-1">
-                          {errors.name}
+                          {errors.name.message}
                         </p>
                       )}
                     </div>
@@ -309,10 +279,7 @@ export default function ContactSection() {
                       <input
                         type="email"
                         id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
+                        {...register("email")}
                         aria-required="true"
                         aria-invalid={!!errors.email}
                         aria-describedby={errors.email ? "email-error" : undefined}
@@ -324,7 +291,7 @@ export default function ContactSection() {
                       />
                       {errors.email && (
                         <p id="email-error" className="text-red-500 text-xs mt-1">
-                          {errors.email}
+                          {errors.email.message}
                         </p>
                       )}
                     </div>
@@ -339,9 +306,7 @@ export default function ContactSection() {
                     <input
                       type="tel"
                       id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
+                      {...register("phone")}
                       className="w-full px-4 py-2 bg-[#121212] border border-white/10 rounded text-white/90 focus:outline-none focus:ring-2 focus:ring-[#556B2F] focus:border-transparent transition-colors"
                       placeholder=""
                     />
@@ -353,13 +318,11 @@ export default function ContactSection() {
                     <div className="relative">
                       <select
                         id="project"
-                        name="project"
-                        value={formData.project}
-                        onChange={handleChange}
-                        required
+                        {...register("project")}
                         aria-required="true"
                         aria-invalid={!!errors.project}
                         aria-describedby={errors.project ? "project-error" : undefined}
+                        defaultValue=""
                         className={cn(
                           "w-full px-4 py-2 bg-[#121212] border rounded text-white/90 focus:outline-none focus:ring-2 transition-colors",
                           errors.project ? "border-red-500 focus:ring-red-500" : "border-white/10 focus:ring-[#556B2F]",
@@ -376,7 +339,7 @@ export default function ContactSection() {
                       </select>
                       {errors.project && (
                         <p id="project-error" className="text-red-500 text-xs mt-1">
-                          {errors.project}
+                          {errors.project.message}
                         </p>
                       )}
                     </div>
@@ -390,13 +353,11 @@ export default function ContactSection() {
                     </label>
                     <select
                       id="studio"
-                      name="studio"
-                      value={formData.studio}
-                      onChange={handleChange}
+                      {...register("studio")}
                       className="w-full px-4 py-2 bg-[#121212] border border-white/10 rounded text-white/90 focus:outline-none focus:ring-2 focus:ring-[#556B2F] focus:border-transparent transition-colors"
                     >
                       <option value="">No preference</option>
-                      <option value="andreas">Andreas "Stone" Johansson</option>
+                      <option value="andreas">Andreas &quot;Stone&quot; Johansson</option>
                       <option value="costa">Costa Leon</option>
                       <option value="simon">Simon Peyron</option>
                       <option value="david">David Fremberg</option>
@@ -413,9 +374,7 @@ export default function ContactSection() {
                     <input
                       type="text"
                       id="dateRange"
-                      name="dateRange"
-                      value={formData.dateRange}
-                      onChange={handleChange}
+                      {...register("dateRange")}
                       className="w-full px-4 py-2 bg-[#121212] border border-white/10 rounded text-white/90 focus:outline-none focus:ring-2 focus:ring-[#556B2F] focus:border-transparent transition-colors"
                       placeholder=""
                     />
@@ -429,10 +388,7 @@ export default function ContactSection() {
                   <div className="relative">
                     <textarea
                       id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
+                      {...register("message")}
                       aria-required="true"
                       aria-invalid={!!errors.message}
                       aria-describedby={errors.message ? "message-error" : undefined}
@@ -445,31 +401,38 @@ export default function ContactSection() {
                     ></textarea>
                     {errors.message && (
                       <p id="message-error" className="text-red-500 text-xs mt-1">
-                        {errors.message}
+                        {errors.message.message}
                       </p>
                     )}
                   </div>
                 </div>
 
-                <div className="flex items-center">
+                <div className="flex items-start">
                   <input
                     id="privacy"
                     type="checkbox"
-                    required
-                    className="h-4 w-4 text-[#556B2F] focus:ring-[#556B2F] border-white/30 rounded"
+                    {...register("privacy")}
+                    className="h-4 w-4 mt-0.5 text-[#556B2F] focus:ring-[#556B2F] border-white/30 rounded"
                   />
-                  <label htmlFor="privacy" className="ml-2 block text-sm text-white/70">
-                    I agree to the{" "}
-                    <a href="#" className="text-[#556B2F] hover:underline">
-                      privacy policy
-                    </a>{" "}
-                    and consent to being contacted about my inquiry.
-                  </label>
+                  <div className="ml-2">
+                    <label htmlFor="privacy" className="block text-sm text-white/70">
+                      I agree to the{" "}
+                      <a href="#" className="text-[#556B2F] hover:underline">
+                        privacy policy
+                      </a>{" "}
+                      and consent to being contacted about my inquiry.
+                    </label>
+                    {errors.privacy && (
+                      <p id="privacy-error" className="text-red-500 text-xs mt-1">
+                        {errors.privacy.message}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 {submitStatus === "success" && (
                   <div className="p-3 bg-green-900/20 border border-green-900/30 rounded text-green-500" role="alert">
-                    Your message has been sent successfully! We'll get back to you soon.
+                    Your message has been sent successfully! We&apos;ll get back to you soon.
                   </div>
                 )}
 
