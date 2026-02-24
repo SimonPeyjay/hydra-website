@@ -6,6 +6,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hydrastudios.se"),
   title: "Hydra Studios | Premium Music Studio Collective in Malmö",
   description:
     "A premium music studio collective in Malmö, Sweden where artistic vision and technical excellence converge. Book your session today.",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Hydra Studios",
     images: [
       {
-        url: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Hallway_logo.jpg",
+        url: "/images/photos/Hallway_logo.webp",
         width: 1200,
         height: 630,
         alt: "Hydra Studios - Premium Music Studio Collective",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     description:
       "A premium music studio collective in Malmö, Sweden where artistic vision and technical excellence converge.",
     images: [
-      "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Hallway_logo.jpg",
+      "/images/photos/Hallway_logo.webp",
     ],
   },
   robots: {
@@ -73,7 +74,7 @@ export default function RootLayout({
               name: "Hydra Studios",
               description: "A premium music studio collective in Malmö, Sweden",
               image:
-                "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/6d5cb651361b0b1fed8b748fa0258f74b8dbdc18/png/hydra-logo-full-texture-original@2.png",
+                "https://hydrastudios.se/images/png/hydra-logo-full-texture-original@2.png",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Fredriksbergsgatan 7 A",

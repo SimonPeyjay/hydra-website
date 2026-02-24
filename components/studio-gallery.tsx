@@ -24,19 +24,19 @@ const studios: Studio[] = [
     features: ["Neve Console", "Live Room", "Isolation Booth", "Vintage Microphones"],
     images: [
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Andreas_studio.jpg",
+        src: "/images/photos/Andreas_studio.webp",
         alt: "Andreas Studio Main Room",
       },
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Andreas_studio2.jpg",
+        src: "/images/photos/Andreas_studio2.webp",
         alt: "Andreas Studio Equipment",
       },
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Andreas_studio3.jpg",
+        src: "/images/photos/Andreas_studio3.webp",
         alt: "Andreas Studio Mixing Area",
       },
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Andreas_studio4.jpg",
+        src: "/images/photos/Andreas_studio4.webp",
         alt: "Andreas Studio Live Room",
       },
     ],
@@ -48,11 +48,11 @@ const studios: Studio[] = [
     features: ["SSL Console", "Acoustic Treatment", "Vintage Synths", "Drum Kit"],
     images: [
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Costa_studio.jpg",
+        src: "/images/photos/Costa_studio.webp",
         alt: "Costa Studio",
       },
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/2f16bdf8d672336a71a9a41e856518267e2a756e/photos/costa%20studio_2.jpg",
+        src: "/images/photos/costa_studio_2.webp",
         alt: "Costa Studio Equipment",
       },
     ],
@@ -64,11 +64,11 @@ const studios: Studio[] = [
     features: ["API Console", "Modular Synths", "Guitar Collection", "Mastering Chain"],
     images: [
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/David_studio.jpg",
+        src: "/images/photos/David_studio.webp",
         alt: "David Studio Main Room",
       },
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/David_studio2.jpg",
+        src: "/images/photos/David_studio2.webp",
         alt: "David Studio Equipment",
       },
     ],
@@ -80,11 +80,11 @@ const studios: Studio[] = [
     features: ["Mastering Console", "Reference Monitors", "Analog EQs", "Vintage Compressors"],
     images: [
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Dennis_studio.jpg",
+        src: "/images/photos/Dennis_studio.webp",
         alt: "Dennis Studio Main Room",
       },
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Dennis_studio2.jpg",
+        src: "/images/photos/Dennis_studio.webp",
         alt: "Dennis Studio Equipment",
       },
     ],
@@ -96,11 +96,11 @@ const studios: Studio[] = [
     features: ["Analog Synths", "Boutique Outboard", "Vocal Booth", "Custom Acoustics"],
     images: [
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/2f16bdf8d672336a71a9a41e856518267e2a756e/photos/Simon%20studio.jpg",
+        src: "/images/photos/Simon_studio.webp",
         alt: "Simon Studio Main Room",
       },
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/2f16bdf8d672336a71a9a41e856518267e2a756e/photos/Simon%20studio_2.jpg",
+        src: "/images/photos/Simon_studio_2.webp",
         alt: "Simon Studio Equipment",
       },
     ],
@@ -112,23 +112,23 @@ const studios: Studio[] = [
     features: ["Kitchen", "Lounge", "Meeting Room", "Hallway"],
     images: [
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Hallway.jpg",
+        src: "/images/photos/Hallway.webp",
         alt: "Hallway",
       },
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Kitchen.jpg",
+        src: "/images/photos/Kitchen.webp",
         alt: "Kitchen",
       },
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Thomas_office.jpg",
+        src: "/images/photos/Thomas_office.webp",
         alt: "Thomas Office",
       },
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/2f16bdf8d672336a71a9a41e856518267e2a756e/photos/Peter%20studio.jpg",
+        src: "/images/photos/Peter_studio.webp",
         alt: "Peter Studio",
       },
       {
-        src: "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/2f16bdf8d672336a71a9a41e856518267e2a756e/photos/Plack%20area.jpg",
+        src: "/images/photos/Plack_area.webp",
         alt: "Plack Area",
       },
     ],
@@ -229,7 +229,7 @@ export default function StudioGallery() {
                 aria-hidden="true"
               >
                 <Image
-                  src="https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/6d5cb651361b0b1fed8b748fa0258f74b8dbdc18/svg/hydra-logo-icon-white.svg"
+                  src="/images/svg/hydra-logo-icon-white.svg"
                   alt=""
                   width={32}
                   height={32}

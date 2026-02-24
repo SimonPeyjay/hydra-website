@@ -31,7 +31,7 @@ const services: Service[] = [
       "High-resolution digital recording",
     ],
     image:
-      "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Andreas_studio.jpg",
+      "/images/photos/Andreas_studio.webp",
   },
   {
     id: "mixing",
@@ -46,7 +46,7 @@ const services: Service[] = [
       "Remote mixing options available",
     ],
     image:
-      "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Dennis_studio.jpg",
+      "/images/photos/Dennis_studio.webp",
   },
   {
     id: "production",
@@ -61,7 +61,7 @@ const services: Service[] = [
       "Creative direction and development",
     ],
     image:
-      "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/David_studio2.jpg",
+      "/images/photos/David_studio2.webp",
   },
   {
     id: "mastering",
@@ -76,7 +76,7 @@ const services: Service[] = [
       "Format-specific optimization",
     ],
     image:
-      "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/2f16bdf8d672336a71a9a41e856518267e2a756e/photos/Peter%20studio.jpg",
+      "/images/photos/Peter_studio.webp",
   },
   {
     id: "collaboration",
@@ -86,7 +86,7 @@ const services: Service[] = [
     icon: <Users className="w-6 h-6" />,
     features: ["Networking events", "Collaborative workspaces", "Cross-project opportunities", "Community resources"],
     image:
-      "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Kitchen.jpg",
+      "/images/photos/Kitchen.webp",
   },
   {
     id: "residency",
@@ -96,7 +96,7 @@ const services: Service[] = [
     icon: <Calendar className="w-6 h-6" />,
     features: ["Flexible booking arrangements", "Dedicated storage space", "24/7 access options", "Preferential rates"],
     image:
-      "https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Hallway.jpg",
+      "/images/photos/Hallway.webp",
   },
 ]
 

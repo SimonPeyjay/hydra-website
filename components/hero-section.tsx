@@ -28,7 +28,7 @@ export default function HeroSection() {
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Hallway_logo.jpg"
+          src="/images/photos/Hallway_logo.webp"
           alt="Hydra Studios Hallway"
           fill
           priority

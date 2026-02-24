@@ -61,7 +61,7 @@ export default function AboutSection() {
             <div className="space-y-4">
               <div className="relative h-[200px] rounded overflow-hidden">
                 <Image
-                  src="https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Thomas_office.jpg"
+                  src="/images/photos/Thomas_office.webp"
                   alt="Thomas Office"
                   fill
                   className="object-cover"
@@ -70,7 +70,7 @@ export default function AboutSection() {
               </div>
               <div className="relative h-[250px] rounded overflow-hidden">
                 <Image
-                  src="https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/David_studio.jpg"
+                  src="/images/photos/David_studio.webp"
                   alt="David Studio"
                   fill
                   className="object-cover"
@@ -81,7 +81,7 @@ export default function AboutSection() {
             <div className="space-y-4 pt-10">
               <div className="relative h-[280px] rounded overflow-hidden">
                 <Image
-                  src="https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Andreas_studio3.jpg"
+                  src="/images/photos/Andreas_studio3.webp"
                   alt="Andreas Studio"
                   fill
                   className="object-cover"
@@ -90,7 +90,7 @@ export default function AboutSection() {
               </div>
               <div className="relative h-[170px] rounded overflow-hidden">
                 <Image
-                  src="https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/1b7964c41d43c85752967d0a7e3d5c306ee4cf55/photos/Kitchen.jpg"
+                  src="/images/photos/Kitchen.webp"
                   alt="Kitchen"
                   fill
                   className="object-cover"

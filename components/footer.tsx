@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <Image
-                src="https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/6d5cb651361b0b1fed8b748fa0258f74b8dbdc18/svg/hydra-logo-full-white.svg"
+                src="/images/svg/hydra-logo-full-white.svg"
                 alt="Hydra Studios"
                 width={140}
                 height={50}

@@ -61,7 +61,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="relative z-10" aria-label="Hydra Studios - Home">
           <Image
-            src="https://raw.githubusercontent.com/SimonPeyjay/hydra-assets/6d5cb651361b0b1fed8b748fa0258f74b8dbdc18/svg/hydra-logo-full-white.svg"
+            src="/images/svg/hydra-logo-full-white.svg"
             alt="Hydra Studios"
             width={120}
             height={40}
