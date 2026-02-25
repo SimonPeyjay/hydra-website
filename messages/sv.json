@@ -11,7 +11,8 @@
     "about": "Om oss",
     "services": "Tjänster",
     "bookNow": "Boka nu",
-    "toggleMenu": "Öppna/stäng meny"
+    "toggleMenu": "Öppna/stäng meny",
+    "closeMenu": "Stäng meny"
   },
   "Hero": {
     "title": "Där vision möter ljudmässig excellens",

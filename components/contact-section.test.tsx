@@ -241,6 +241,20 @@ describe("ContactSection", () => {
     expect(screen.getByLabelText(/project details/i)).toHaveAttribute("aria-required", "true")
   })
 
+  it("has cursor-not-allowed class when submit button is disabled", async () => {
+    // Never resolving fetch to keep loading state
+    vi.spyOn(globalThis, "fetch").mockReturnValueOnce(new Promise(() => {}))
+
+    render(<ContactSection />)
+    await fillRequiredFields(user)
+    await user.click(screen.getByRole("button", { name: /send inquiry/i }))
+
+    await waitFor(() => {
+      expect(screen.getByRole("button")).toBeDisabled()
+      expect(screen.getByRole("button")).toHaveClass("disabled:cursor-not-allowed")
+    })
+  })
+
   it("shows submit button loading state during submission", async () => {
     // Never resolving fetch to keep loading state
     vi.spyOn(globalThis, "fetch").mockReturnValueOnce(new Promise(() => {}))

@@ -11,7 +11,8 @@
     "about": "私たちについて",
     "services": "サービス",
     "bookNow": "予約する",
-    "toggleMenu": "メニュー切替"
+    "toggleMenu": "メニュー切替",
+    "closeMenu": "メニューを閉じる"
   },
   "Hero": {
     "title": "ビジョンと音響の卓越性が出会う場所",

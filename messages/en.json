@@ -11,7 +11,8 @@
     "about": "About",
     "services": "Services",
     "bookNow": "Book Now",
-    "toggleMenu": "Toggle menu"
+    "toggleMenu": "Toggle menu",
+    "closeMenu": "Close menu"
   },
   "Hero": {
     "title": "Where Vision Meets Sonic Excellence",

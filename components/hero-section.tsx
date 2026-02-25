@@ -21,7 +21,7 @@ export default function HeroSection() {
       heroRef.current.style.transform = `translateY(${translateY}px)`
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 

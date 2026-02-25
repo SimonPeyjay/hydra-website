@@ -100,12 +100,12 @@ export default function Navbar() {
 
           <button
             className="md:hidden relative z-[60] p-3 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#556B2F]"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={() => setMobileMenuOpen(true)}
             aria-label={t("toggleMenu")}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <Menu size={24} />
           </button>
         </div>
       </header>
@@ -122,7 +122,14 @@ export default function Navbar() {
         )}
         aria-hidden={!mobileMenuOpen}
       >
-        <nav className="flex flex-col items-center space-y-8" aria-label="Mobile navigation">
+        <button
+          className="absolute top-5 right-4 p-3 text-white hover:text-white/80 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-[#556B2F] rounded-md"
+          onClick={closeMenu}
+          aria-label={t("closeMenu")}
+        >
+          <X size={24} />
+        </button>
+        <nav className="flex flex-col items-center space-y-8 pb-[env(safe-area-inset-bottom)]" aria-label="Mobile navigation">
           <Link
             href="#studios"
             className="text-white/80 hover:text-white transition-colors duration-150 text-xl uppercase tracking-wider font-medium"

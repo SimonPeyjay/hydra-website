@@ -101,7 +101,7 @@ export default function ContactSection() {
         <div
           ref={ref}
           className={cn(
-            "max-w-4xl mx-auto transition-all duration-1000 ease-out",
+            "max-w-4xl mx-auto transition-all duration-700 ease-out",
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
           )}
         >
@@ -389,7 +389,7 @@ export default function ContactSection() {
                       aria-required="true"
                       aria-invalid={!!errors.message}
                       aria-describedby={errors.message ? "message-error" : undefined}
-                      rows={5}
+                      rows={3}
                       className={cn(
                         "w-full px-4 py-2 bg-[#121212] border rounded text-white/90 focus:outline-none focus:ring-2 transition-colors resize-none",
                         errors.message ? "border-red-500 focus:ring-red-500" : "border-white/10 focus:ring-[#556B2F]",
@@ -445,7 +445,7 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-[#556B2F] to-[#657d38] hover:from-[#657d38] hover:to-[#758e49] text-white px-6 py-3 rounded shadow-[0_0_15px_rgba(85,107,47,0.3)] hover:shadow-[0_0_20px_rgba(85,107,47,0.5)] text-sm uppercase tracking-wider font-medium transition-colors disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-[#556B2F]"
+                    className="w-full bg-gradient-to-r from-[#556B2F] to-[#657d38] hover:from-[#657d38] hover:to-[#758e49] text-white px-6 py-3 rounded shadow-[0_0_15px_rgba(85,107,47,0.3)] hover:shadow-[0_0_20px_rgba(85,107,47,0.5)] text-sm uppercase tracking-wider font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-[#556B2F]"
                     aria-live="polite"
                   >
                     {isSubmitting ? (

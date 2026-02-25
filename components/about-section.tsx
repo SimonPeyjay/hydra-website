@@ -20,7 +20,7 @@ export default function AboutSection() {
         <div ref={sectionRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div
             className={cn(
-              "transition-all duration-1000 ease-out",
+              "transition-all duration-700 ease-out",
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
             )}
           >
@@ -38,7 +38,7 @@ export default function AboutSection() {
 
           <div
             className={cn(
-              "grid grid-cols-2 gap-4 transition-all duration-1000 ease-out delay-300",
+              "grid grid-cols-2 gap-4 transition-all duration-700 ease-out delay-300",
               inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
             )}
           >
@@ -62,7 +62,7 @@ export default function AboutSection() {
                 />
               </div>
             </div>
-            <div className="space-y-4 pt-10">
+            <div className="space-y-4 pt-2 sm:pt-10">
               <div className="relative h-[280px] rounded overflow-hidden">
                 <Image
                   src="/images/photos/Andreas_studio3.webp"

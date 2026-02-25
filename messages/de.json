@@ -11,7 +11,8 @@
     "about": "Über uns",
     "services": "Leistungen",
     "bookNow": "Jetzt buchen",
-    "toggleMenu": "Menü umschalten"
+    "toggleMenu": "Menü umschalten",
+    "closeMenu": "Menü schließen"
   },
   "Hero": {
     "title": "Wo Vision auf klangliche Exzellenz trifft",

@@ -48,11 +48,11 @@ export default function ServicesSection() {
         <div
           ref={ref}
           className={cn(
-            "transition-all duration-1000 ease-out",
+            "transition-all duration-700 ease-out",
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
           )}
         >
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
+          <div className="flex overflow-x-auto md:flex-wrap md:justify-center gap-2 mb-12 pb-2 md:pb-0 scrollbar-hide">
             {serviceKeys.map((key) => (
               <button
                 key={key}
@@ -64,8 +64,8 @@ export default function ServicesSection() {
                 )}
                 onClick={() => setActiveKey(key)}
               >
-                <span className="flex items-center gap-2">
-                  {serviceIcons[key]}
+                <span className="flex items-center gap-2 whitespace-nowrap">
+                  <span className="hidden md:inline">{serviceIcons[key]}</span>
                   <span>{t(`${key}.title`)}</span>
                 </span>
               </button>

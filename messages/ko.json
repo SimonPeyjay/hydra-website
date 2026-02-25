@@ -11,7 +11,8 @@
     "about": "소개",
     "services": "서비스",
     "bookNow": "예약하기",
-    "toggleMenu": "메뉴 전환"
+    "toggleMenu": "메뉴 전환",
+    "closeMenu": "메뉴 닫기"
   },
   "Hero": {
     "title": "비전과 음향의 탁월함이 만나는 곳",
