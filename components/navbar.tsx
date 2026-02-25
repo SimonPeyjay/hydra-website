@@ -84,6 +84,12 @@ export default function Navbar() {
               {t("about")}
             </Link>
             <Link
+              href="#team"
+              className="text-white/80 hover:text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#556B2F] after:transition-all after:duration-300 hover:after:w-full text-sm uppercase tracking-wider font-medium transition-colors duration-300"
+            >
+              {t("team")}
+            </Link>
+            <Link
               href="#services"
               className="text-white/80 hover:text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#556B2F] after:transition-all after:duration-300 hover:after:w-full text-sm uppercase tracking-wider font-medium transition-colors duration-300"
             >
@@ -143,6 +149,13 @@ export default function Navbar() {
             onClick={closeMenu}
           >
             {t("about")}
+          </Link>
+          <Link
+            href="#team"
+            className="text-white/80 hover:text-white transition-colors duration-150 text-xl uppercase tracking-wider font-medium"
+            onClick={closeMenu}
+          >
+            {t("team")}
           </Link>
           <Link
             href="#services"

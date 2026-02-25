@@ -10,6 +10,7 @@
     "studios": "Studios",
     "about": "About",
     "services": "Services",
+    "team": "Team",
     "bookNow": "Book Now",
     "toggleMenu": "Toggle menu",
     "closeMenu": "Close menu"
@@ -145,6 +146,68 @@
       ]
     }
   },
+  "Team": {
+    "title": "Meet the Team",
+    "subtitle": "The people behind the music. A collective of producers, songwriters, and musicians united by a shared passion for sound.",
+    "loves": "Loves",
+    "hates": "Hates",
+    "andreas": {
+      "name": "Andreas \"Stone\" Johansson",
+      "animal": "Hydra's own fox",
+      "description": "Grand piano, long-renowned songwriter and producer. Fantastic pianist and meticulously fussy. In every sense of the word.",
+      "likes": "Editing, to the point where he never stops.",
+      "hates": "Keeping emails in the inbox."
+    },
+    "david": {
+      "name": "David Fremberg",
+      "animal": "Hydra's pinball wizard",
+      "description": "With years of artist and live experience, he accounts for the most amps and live elements in his recordings.",
+      "likes": "KISS more than anything, and his rediscovered love for trad jazz.",
+      "hates": "Throwing away emails in the inbox."
+    },
+    "denniz": {
+      "name": "Denniz Jamm",
+      "animal": "Hydra's cobra",
+      "description": "Calm, methodical, night owl. Always works the night shift. Denniz loves to mix and has a special ear for taking the mix to new heights.",
+      "likes": "Sleeping in, nightclubs, and mixing dance music.",
+      "hates": "Cold weather — happily flees when there's no warmth left in Malmö."
+    },
+    "costa": {
+      "name": "Costa Leon",
+      "animal": "Hydra's lemur",
+      "description": "Hydra's own DJ, with years of experience as a producer and songwriter, but also has an artist career alongside his creative work. Costa keeps a high tempo but still takes it easy. He's Greek, after all.",
+      "likes": "Making dance music.",
+      "hates": "Early mornings. But he always seems to still be around come morning."
+    },
+    "simon": {
+      "name": "Simon Peyron",
+      "animal": "Hydra's falcon",
+      "description": "Also known as \"celebrity Simon\", with the epithets \"baker on kids' TV\" and metal singer, Simon is a bright spark at Hydra. With extensive experience in production, mixing, and songwriting, Simon is a nerd to his fingertips.",
+      "likes": "Nowadays also coding. ADHD.",
+      "hates": "That this website never gets finished, but SOON!"
+    },
+    "peter": {
+      "name": "Peter Zimny",
+      "animal": "Hydra's chimpanzee",
+      "description": "Official brass master. If it has a hole, he'll blow into it — and make it sound good too. One of Sweden's most sought-after multi-instrumentalists. Saxophone, flute, clarinet — you name it.",
+      "likes": "Water fasting, tennis, and talking about water fasting and tennis.",
+      "hates": "Reheated chicken."
+    },
+    "johan": {
+      "name": "Johan Lundén",
+      "animal": "Hydra's newest addition",
+      "description": "He hasn't been assigned an animal yet — a ceremony is planned for later this year. Johan has extensive experience in songwriting and audio post-production for film and gaming. We're very happy to have him on board.",
+      "likes": "Creating string arrangements.",
+      "hates": "Not really sure, he always seems so happy."
+    },
+    "thomas": {
+      "name": "Thomas \"Tomme\" Wallén",
+      "animal": "Hydra's Skalman",
+      "description": "The house dad, the reassuring teacher on a chaotic playground. Thomas is the oil in the machine — making sure songs reach artists and that artists actually show up now and then. Without him, no Hydra.",
+      "likes": "Royalty reporting and making Excel files.",
+      "hates": "Royalty reporting and making Excel files — so now he has a system for it."
+    }
+  },
   "Music": {
     "title": "Listen to Our Work",
     "subtitle": "A curated selection of productions from the talented songwriters, producers, and musicians working at Hydra Studios.",
@@ -202,6 +265,7 @@
     "services": "Services",
     "aboutUs": "About Us",
     "contact": "Contact",
+    "team": "The Team",
     "blog": "Blog",
     "servicesTitle": "Services",
     "recording": "Recording",

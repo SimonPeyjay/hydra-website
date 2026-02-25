@@ -10,6 +10,7 @@
     "studios": "Studios",
     "about": "Über uns",
     "services": "Leistungen",
+    "team": "Team",
     "bookNow": "Jetzt buchen",
     "toggleMenu": "Menü umschalten",
     "closeMenu": "Menü schließen"
@@ -145,6 +146,68 @@
       ]
     }
   },
+  "Team": {
+    "title": "Das Team",
+    "subtitle": "Die Menschen hinter der Musik. Ein Kollektiv aus Produzenten, Songwritern und Musikern, vereint durch eine gemeinsame Leidenschaft für Sound.",
+    "loves": "Liebt",
+    "hates": "Hasst",
+    "andreas": {
+      "name": "Andreas \"Stone\" Johansson",
+      "animal": "Hydras eigener Fuchs",
+      "description": "Flügel, langjährig renommierter Songwriter und Produzent. Fantastischer Pianist und chaotisch penibel. Im doppelten Sinne.",
+      "likes": "Editieren, bis zu dem Punkt, an dem er nie aufhört.",
+      "hates": "E-Mails im Posteingang zu speichern."
+    },
+    "david": {
+      "name": "David Fremberg",
+      "animal": "Hydras Flipper",
+      "description": "Mit langjähriger Künstler- und Live-Erfahrung steht er für die meisten Verstärker und Live-Elemente in seinen Aufnahmen.",
+      "likes": "KISS mehr als alles andere und seine wiederentdeckte Liebe zum Traditional Jazz.",
+      "hates": "E-Mails im Posteingang zu löschen."
+    },
+    "denniz": {
+      "name": "Denniz Jamm",
+      "animal": "Hydras Kobra",
+      "description": "Ruhig, methodisch, Nachteule. Arbeitet immer die Nachtschicht. Denniz liebt es zu mixen und hat ein besonderes Gehör dafür, den Mix auf neue Höhen zu bringen.",
+      "likes": "Ausschlafen, Nachtclubs und Tanzmusik mixen.",
+      "hates": "Kaltes Wetter — flieht gerne, wenn es in Malmö keine Wärme mehr gibt."
+    },
+    "costa": {
+      "name": "Costa Leon",
+      "animal": "Hydras Lemur",
+      "description": "Hydras eigener DJ, mit langjähriger Erfahrung als Produzent und Songwriter, aber auch mit einer Künstlerkarriere neben seinem kreativen Schaffen. Costa hat ein hohes Tempo, nimmt es aber trotzdem gelassen. Er ist schließlich Grieche.",
+      "likes": "Tanzmusik machen.",
+      "hates": "Frühe Morgen. Aber er scheint trotzdem immer bis zum Morgen da zu sein."
+    },
+    "simon": {
+      "name": "Simon Peyron",
+      "animal": "Hydras Falke",
+      "description": "Auch bekannt als \"Promi-Simon\", mit den Beinamen \"Bäcker im Kinderfernsehen\" und Metal-Sänger, ist Simon eine fröhliche Brise bei Hydra. Mit langjähriger Erfahrung in Produktion, Mix und Songwriting ist Simon ein Nerd bis in die Fingerspitzen.",
+      "likes": "Neuerdings auch Programmieren. ADHS.",
+      "hates": "Dass diese Website nie fertig wird, aber BALD!"
+    },
+    "peter": {
+      "name": "Peter Zimny",
+      "animal": "Hydras Schimpanse",
+      "description": "Offizieller Bläsermeister. Hat es ein Loch, bläst er hinein — und es klingt auch noch gut. Einer der meistgebuchten Multiinstrumentalisten Schwedens. Saxophon, Flöte, Klarinette — you name it.",
+      "likes": "Wasserfasten, Tennis und über Wasserfasten und Tennis zu erzählen.",
+      "hates": "Aufgewärmtes Hähnchen."
+    },
+    "johan": {
+      "name": "Johan Lundén",
+      "animal": "Hydras neuester Zugang",
+      "description": "Er hat noch kein Tier zugewiesen bekommen — eine Zeremonie ist für dieses Jahr geplant. Johan hat langjährige Erfahrung im Songwriting und in der Audiobearbeitung für Film und Gaming. Wir sind sehr froh, ihn dabei zu haben.",
+      "likes": "Streicherarrangements erstellen.",
+      "hates": "Wissen wir nicht so genau, er wirkt immer so fröhlich."
+    },
+    "thomas": {
+      "name": "Thomas \"Tomme\" Wallén",
+      "animal": "Hydras Skalman",
+      "description": "Der Hauspapa, die beruhigende Lehrerin auf einem chaotischen Schulhof. Thomas ist das Öl im Getriebe — sorgt dafür, dass Songs Künstler erreichen und dass Künstler auch tatsächlich ab und zu vorbeikommen. Ohne ihn kein Hydra.",
+      "likes": "Tantiemenabrechnung und Excel-Dateien erstellen.",
+      "hates": "Tantiemenabrechnung und Excel-Dateien erstellen — deshalb hat er jetzt ein System dafür."
+    }
+  },
   "Music": {
     "title": "Hören Sie unsere Arbeit",
     "subtitle": "Eine kuratierte Auswahl an Produktionen der talentierten Songwriter, Produzenten und Musiker, die in den Hydra Studios arbeiten.",
@@ -202,6 +265,7 @@
     "services": "Leistungen",
     "aboutUs": "Über uns",
     "contact": "Kontakt",
+    "team": "Das Team",
     "blog": "Blog",
     "servicesTitle": "Leistungen",
     "recording": "Aufnahme",
