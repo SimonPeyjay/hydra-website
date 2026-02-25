@@ -35,6 +35,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: out/
           server-dir: ${{ secrets.FTP_TARGET_DIR }}
+          dangerous-clean-slate: true
           exclude: |
             **/.DS_Store
           log-level: verbose
