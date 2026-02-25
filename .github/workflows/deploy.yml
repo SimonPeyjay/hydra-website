@@ -1,30 +1,40 @@
-name: 🚀 Deploy to One.com via FTP
+name: Deploy to one.com
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  ftp-deploy:
-    name: Upload out/ to FTP
+  build-and-deploy:
+    name: Build & Deploy
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm ci --legacy-peer-deps
 
       - name: Build static site
         run: npx next build
+        env:
+          NEXT_PUBLIC_WEB3FORMS_KEY: ${{ secrets.WEB3FORMS_KEY }}
 
-      - name: Upload to One.com via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy to one.com via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: out/
           server-dir: ${{ secrets.FTP_TARGET_DIR }}
+          exclude: |
+            **/.DS_Store
+          log-level: verbose

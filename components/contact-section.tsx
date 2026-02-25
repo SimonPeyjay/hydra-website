@@ -15,7 +15,7 @@ import {
   type ProjectType,
 } from "@/lib/constants"
 
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE"
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || ""
 
 export default function ContactSection() {
   const [submitStatus, setSubmitStatus] = useState<null | "success" | "error">(null)
