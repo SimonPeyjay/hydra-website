@@ -18,6 +18,26 @@ import {
 
 const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || ""
 
+const inputBase =
+  "w-full px-4 py-3 bg-[#0E0E0E] border rounded-lg text-white/90 text-sm placeholder:text-white/30 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-200"
+const inputNormal = "border-white/[0.08] focus:ring-[#556B2F]/70 hover:border-white/20"
+const inputError = "border-red-500/60 focus:ring-red-500/70"
+const selectBase =
+  "w-full px-4 py-3 pr-10 bg-[#0E0E0E] border rounded-lg text-white/90 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-200 appearance-none"
+
+function SelectWrapper({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="relative">
+      {children}
+      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </div>
+    </div>
+  )
+}
+
 export default function ContactSection() {
   const [submitStatus, setSubmitStatus] = useState<null | "success" | "error">(null)
   const [errorMessage, setErrorMessage] = useState("")
@@ -87,15 +107,15 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-[#121212] relative overflow-hidden">
+    <section id="contact" className="py-16 md:py-24 bg-[#121212] relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#556B2F]/5 blur-[120px] transform -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-[300px] h-[300px] rounded-full bg-[#B08D57]/5 blur-[80px] transform translate-x-1/2 translate-y-1/2"></div>
 
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">{t("title")}</h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">{t("subtitle")}</p>
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4 tracking-tight">{t("title")}</h2>
+          <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto leading-relaxed">{t("subtitle")}</p>
         </div>
 
         <div
@@ -105,28 +125,28 @@ export default function ContactSection() {
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
           )}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6">
             {/* Contact Information */}
-            <div className="lg:col-span-2 bg-[#1A1A1A] p-6 rounded">
+            <div className="lg:col-span-2 bg-[#1A1A1A] border border-white/[0.06] p-6 md:p-8 rounded-2xl">
               <div className="mb-8">
                 <Image
                   src="/images/png/hydra-logo-icon-texture-variant@2.png"
                   alt="Hydra Studios"
-                  width={80}
-                  height={80}
-                  className="mb-6"
+                  width={64}
+                  height={64}
+                  className="mb-6 opacity-90"
                 />
-                <h3 className="text-xl font-bold mb-4">{t("contactInfo")}</h3>
-                <p className="text-white/70 mb-6">{t("contactDescription")}</p>
+                <h3 className="text-lg font-semibold mb-3 text-white/95">{t("contactInfo")}</h3>
+                <p className="text-sm text-white/50 leading-relaxed">{t("contactDescription")}</p>
               </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="text-[#556B2F]">
+              <div className="space-y-5">
+                <div className="flex items-start gap-3">
+                  <div className="text-[#556B2F] mt-0.5 shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="18"
+                      height="18"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -140,19 +160,19 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-sm font-medium text-white/90">{t("email")}</h4>
-                    <a href="mailto:info@hydrastudios.se" className="text-white/70 hover:text-white transition-colors">
+                    <h4 className="text-xs font-medium text-white/50 uppercase tracking-wider mb-1">{t("email")}</h4>
+                    <a href="mailto:info@hydrastudios.se" className="text-sm text-white/80 hover:text-white transition-colors">
                       info@hydrastudios.se
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="text-[#556B2F]">
+                <div className="flex items-start gap-3">
+                  <div className="text-[#556B2F] mt-0.5 shrink-0">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="18"
+                      height="18"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -166,31 +186,30 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-sm font-medium text-white/90">{t("location")}</h4>
-                    <address className="text-white/70 not-italic">
+                    <h4 className="text-xs font-medium text-white/50 uppercase tracking-wider mb-1">{t("location")}</h4>
+                    <address className="text-sm text-white/80 not-italic leading-relaxed">
                       Fredriksbergsgatan 7 A<br />
-                      212 11 Malmö
-                      <br />
+                      212 11 Malmö<br />
                       SWEDEN
                     </address>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-12">
-                <h4 className="text-sm font-medium text-white/90 mb-4">{t("followUs")}</h4>
-                <div className="flex gap-4">
+              <div className="mt-10 pt-6 border-t border-white/[0.06]">
+                <h4 className="text-xs font-medium text-white/50 uppercase tracking-wider mb-4">{t("followUs")}</h4>
+                <div className="flex gap-3">
                   <a
                     href="https://www.facebook.com/hydrasweden"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white/70 hover:text-white transition-colors"
+                    className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-white/50 hover:text-white hover:bg-white/[0.08] hover:border-white/[0.12] transition-all duration-200"
                     aria-label="Facebook"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -206,13 +225,13 @@ export default function ContactSection() {
                     href="https://www.instagram.com/hydrasweden"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white/70 hover:text-white transition-colors"
+                    className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-white/50 hover:text-white hover:bg-white/[0.08] hover:border-white/[0.12] transition-all duration-200"
                     aria-label="Instagram"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -231,8 +250,8 @@ export default function ContactSection() {
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-3 bg-[#1A1A1A] p-6 rounded">
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
+            <div className="lg:col-span-3 bg-[#1A1A1A] border border-white/[0.06] p-6 md:p-8 rounded-2xl">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
                 {/* Honeypot anti-spam field */}
                 <input
                   type="checkbox"
@@ -243,10 +262,10 @@ export default function ContactSection() {
                   autoComplete="off"
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-white/90 mb-2">
-                      {t("nameLabel")} <span className="text-red-500">{t("required")}</span>
+                    <label htmlFor="name" className="block text-xs font-medium text-white/60 uppercase tracking-wider mb-2">
+                      {t("nameLabel")} <span className="text-[#556B2F]">{t("required")}</span>
                     </label>
                     <div className="relative">
                       <input
@@ -256,22 +275,19 @@ export default function ContactSection() {
                         aria-required="true"
                         aria-invalid={!!errors.name}
                         aria-describedby={errors.name ? "name-error" : undefined}
-                        className={cn(
-                          "w-full px-4 py-2 bg-[#121212] border rounded text-white/90 focus:outline-none focus:ring-2 transition-colors",
-                          errors.name ? "border-red-500 focus:ring-red-500" : "border-white/10 focus:ring-[#556B2F]",
-                        )}
+                        className={cn(inputBase, errors.name ? inputError : inputNormal)}
                         placeholder=""
                       />
                       {errors.name && (
-                        <p id="name-error" className="text-red-500 text-xs mt-1">
+                        <p id="name-error" className="text-red-400 text-xs mt-1.5">
                           {errors.name.message}
                         </p>
                       )}
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-white/90 mb-2">
-                      {t("emailLabel")} <span className="text-red-500">{t("required")}</span>
+                    <label htmlFor="email" className="block text-xs font-medium text-white/60 uppercase tracking-wider mb-2">
+                      {t("emailLabel")} <span className="text-[#556B2F]">{t("required")}</span>
                     </label>
                     <div className="relative">
                       <input
@@ -281,14 +297,11 @@ export default function ContactSection() {
                         aria-required="true"
                         aria-invalid={!!errors.email}
                         aria-describedby={errors.email ? "email-error" : undefined}
-                        className={cn(
-                          "w-full px-4 py-2 bg-[#121212] border rounded text-white/90 focus:outline-none focus:ring-2 transition-colors",
-                          errors.email ? "border-red-500 focus:ring-red-500" : "border-white/10 focus:ring-[#556B2F]",
-                        )}
+                        className={cn(inputBase, errors.email ? inputError : inputNormal)}
                         placeholder=""
                       />
                       {errors.email && (
-                        <p id="email-error" className="text-red-500 text-xs mt-1">
+                        <p id="email-error" className="text-red-400 text-xs mt-1.5">
                           {errors.email.message}
                         </p>
                       )}
@@ -296,24 +309,24 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-white/90 mb-2">
+                    <label htmlFor="phone" className="block text-xs font-medium text-white/60 uppercase tracking-wider mb-2">
                       {t("phoneLabel")}
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       {...register("phone")}
-                      className="w-full px-4 py-2 bg-[#121212] border border-white/10 rounded text-white/90 focus:outline-none focus:ring-2 focus:ring-[#556B2F] focus:border-transparent transition-colors"
+                      className={cn(inputBase, inputNormal)}
                       placeholder=""
                     />
                   </div>
                   <div>
-                    <label htmlFor="project" className="block text-sm font-medium text-white/90 mb-2">
-                      {t("projectLabel")} <span className="text-red-500">{t("required")}</span>
+                    <label htmlFor="project" className="block text-xs font-medium text-white/60 uppercase tracking-wider mb-2">
+                      {t("projectLabel")} <span className="text-[#556B2F]">{t("required")}</span>
                     </label>
-                    <div className="relative">
+                    <SelectWrapper>
                       <select
                         id="project"
                         {...register("project")}
@@ -322,8 +335,8 @@ export default function ContactSection() {
                         aria-describedby={errors.project ? "project-error" : undefined}
                         defaultValue=""
                         className={cn(
-                          "w-full px-4 py-2 bg-[#121212] border rounded text-white/90 focus:outline-none focus:ring-2 transition-colors",
-                          errors.project ? "border-red-500 focus:ring-red-500" : "border-white/10 focus:ring-[#556B2F]",
+                          selectBase,
+                          errors.project ? inputError : inputNormal,
                         )}
                       >
                         <option value="" disabled>
@@ -335,52 +348,54 @@ export default function ContactSection() {
                         <option value="production">{t("projectProduction")}</option>
                         <option value="other">{t("projectOther")}</option>
                       </select>
-                      {errors.project && (
-                        <p id="project-error" className="text-red-500 text-xs mt-1">
-                          {errors.project.message}
-                        </p>
-                      )}
-                    </div>
+                    </SelectWrapper>
+                    {errors.project && (
+                      <p id="project-error" className="text-red-400 text-xs mt-1.5">
+                        {errors.project.message}
+                      </p>
+                    )}
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
                   <div>
-                    <label htmlFor="studio" className="block text-sm font-medium text-white/90 mb-2">
+                    <label htmlFor="studio" className="block text-xs font-medium text-white/60 uppercase tracking-wider mb-2">
                       {t("studioLabel")}
                     </label>
-                    <select
-                      id="studio"
-                      {...register("studio")}
-                      className="w-full px-4 py-2 bg-[#121212] border border-white/10 rounded text-white/90 focus:outline-none focus:ring-2 focus:ring-[#556B2F] focus:border-transparent transition-colors"
-                    >
-                      <option value="">{t("noPreference")}</option>
-                      <option value="andreas">{t("studioAndreas")}</option>
-                      <option value="costa">{t("studioCosta")}</option>
-                      <option value="simon">{t("studioSimon")}</option>
-                      <option value="david">{t("studioDavid")}</option>
-                      <option value="peter">{t("studioPeter")}</option>
-                      <option value="denniz">{t("studioDenniz")}</option>
-                      <option value="thomas">{t("studioThomas")}</option>
-                    </select>
+                    <SelectWrapper>
+                      <select
+                        id="studio"
+                        {...register("studio")}
+                        className={cn(selectBase, inputNormal)}
+                      >
+                        <option value="">{t("noPreference")}</option>
+                        <option value="andreas">{t("studioAndreas")}</option>
+                        <option value="costa">{t("studioCosta")}</option>
+                        <option value="simon">{t("studioSimon")}</option>
+                        <option value="david">{t("studioDavid")}</option>
+                        <option value="peter">{t("studioPeter")}</option>
+                        <option value="denniz">{t("studioDenniz")}</option>
+                        <option value="thomas">{t("studioThomas")}</option>
+                      </select>
+                    </SelectWrapper>
                   </div>
                   <div>
-                    <label htmlFor="dateRange" className="block text-sm font-medium text-white/90 mb-2">
+                    <label htmlFor="dateRange" className="block text-xs font-medium text-white/60 uppercase tracking-wider mb-2">
                       {t("dateLabel")}
                     </label>
                     <input
                       type="text"
                       id="dateRange"
                       {...register("dateRange")}
-                      className="w-full px-4 py-2 bg-[#121212] border border-white/10 rounded text-white/90 focus:outline-none focus:ring-2 focus:ring-[#556B2F] focus:border-transparent transition-colors"
+                      className={cn(inputBase, inputNormal)}
                       placeholder=""
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-white/90 mb-2">
-                    {t("messageLabel")} <span className="text-red-500">{t("required")}</span>
+                  <label htmlFor="message" className="block text-xs font-medium text-white/60 uppercase tracking-wider mb-2">
+                    {t("messageLabel")} <span className="text-[#556B2F]">{t("required")}</span>
                   </label>
                   <div className="relative">
                     <textarea
@@ -389,40 +404,41 @@ export default function ContactSection() {
                       aria-required="true"
                       aria-invalid={!!errors.message}
                       aria-describedby={errors.message ? "message-error" : undefined}
-                      rows={3}
+                      rows={4}
                       className={cn(
-                        "w-full px-4 py-2 bg-[#121212] border rounded text-white/90 focus:outline-none focus:ring-2 transition-colors resize-none",
-                        errors.message ? "border-red-500 focus:ring-red-500" : "border-white/10 focus:ring-[#556B2F]",
+                        inputBase,
+                        "resize-none",
+                        errors.message ? inputError : inputNormal,
                       )}
                       placeholder={t("messagePlaceholder")}
                     ></textarea>
                     {errors.message && (
-                      <p id="message-error" className="text-red-500 text-xs mt-1">
+                      <p id="message-error" className="text-red-400 text-xs mt-1.5">
                         {errors.message.message}
                       </p>
                     )}
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                <div className="flex items-start gap-3 pt-1">
                   <input
                     id="privacy"
                     type="checkbox"
                     {...register("privacy")}
-                    className="h-4 w-4 mt-0.5 text-[#556B2F] focus:ring-[#556B2F] border-white/30 rounded"
+                    className="h-4 w-4 mt-0.5 shrink-0 accent-[#556B2F] rounded border-white/20 bg-[#0E0E0E] cursor-pointer"
                   />
-                  <div className="ml-2">
-                    <label htmlFor="privacy" className="block text-sm text-white/70">
+                  <div>
+                    <label htmlFor="privacy" className="block text-sm text-white/50 leading-relaxed cursor-pointer">
                       {t.rich("privacyText", {
                         link: (chunks) => (
-                          <a href="#" className="text-[#556B2F] hover:underline">
-                            {t("privacyLink")}
+                          <a href="#" className="text-[#6B8A3E] hover:text-[#7FA34A] hover:underline transition-colors">
+                            {chunks}
                           </a>
                         ),
                       })}
                     </label>
                     {errors.privacy && (
-                      <p id="privacy-error" className="text-red-500 text-xs mt-1">
+                      <p id="privacy-error" className="text-red-400 text-xs mt-1.5">
                         {errors.privacy.message}
                       </p>
                     )}
@@ -430,22 +446,22 @@ export default function ContactSection() {
                 </div>
 
                 {submitStatus === "success" && (
-                  <div className="p-3 bg-green-900/20 border border-green-900/30 rounded text-green-500" role="alert">
+                  <div className="p-4 bg-emerald-950/30 border border-emerald-800/30 rounded-xl text-emerald-400 text-sm" role="alert">
                     {t("successMessage")}
                   </div>
                 )}
 
                 {submitStatus === "error" && (
-                  <div className="p-3 bg-red-900/20 border border-red-900/30 rounded text-red-500" role="alert">
+                  <div className="p-4 bg-red-950/30 border border-red-800/30 rounded-xl text-red-400 text-sm" role="alert">
                     {errorMessage || t("errorMessage")}
                   </div>
                 )}
 
-                <div>
+                <div className="pt-2">
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-[#556B2F] to-[#657d38] hover:from-[#657d38] hover:to-[#758e49] text-white px-6 py-3 rounded shadow-[0_0_15px_rgba(85,107,47,0.3)] hover:shadow-[0_0_20px_rgba(85,107,47,0.5)] text-sm uppercase tracking-wider font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-[#556B2F]"
+                    className="w-full bg-gradient-to-r from-[#556B2F] to-[#657d38] hover:from-[#617A35] hover:to-[#758e49] active:from-[#4A5F28] active:to-[#556B2F] text-white px-6 py-3.5 rounded-xl shadow-[0_0_20px_rgba(85,107,47,0.15)] hover:shadow-[0_0_30px_rgba(85,107,47,0.25)] text-sm uppercase tracking-widest font-medium transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-[#556B2F]/50 focus:ring-offset-2 focus:ring-offset-[#1A1A1A]"
                     aria-live="polite"
                   >
                     {isSubmitting ? (
