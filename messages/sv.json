@@ -1,0 +1,215 @@
+{
+  "Metadata": {
+    "title": "Hydra Studios | Premiumstudiokollektiv för musik i Malmö",
+    "description": "Ett premiumstudiokollektiv i Malmö, Sverige där konstnärlig vision och teknisk excellens möts. Boka din session idag.",
+    "ogDescription": "Ett premiumstudiokollektiv i Malmö, Sverige där konstnärlig vision och teknisk excellens möts."
+  },
+  "Navbar": {
+    "skipToContent": "Hoppa till huvudinnehåll",
+    "homeLabel": "Hydra Studios - Hem",
+    "studios": "Studios",
+    "about": "Om oss",
+    "services": "Tjänster",
+    "bookNow": "Boka nu",
+    "toggleMenu": "Öppna/stäng meny"
+  },
+  "Hero": {
+    "title": "Där vision möter ljudmässig excellens",
+    "subtitle": "Ett premiumkollektiv av inspelningsstudior i världsklass, designade för artister som inte nöjer sig med något annat än det bästa.",
+    "exploreStudios": "Utforska studios",
+    "bookSession": "Boka en session",
+    "exploreLabel": "Utforska våra studios",
+    "bookLabel": "Boka en inspelningssession",
+    "scrollLabel": "Scrolla till studiosektionen",
+    "bgAlt": "Hydra Studios korridor"
+  },
+  "Studios": {
+    "title": "Våra premiumstudios",
+    "subtitle": "Utforska vår samling av noggrant designade inspelningsutrymmen, var och en med sin unika karaktär och kapacitet.",
+    "viewDetails": "Visa detaljer för {name}",
+    "closeModal": "Stäng",
+    "features": "Utrustning",
+    "bookStudio": "Boka denna studio",
+    "studioImages": "Studiobilder",
+    "andreas": {
+      "name": "Andreas Studio",
+      "description": "En rymlig inspelningsmiljö med toppmodern akustik och vintage-utrustning.",
+      "features": ["Neve-konsol", "Live-rum", "Isoleringsrum", "Vintage-mikrofoner"],
+      "images": ["Andreas Studio huvudrum", "Andreas Studio utrustning", "Andreas Studio mixområde", "Andreas Studio live-rum"]
+    },
+    "costa": {
+      "name": "Costa Studio",
+      "description": "Intimt inspelningsutrymme med premiumakustik och en varm, inbjudande atmosfär.",
+      "features": ["SSL-konsol", "Akustisk behandling", "Vintage-syntar", "Trumset"],
+      "images": ["Costa Studio", "Costa Studio utrustning"]
+    },
+    "david": {
+      "name": "David Studio",
+      "description": "Modern produktionssvit med banbrytande digital utrustning och analog värme.",
+      "features": ["API-konsol", "Modulära syntar", "Gitarrsamling", "Masteringkedja"],
+      "images": ["David Studio huvudrum", "David Studio utrustning"]
+    },
+    "dennis": {
+      "name": "Dennis Studio",
+      "description": "Specialiserad mix- och masteringsvit med perfekt avlyssningsmiljö.",
+      "features": ["Masteringkonsol", "Referensmonitorer", "Analoga EQ:er", "Vintage-kompressorer"],
+      "images": ["Dennis Studio huvudrum", "Dennis Studio utrustning"]
+    },
+    "simon": {
+      "name": "Simon Studio",
+      "description": "Kreativt produktionsutrymme med en blandning av vintage- och modern utrustning för unika ljudtexturer.",
+      "features": ["Analoga syntar", "Boutique-outboard", "Sångbås", "Skräddarsydd akustik"],
+      "images": ["Simon Studio huvudrum", "Simon Studio utrustning"]
+    },
+    "common": {
+      "name": "Gemensamma utrymmen",
+      "description": "Delade utrymmen designade för samarbete, avkoppling och inspiration.",
+      "features": ["Kök", "Lounge", "Mötesrum", "Korridor"],
+      "images": ["Korridor", "Kök", "Thomas kontor", "Peter Studio", "Plackområde"]
+    }
+  },
+  "About": {
+    "title": "Om Hydra",
+    "paragraph1": "Hydra är ett kollektiv av inspelningsstudior i världsklass grundat på en enkel princip: att skapa utrymmen där konstnärlig vision och teknisk excellens möts.",
+    "paragraph2": "Våra studios är mer än bara rum med utrustning – de är noggrant utformade miljöer designade för att inspirera kreativitet och fånga det perfekta ljudet. Varje utrymme har sin egen unika karaktär, akustik och utrustningsval, vilket låter artister hitta den perfekta matchningen för sitt projekt.",
+    "quote": "\"Vi byggde Hydra för att vara den typen av studio vi alltid ville arbeta i – där teknisk excellens möter kreativ frihet.\"",
+    "paragraph3": "Det som skiljer Hydra från mängden är vårt samarbetsinriktade tillvägagångssätt. Som kollektiv samlar vi några av branschens mest talangfulla ljudtekniker, producenter och studiodesigners, alla förenade av en passion för exceptionellt ljud och ett engagemang för att hjälpa artister förverkliga sin vision.",
+    "thomasAlt": "Thomas kontor",
+    "davidAlt": "David Studio",
+    "andreasAlt": "Andreas Studio",
+    "kitchenAlt": "Kök"
+  },
+  "Services": {
+    "title": "Våra tjänster",
+    "subtitle": "Från inspelning och mixning till produktion och mastering erbjuder vi en komplett uppsättning tjänster för att förverkliga din musikaliska vision.",
+    "learnMore": "Läs mer",
+    "recording": {
+      "title": "Inspelning",
+      "description": "Toppmoderna inspelningsfaciliteter med premiummikrofoner, förförstärkare och akustiskt behandlade utrymmen designade för att fånga ditt ljud med exceptionell klarhet och karaktär.",
+      "features": [
+        "Flera live-rum och isoleringsrum",
+        "Vintage- och moderna mikrofonsamlingar",
+        "Premium analoga signalkedjor",
+        "Högupplöst digital inspelning"
+      ]
+    },
+    "mixing": {
+      "title": "Mixning",
+      "description": "Expertmixningstjänster i akustiskt optimerade miljöer, med användning av både vintage analog utrustning och banbrytande digitala verktyg för att förverkliga din vision.",
+      "features": [
+        "Analog och digital hybridmixning",
+        "Precisionslyssningsmiljöer",
+        "Omfattande outboard-utrustningssamling",
+        "Distansmixning tillgänglig"
+      ]
+    },
+    "production": {
+      "title": "Produktion",
+      "description": "Fullservicemusikproduktion från koncept till färdig produkt, med tillgång till vårt nätverk av producenter, musiker och kreativa samarbetspartners i världsklass.",
+      "features": [
+        "Arrangemang och komposition",
+        "Koordinering av sessionmusiker",
+        "Vintage- och moderna instrumentsamlingar",
+        "Kreativ riktning och utveckling"
+      ]
+    },
+    "mastering": {
+      "title": "Mastering",
+      "description": "Precisionsmasteringtjänster i en dedikerad miljö med specialiserad utrustning och erfarna tekniker för att ge din musik den sista finishen.",
+      "features": [
+        "Dedikerade masteringsviter",
+        "Analog och digital bearbetning",
+        "Referensklassig avlyssning",
+        "Formatspecifik optimering"
+      ]
+    },
+    "collaboration": {
+      "title": "Artistsamarbete",
+      "description": "Knyt kontakt med andra artister, producenter och musiker i vår kreativa gemenskap. Hydra är mer än studios – det är ett kollektiv av kreativa proffs.",
+      "features": [
+        "Nätverksevent",
+        "Kollaborativa arbetsytor",
+        "Tvärprojektmöjligheter",
+        "Gemenskapsresurser"
+      ]
+    },
+    "residency": {
+      "title": "Studioboende",
+      "description": "Långsiktig studiotillgång för artister och producenter som söker en kreativ hemmabas med alla tekniska resurser som krävs för utökade projekt.",
+      "features": [
+        "Flexibla bokningsarrangemang",
+        "Dedikerat förvaringsutrymme",
+        "24/7 tillgång",
+        "Förmånliga priser"
+      ]
+    }
+  },
+  "Contact": {
+    "title": "Boka din session",
+    "subtitle": "Redo att förverkliga ditt projekt? Kontakta oss för att boka studiotid eller diskutera dina behov med vårt team.",
+    "contactInfo": "Kontaktinformation",
+    "contactDescription": "Fyll i formuläret så återkommer vårt team inom 24 timmar.",
+    "email": "E-post",
+    "location": "Plats",
+    "followUs": "Följ oss",
+    "nameLabel": "Ditt namn",
+    "emailLabel": "E-postadress",
+    "phoneLabel": "Telefonnummer (valfritt)",
+    "projectLabel": "Projekttyp",
+    "studioLabel": "Önskad studio (valfritt)",
+    "dateLabel": "Önskade datum (valfritt)",
+    "messageLabel": "Projektdetaljer",
+    "messagePlaceholder": "Berätta om ditt projekt och dina behov...",
+    "selectProject": "Välj projekttyp",
+    "noPreference": "Ingen preferens",
+    "projectRecording": "Inspelning",
+    "projectMixing": "Mixning",
+    "projectMastering": "Mastering",
+    "projectProduction": "Fullständig produktion",
+    "projectOther": "Övrigt",
+    "studioAndreas": "Andreas \"Stone\" Johansson",
+    "studioCosta": "Costa Leon",
+    "studioSimon": "Simon Peyron",
+    "studioDavid": "David Fremberg",
+    "studioPeter": "Peter Zimny",
+    "studioJohan": "Johan Lundén",
+    "studioDenniz": "Denniz Jamm",
+    "studioThomas": "Thomas Wallén (Förlag)",
+    "privacyText": "Jag godkänner {link} och samtycker till att bli kontaktad angående min förfrågan.",
+    "privacyLink": "integritetspolicyn",
+    "successMessage": "Ditt meddelande har skickats! Vi återkommer snart.",
+    "errorMessage": "Ett fel uppstod vid skickandet av ditt meddelande. Försök igen.",
+    "formErrorMessage": "Vänligen rätta till felen i formuläret.",
+    "submitButton": "Skicka förfrågan",
+    "submitting": "Skickar...",
+    "errorName": "Namn krävs",
+    "errorEmail": "E-post krävs",
+    "errorEmailInvalid": "E-postadressen är ogiltig",
+    "errorProject": "Vänligen välj en projekttyp",
+    "errorMessage2": "Meddelande krävs",
+    "required": "*"
+  },
+  "Footer": {
+    "about": "Ett premiumstudiokollektiv för musik där konstnärlig vision och teknisk excellens möts.",
+    "quickLinks": "Snabblänkar",
+    "ourStudios": "Våra studios",
+    "services": "Tjänster",
+    "aboutUs": "Om oss",
+    "contact": "Kontakt",
+    "blog": "Blogg",
+    "servicesTitle": "Tjänster",
+    "recording": "Inspelning",
+    "mixing": "Mixning",
+    "mastering": "Mastering",
+    "production": "Produktion",
+    "studioResidency": "Studioboende",
+    "contactTitle": "Kontakt",
+    "copyright": "© {year} Hydra Studios. Alla rättigheter förbehållna.",
+    "privacyPolicy": "Integritetspolicy",
+    "termsOfService": "Användarvillkor",
+    "cookiePolicy": "Cookiepolicy"
+  },
+  "LanguageSwitcher": {
+    "label": "Språk"
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "Metadata": {
+    "title": "Hydra Studios | Premium Music Studio Collective in Malmö",
+    "description": "A premium music studio collective in Malmö, Sweden where artistic vision and technical excellence converge. Book your session today.",
+    "ogDescription": "A premium music studio collective in Malmö, Sweden where artistic vision and technical excellence converge."
+  },
+  "Navbar": {
+    "skipToContent": "Skip to main content",
+    "homeLabel": "Hydra Studios - Home",
+    "studios": "Studios",
+    "about": "About",
+    "services": "Services",
+    "bookNow": "Book Now",
+    "toggleMenu": "Toggle menu"
+  },
+  "Hero": {
+    "title": "Where Vision Meets Sonic Excellence",
+    "subtitle": "A premium collective of world-class recording studios designed for artists who demand nothing but the best.",
+    "exploreStudios": "Explore Studios",
+    "bookSession": "Book a Session",
+    "exploreLabel": "Explore our studios",
+    "bookLabel": "Book a recording session",
+    "scrollLabel": "Scroll to studios section",
+    "bgAlt": "Hydra Studios Hallway"
+  },
+  "Studios": {
+    "title": "Our Premium Studios",
+    "subtitle": "Explore our collection of meticulously designed recording spaces, each with its own unique character and capabilities.",
+    "viewDetails": "View details for {name}",
+    "closeModal": "Close modal",
+    "features": "Features",
+    "bookStudio": "Book This Studio",
+    "studioImages": "Studio images",
+    "andreas": {
+      "name": "Andreas Studio",
+      "description": "A spacious recording environment with state-of-the-art acoustics and vintage equipment.",
+      "features": ["Neve Console", "Live Room", "Isolation Booth", "Vintage Microphones"],
+      "images": ["Andreas Studio Main Room", "Andreas Studio Equipment", "Andreas Studio Mixing Area", "Andreas Studio Live Room"]
+    },
+    "costa": {
+      "name": "Costa Studio",
+      "description": "Intimate recording space with premium acoustics and a warm, inviting atmosphere.",
+      "features": ["SSL Console", "Acoustic Treatment", "Vintage Synths", "Drum Kit"],
+      "images": ["Costa Studio", "Costa Studio Equipment"]
+    },
+    "david": {
+      "name": "David Studio",
+      "description": "Modern production suite with cutting-edge digital equipment and analog warmth.",
+      "features": ["API Console", "Modular Synths", "Guitar Collection", "Mastering Chain"],
+      "images": ["David Studio Main Room", "David Studio Equipment"]
+    },
+    "dennis": {
+      "name": "Dennis Studio",
+      "description": "Specialized mixing and mastering suite with pristine monitoring environment.",
+      "features": ["Mastering Console", "Reference Monitors", "Analog EQs", "Vintage Compressors"],
+      "images": ["Dennis Studio Main Room", "Dennis Studio Equipment"]
+    },
+    "simon": {
+      "name": "Simon Studio",
+      "description": "Creative production space with a blend of vintage and modern equipment for unique sonic textures.",
+      "features": ["Analog Synths", "Boutique Outboard", "Vocal Booth", "Custom Acoustics"],
+      "images": ["Simon Studio Main Room", "Simon Studio Equipment"]
+    },
+    "common": {
+      "name": "Common Areas",
+      "description": "Shared spaces designed for collaboration, relaxation, and inspiration.",
+      "features": ["Kitchen", "Lounge", "Meeting Room", "Hallway"],
+      "images": ["Hallway", "Kitchen", "Thomas Office", "Peter Studio", "Plack Area"]
+    }
+  },
+  "About": {
+    "title": "About Hydra",
+    "paragraph1": "Hydra is a collective of world-class recording studios founded on a simple principle: to create spaces where artistic vision and technical excellence converge.",
+    "paragraph2": "Our studios are more than just rooms with equipment—they're carefully crafted environments designed to inspire creativity and capture the perfect sound. Each space has its own unique character, acoustics, and equipment selection, allowing artists to find the perfect match for their project.",
+    "quote": "\"We built Hydra to be the kind of studio we always wanted to work in—where technical excellence meets creative freedom.\"",
+    "paragraph3": "What sets Hydra apart is our collaborative approach. As a collective, we bring together some of the industry's most talented engineers, producers, and studio designers, all united by a passion for exceptional sound and a commitment to helping artists realize their vision.",
+    "thomasAlt": "Thomas Office",
+    "davidAlt": "David Studio",
+    "andreasAlt": "Andreas Studio",
+    "kitchenAlt": "Kitchen"
+  },
+  "Services": {
+    "title": "Our Services",
+    "subtitle": "From recording and mixing to production and mastering, we offer a complete suite of services to bring your musical vision to life.",
+    "learnMore": "Learn More",
+    "recording": {
+      "title": "Recording",
+      "description": "State-of-the-art recording facilities with premium microphones, preamps, and acoustically-treated spaces designed to capture your sound with exceptional clarity and character.",
+      "features": [
+        "Multiple live rooms and isolation booths",
+        "Vintage and modern microphone collection",
+        "Premium analog signal chains",
+        "High-resolution digital recording"
+      ]
+    },
+    "mixing": {
+      "title": "Mixing",
+      "description": "Expert mixing services in acoustically-optimized environments, utilizing both vintage analog gear and cutting-edge digital tools to bring your vision to life.",
+      "features": [
+        "Analog and digital hybrid mixing",
+        "Precision monitoring environments",
+        "Extensive outboard gear collection",
+        "Remote mixing options available"
+      ]
+    },
+    "production": {
+      "title": "Production",
+      "description": "Full-service music production from concept to completion, with access to our network of world-class producers, musicians, and creative collaborators.",
+      "features": [
+        "Arrangement and composition",
+        "Session musicians coordination",
+        "Vintage and modern instrument collection",
+        "Creative direction and development"
+      ]
+    },
+    "mastering": {
+      "title": "Mastering",
+      "description": "Precision mastering services in a dedicated environment with specialized equipment and experienced engineers to give your music its final polish.",
+      "features": [
+        "Dedicated mastering suites",
+        "Analog and digital processing",
+        "Reference-grade monitoring",
+        "Format-specific optimization"
+      ]
+    },
+    "collaboration": {
+      "title": "Artist Collaboration",
+      "description": "Connect with other artists, producers, and musicians in our creative community. Hydra is more than studios—it's a collective of creative professionals.",
+      "features": [
+        "Networking events",
+        "Collaborative workspaces",
+        "Cross-project opportunities",
+        "Community resources"
+      ]
+    },
+    "residency": {
+      "title": "Studio Residency",
+      "description": "Long-term studio access for artists and producers looking for a creative home base with all the technical resources needed for extended projects.",
+      "features": [
+        "Flexible booking arrangements",
+        "Dedicated storage space",
+        "24/7 access options",
+        "Preferential rates"
+      ]
+    }
+  },
+  "Contact": {
+    "title": "Book Your Session",
+    "subtitle": "Ready to bring your project to life? Get in touch to book studio time or discuss your needs with our team.",
+    "contactInfo": "Contact Information",
+    "contactDescription": "Fill out the form and our team will get back to you within 24 hours.",
+    "email": "Email",
+    "location": "Location",
+    "followUs": "Follow Us",
+    "nameLabel": "Your Name",
+    "emailLabel": "Email Address",
+    "phoneLabel": "Phone Number (optional)",
+    "projectLabel": "Project Type",
+    "studioLabel": "Preferred Studio (optional)",
+    "dateLabel": "Preferred Dates (optional)",
+    "messageLabel": "Project Details",
+    "messagePlaceholder": "Tell us about your project and requirements...",
+    "selectProject": "Select project type",
+    "noPreference": "No preference",
+    "projectRecording": "Recording",
+    "projectMixing": "Mixing",
+    "projectMastering": "Mastering",
+    "projectProduction": "Full Production",
+    "projectOther": "Other",
+    "studioAndreas": "Andreas \"Stone\" Johansson",
+    "studioCosta": "Costa Leon",
+    "studioSimon": "Simon Peyron",
+    "studioDavid": "David Fremberg",
+    "studioPeter": "Peter Zimny",
+    "studioJohan": "Johan Lundén",
+    "studioDenniz": "Denniz Jamm",
+    "studioThomas": "Thomas Wallén (Publishing)",
+    "privacyText": "I agree to the {link} and consent to being contacted about my inquiry.",
+    "privacyLink": "privacy policy",
+    "successMessage": "Your message has been sent successfully! We'll get back to you soon.",
+    "errorMessage": "There was an error sending your message. Please try again.",
+    "formErrorMessage": "Please correct the errors in the form.",
+    "submitButton": "Send Inquiry",
+    "submitting": "Sending...",
+    "errorName": "Name is required",
+    "errorEmail": "Email is required",
+    "errorEmailInvalid": "Email is invalid",
+    "errorProject": "Please select a project type",
+    "errorMessage2": "Message is required",
+    "required": "*"
+  },
+  "Footer": {
+    "about": "A premium music studio collective where artistic vision and technical excellence converge.",
+    "quickLinks": "Quick Links",
+    "ourStudios": "Our Studios",
+    "services": "Services",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "blog": "Blog",
+    "servicesTitle": "Services",
+    "recording": "Recording",
+    "mixing": "Mixing",
+    "mastering": "Mastering",
+    "production": "Production",
+    "studioResidency": "Studio Residency",
+    "contactTitle": "Contact",
+    "copyright": "© {year} Hydra Studios. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy"
+  },
+  "LanguageSwitcher": {
+    "label": "Language"
+  }
+}

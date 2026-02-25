@@ -1,0 +1,215 @@
+{
+  "Metadata": {
+    "title": "Hydra Studios | マルメのプレミアム音楽スタジオ集団",
+    "description": "スウェーデン・マルメにあるプレミアム音楽スタジオ集団。芸術的ビジョンと技術的卓越性が融合する場所。今すぐセッションをご予約ください。",
+    "ogDescription": "スウェーデン・マルメにあるプレミアム音楽スタジオ集団。芸術的ビジョンと技術的卓越性が融合する場所。"
+  },
+  "Navbar": {
+    "skipToContent": "メインコンテンツへスキップ",
+    "homeLabel": "Hydra Studios - ホーム",
+    "studios": "スタジオ",
+    "about": "私たちについて",
+    "services": "サービス",
+    "bookNow": "予約する",
+    "toggleMenu": "メニュー切替"
+  },
+  "Hero": {
+    "title": "ビジョンと音響の卓越性が出会う場所",
+    "subtitle": "最高を求めるアーティストのためにデザインされた、世界クラスのレコーディングスタジオのプレミアム集団。",
+    "exploreStudios": "スタジオを見る",
+    "bookSession": "セッションを予約",
+    "exploreLabel": "スタジオを探索する",
+    "bookLabel": "レコーディングセッションを予約する",
+    "scrollLabel": "スタジオセクションへスクロール",
+    "bgAlt": "Hydra Studios 廊下"
+  },
+  "Studios": {
+    "title": "プレミアムスタジオ",
+    "subtitle": "それぞれ独自の個性と機能を持つ、細部にまでこだわったレコーディングスペースのコレクションをご覧ください。",
+    "viewDetails": "{name}の詳細を見る",
+    "closeModal": "閉じる",
+    "features": "設備",
+    "bookStudio": "このスタジオを予約",
+    "studioImages": "スタジオ画像",
+    "andreas": {
+      "name": "Andreas Studio",
+      "description": "最先端の音響と ビンテージ機材を備えた広々としたレコーディング環境。",
+      "features": ["Neveコンソール", "ライブルーム", "アイソレーションブース", "ビンテージマイク"],
+      "images": ["Andreas Studio メインルーム", "Andreas Studio 機材", "Andreas Studio ミキシングエリア", "Andreas Studio ライブルーム"]
+    },
+    "costa": {
+      "name": "Costa Studio",
+      "description": "プレミアム音響と温かく居心地の良い雰囲気のインティメートなレコーディングスペース。",
+      "features": ["SSLコンソール", "音響処理", "ビンテージシンセ", "ドラムキット"],
+      "images": ["Costa Studio", "Costa Studio 機材"]
+    },
+    "david": {
+      "name": "David Studio",
+      "description": "最先端のデジタル機器とアナログの温かみを兼ね備えたモダンなプロダクションスイート。",
+      "features": ["APIコンソール", "モジュラーシンセ", "ギターコレクション", "マスタリングチェーン"],
+      "images": ["David Studio メインルーム", "David Studio 機材"]
+    },
+    "dennis": {
+      "name": "Dennis Studio",
+      "description": "卓越したモニタリング環境を備えた専門的なミキシング＆マスタリングスイート。",
+      "features": ["マスタリングコンソール", "リファレンスモニター", "アナログEQ", "ビンテージコンプレッサー"],
+      "images": ["Dennis Studio メインルーム", "Dennis Studio 機材"]
+    },
+    "simon": {
+      "name": "Simon Studio",
+      "description": "ユニークな音のテクスチャーを生み出すビンテージとモダンの機材を融合したクリエイティブなプロダクションスペース。",
+      "features": ["アナログシンセ", "ブティックアウトボード", "ボーカルブース", "カスタム音響"],
+      "images": ["Simon Studio メインルーム", "Simon Studio 機材"]
+    },
+    "common": {
+      "name": "共有スペース",
+      "description": "コラボレーション、リラクゼーション、インスピレーションのためにデザインされた共有スペース。",
+      "features": ["キッチン", "ラウンジ", "会議室", "廊下"],
+      "images": ["廊下", "キッチン", "Thomas オフィス", "Peter Studio", "プラックエリア"]
+    }
+  },
+  "About": {
+    "title": "Hydraについて",
+    "paragraph1": "Hydraは、芸術的ビジョンと技術的卓越性が融合する空間を創造するというシンプルな原則に基づいて設立された、世界クラスのレコーディングスタジオ集団です。",
+    "paragraph2": "私たちのスタジオは、単なる機材のある部屋以上のものです。創造性を刺激し、完璧なサウンドをキャプチャーするために丁寧に作り上げた環境です。各スペースにはそれぞれ独自の個性、音響、機材の選択があり、アーティストがプロジェクトに最適な環境を見つけることができます。",
+    "quote": "「私たちは常に働きたいと思っていたスタジオ、つまり技術的卓越性と創造的自由が出会うスタジオとしてHydraを構築しました。」",
+    "paragraph3": "Hydraを他と差別化するのは、私たちの協調的なアプローチです。集団として、業界で最も才能のあるエンジニア、プロデューサー、スタジオデザイナーを集め、卓越したサウンドへの情熱とアーティストのビジョン実現への献身で結ばれています。",
+    "thomasAlt": "Thomas オフィス",
+    "davidAlt": "David Studio",
+    "andreasAlt": "Andreas Studio",
+    "kitchenAlt": "キッチン"
+  },
+  "Services": {
+    "title": "サービス",
+    "subtitle": "レコーディングやミキシングからプロダクション、マスタリングまで、あなたの音楽的ビジョンを実現するための総合的なサービスを提供しています。",
+    "learnMore": "詳細を見る",
+    "recording": {
+      "title": "レコーディング",
+      "description": "プレミアムマイク、プリアンプ、音響処理されたスペースを備えた最先端のレコーディング施設で、卓越した明瞭さと個性であなたのサウンドをキャプチャーします。",
+      "features": [
+        "複数のライブルームとアイソレーションブース",
+        "ビンテージ＆モダンマイクコレクション",
+        "プレミアムアナログシグナルチェーン",
+        "ハイレゾデジタルレコーディング"
+      ]
+    },
+    "mixing": {
+      "title": "ミキシング",
+      "description": "ビンテージアナログ機器と最先端のデジタルツールの両方を活用した、音響最適化された環境でのエキスパートミキシングサービス。",
+      "features": [
+        "アナログ＆デジタルハイブリッドミキシング",
+        "精密モニタリング環境",
+        "豊富なアウトボード機器コレクション",
+        "リモートミキシング対応"
+      ]
+    },
+    "production": {
+      "title": "プロダクション",
+      "description": "コンセプトから完成まで、世界クラスのプロデューサー、ミュージシャン、クリエイティブコラボレーターのネットワークにアクセスできるフルサービスの音楽プロダクション。",
+      "features": [
+        "アレンジ＆作曲",
+        "セッションミュージシャンのコーディネート",
+        "ビンテージ＆モダン楽器コレクション",
+        "クリエイティブディレクション＆開発"
+      ]
+    },
+    "mastering": {
+      "title": "マスタリング",
+      "description": "専用環境で専門機器と経験豊富なエンジニアによる精密なマスタリングサービスで、あなたの音楽に最終的な磨きをかけます。",
+      "features": [
+        "専用マスタリングスイート",
+        "アナログ＆デジタル処理",
+        "リファレンスグレードモニタリング",
+        "フォーマット別最適化"
+      ]
+    },
+    "collaboration": {
+      "title": "アーティストコラボレーション",
+      "description": "クリエイティブコミュニティで他のアーティスト、プロデューサー、ミュージシャンとつながりましょう。Hydraはスタジオ以上のもの、クリエイティブプロフェッショナルの集団です。",
+      "features": [
+        "ネットワーキングイベント",
+        "コラボレーションワークスペース",
+        "クロスプロジェクトの機会",
+        "コミュニティリソース"
+      ]
+    },
+    "residency": {
+      "title": "スタジオレジデンシー",
+      "description": "長期プロジェクトに必要なすべての技術リソースを備えたクリエイティブな拠点を求めるアーティストやプロデューサーのための長期スタジオアクセス。",
+      "features": [
+        "フレキシブルな予約プラン",
+        "専用ストレージスペース",
+        "24時間アクセスオプション",
+        "優待料金"
+      ]
+    }
+  },
+  "Contact": {
+    "title": "セッションを予約",
+    "subtitle": "プロジェクトを実現する準備はできましたか？スタジオタイムの予約やチームとのご相談はこちらから。",
+    "contactInfo": "連絡先情報",
+    "contactDescription": "フォームにご記入ください。24時間以内にチームからご連絡いたします。",
+    "email": "メール",
+    "location": "所在地",
+    "followUs": "フォローする",
+    "nameLabel": "お名前",
+    "emailLabel": "メールアドレス",
+    "phoneLabel": "電話番号（任意）",
+    "projectLabel": "プロジェクトタイプ",
+    "studioLabel": "希望スタジオ（任意）",
+    "dateLabel": "希望日程（任意）",
+    "messageLabel": "プロジェクト詳細",
+    "messagePlaceholder": "プロジェクトとご要望についてお聞かせください...",
+    "selectProject": "プロジェクトタイプを選択",
+    "noPreference": "特になし",
+    "projectRecording": "レコーディング",
+    "projectMixing": "ミキシング",
+    "projectMastering": "マスタリング",
+    "projectProduction": "フルプロダクション",
+    "projectOther": "その他",
+    "studioAndreas": "Andreas \"Stone\" Johansson",
+    "studioCosta": "Costa Leon",
+    "studioSimon": "Simon Peyron",
+    "studioDavid": "David Fremberg",
+    "studioPeter": "Peter Zimny",
+    "studioJohan": "Johan Lundén",
+    "studioDenniz": "Denniz Jamm",
+    "studioThomas": "Thomas Wallén（音楽出版）",
+    "privacyText": "{link}に同意し、お問い合わせに関する連絡を受けることに同意します。",
+    "privacyLink": "プライバシーポリシー",
+    "successMessage": "メッセージが正常に送信されました！近日中にご連絡いたします。",
+    "errorMessage": "メッセージの送信中にエラーが発生しました。もう一度お試しください。",
+    "formErrorMessage": "フォームのエラーを修正してください。",
+    "submitButton": "お問い合わせを送信",
+    "submitting": "送信中...",
+    "errorName": "名前は必須です",
+    "errorEmail": "メールアドレスは必須です",
+    "errorEmailInvalid": "メールアドレスが無効です",
+    "errorProject": "プロジェクトタイプを選択してください",
+    "errorMessage2": "メッセージは必須です",
+    "required": "*"
+  },
+  "Footer": {
+    "about": "芸術的ビジョンと技術的卓越性が融合するプレミアム音楽スタジオ集団。",
+    "quickLinks": "クイックリンク",
+    "ourStudios": "スタジオ一覧",
+    "services": "サービス",
+    "aboutUs": "私たちについて",
+    "contact": "お問い合わせ",
+    "blog": "ブログ",
+    "servicesTitle": "サービス",
+    "recording": "レコーディング",
+    "mixing": "ミキシング",
+    "mastering": "マスタリング",
+    "production": "プロダクション",
+    "studioResidency": "スタジオレジデンシー",
+    "contactTitle": "お問い合わせ",
+    "copyright": "© {year} Hydra Studios. All rights reserved.",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "cookiePolicy": "Cookieポリシー"
+  },
+  "LanguageSwitcher": {
+    "label": "言語"
+  }
+}

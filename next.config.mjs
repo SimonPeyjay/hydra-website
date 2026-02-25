@@ -1,3 +1,7 @@
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -9,7 +13,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: 'export', // 👈 detta är det du lägger till
+  output: 'export',
+  trailingSlash: true,
 }
 
-export default nextConfig
+export default withNextIntl(nextConfig)

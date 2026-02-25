@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { Loader } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { contactSchema, type ContactFormData } from "@/lib/validations/contact"
+import { useTranslations } from "next-intl"
 import {
   STUDIO_MAP,
   PROJECT_TYPE_MAP,
@@ -20,6 +21,7 @@ const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || ""
 export default function ContactSection() {
   const [submitStatus, setSubmitStatus] = useState<null | "success" | "error">(null)
   const [errorMessage, setErrorMessage] = useState("")
+  const t = useTranslations("Contact")
 
   const {
     register,
@@ -92,10 +94,8 @@ export default function ContactSection() {
 
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">Book Your Session</h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Ready to bring your project to life? Get in touch to book studio time or discuss your needs with our team.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">{t("title")}</h2>
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">{t("subtitle")}</p>
         </div>
 
         <div
@@ -116,10 +116,8 @@ export default function ContactSection() {
                   height={80}
                   className="mb-6"
                 />
-                <h3 className="text-xl font-bold mb-4">Contact Information</h3>
-                <p className="text-white/70 mb-6">
-                  Fill out the form and our team will get back to you within 24 hours.
-                </p>
+                <h3 className="text-xl font-bold mb-4">{t("contactInfo")}</h3>
+                <p className="text-white/70 mb-6">{t("contactDescription")}</p>
               </div>
 
               <div className="space-y-6">
@@ -142,7 +140,7 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-sm font-medium text-white/90">Email</h4>
+                    <h4 className="text-sm font-medium text-white/90">{t("email")}</h4>
                     <a href="mailto:info@hydrastudios.se" className="text-white/70 hover:text-white transition-colors">
                       info@hydrastudios.se
                     </a>
@@ -168,7 +166,7 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-sm font-medium text-white/90">Location</h4>
+                    <h4 className="text-sm font-medium text-white/90">{t("location")}</h4>
                     <address className="text-white/70 not-italic">
                       Fredriksbergsgatan 7 A<br />
                       212 11 Malmö
@@ -180,7 +178,7 @@ export default function ContactSection() {
               </div>
 
               <div className="mt-12">
-                <h4 className="text-sm font-medium text-white/90 mb-4">Follow Us</h4>
+                <h4 className="text-sm font-medium text-white/90 mb-4">{t("followUs")}</h4>
                 <div className="flex gap-4">
                   <a
                     href="https://www.facebook.com/hydrasweden"
@@ -248,7 +246,7 @@ export default function ContactSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-white/90 mb-2">
-                      Your Name <span className="text-red-500">*</span>
+                      {t("nameLabel")} <span className="text-red-500">{t("required")}</span>
                     </label>
                     <div className="relative">
                       <input
@@ -273,7 +271,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-white/90 mb-2">
-                      Email Address <span className="text-red-500">*</span>
+                      {t("emailLabel")} <span className="text-red-500">{t("required")}</span>
                     </label>
                     <div className="relative">
                       <input
@@ -301,7 +299,7 @@ export default function ContactSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-white/90 mb-2">
-                      Phone Number (optional)
+                      {t("phoneLabel")}
                     </label>
                     <input
                       type="tel"
@@ -313,7 +311,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <label htmlFor="project" className="block text-sm font-medium text-white/90 mb-2">
-                      Project Type <span className="text-red-500">*</span>
+                      {t("projectLabel")} <span className="text-red-500">{t("required")}</span>
                     </label>
                     <div className="relative">
                       <select
@@ -329,13 +327,13 @@ export default function ContactSection() {
                         )}
                       >
                         <option value="" disabled>
-                          Select project type
+                          {t("selectProject")}
                         </option>
-                        <option value="recording">Recording</option>
-                        <option value="mixing">Mixing</option>
-                        <option value="mastering">Mastering</option>
-                        <option value="production">Full Production</option>
-                        <option value="other">Other</option>
+                        <option value="recording">{t("projectRecording")}</option>
+                        <option value="mixing">{t("projectMixing")}</option>
+                        <option value="mastering">{t("projectMastering")}</option>
+                        <option value="production">{t("projectProduction")}</option>
+                        <option value="other">{t("projectOther")}</option>
                       </select>
                       {errors.project && (
                         <p id="project-error" className="text-red-500 text-xs mt-1">
@@ -349,27 +347,26 @@ export default function ContactSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="studio" className="block text-sm font-medium text-white/90 mb-2">
-                      Preferred Studio (optional)
+                      {t("studioLabel")}
                     </label>
                     <select
                       id="studio"
                       {...register("studio")}
                       className="w-full px-4 py-2 bg-[#121212] border border-white/10 rounded text-white/90 focus:outline-none focus:ring-2 focus:ring-[#556B2F] focus:border-transparent transition-colors"
                     >
-                      <option value="">No preference</option>
-                      <option value="andreas">Andreas &quot;Stone&quot; Johansson</option>
-                      <option value="costa">Costa Leon</option>
-                      <option value="simon">Simon Peyron</option>
-                      <option value="david">David Fremberg</option>
-                      <option value="peter">Peter Zimny</option>
-                      <option value="angelino">Angelino Markenhorn</option>
-                      <option value="denniz">Denniz Jamm</option>
-                      <option value="thomas">Thomas Wallén (Publishing)</option>
+                      <option value="">{t("noPreference")}</option>
+                      <option value="andreas">{t("studioAndreas")}</option>
+                      <option value="costa">{t("studioCosta")}</option>
+                      <option value="simon">{t("studioSimon")}</option>
+                      <option value="david">{t("studioDavid")}</option>
+                      <option value="peter">{t("studioPeter")}</option>
+                      <option value="denniz">{t("studioDenniz")}</option>
+                      <option value="thomas">{t("studioThomas")}</option>
                     </select>
                   </div>
                   <div>
                     <label htmlFor="dateRange" className="block text-sm font-medium text-white/90 mb-2">
-                      Preferred Dates (optional)
+                      {t("dateLabel")}
                     </label>
                     <input
                       type="text"
@@ -383,7 +380,7 @@ export default function ContactSection() {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-white/90 mb-2">
-                    Project Details <span className="text-red-500">*</span>
+                    {t("messageLabel")} <span className="text-red-500">{t("required")}</span>
                   </label>
                   <div className="relative">
                     <textarea
@@ -397,7 +394,7 @@ export default function ContactSection() {
                         "w-full px-4 py-2 bg-[#121212] border rounded text-white/90 focus:outline-none focus:ring-2 transition-colors resize-none",
                         errors.message ? "border-red-500 focus:ring-red-500" : "border-white/10 focus:ring-[#556B2F]",
                       )}
-                      placeholder="Tell us about your project and requirements..."
+                      placeholder={t("messagePlaceholder")}
                     ></textarea>
                     {errors.message && (
                       <p id="message-error" className="text-red-500 text-xs mt-1">
@@ -416,11 +413,13 @@ export default function ContactSection() {
                   />
                   <div className="ml-2">
                     <label htmlFor="privacy" className="block text-sm text-white/70">
-                      I agree to the{" "}
-                      <a href="#" className="text-[#556B2F] hover:underline">
-                        privacy policy
-                      </a>{" "}
-                      and consent to being contacted about my inquiry.
+                      {t.rich("privacyText", {
+                        link: (chunks) => (
+                          <a href="#" className="text-[#556B2F] hover:underline">
+                            {t("privacyLink")}
+                          </a>
+                        ),
+                      })}
                     </label>
                     {errors.privacy && (
                       <p id="privacy-error" className="text-red-500 text-xs mt-1">
@@ -432,13 +431,13 @@ export default function ContactSection() {
 
                 {submitStatus === "success" && (
                   <div className="p-3 bg-green-900/20 border border-green-900/30 rounded text-green-500" role="alert">
-                    Your message has been sent successfully! We&apos;ll get back to you soon.
+                    {t("successMessage")}
                   </div>
                 )}
 
                 {submitStatus === "error" && (
                   <div className="p-3 bg-red-900/20 border border-red-900/30 rounded text-red-500" role="alert">
-                    {errorMessage || "There was an error sending your message. Please try again."}
+                    {errorMessage || t("errorMessage")}
                   </div>
                 )}
 
@@ -452,10 +451,10 @@ export default function ContactSection() {
                     {isSubmitting ? (
                       <span className="flex items-center justify-center">
                         <Loader className="animate-spin mr-2 h-4 w-4" />
-                        Sending...
+                        {t("submitting")}
                       </span>
                     ) : (
-                      "Send Inquiry"
+                      t("submitButton")
                     )}
                   </button>
                 </div>

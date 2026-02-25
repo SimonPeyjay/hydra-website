@@ -1,0 +1,215 @@
+{
+  "Metadata": {
+    "title": "Hydra Studios | Premium-Musikstudiokollektiv in Malmö",
+    "description": "Ein Premium-Musikstudiokollektiv in Malmö, Schweden, wo künstlerische Vision und technische Exzellenz zusammentreffen. Buchen Sie Ihre Session noch heute.",
+    "ogDescription": "Ein Premium-Musikstudiokollektiv in Malmö, Schweden, wo künstlerische Vision und technische Exzellenz zusammentreffen."
+  },
+  "Navbar": {
+    "skipToContent": "Zum Hauptinhalt springen",
+    "homeLabel": "Hydra Studios - Startseite",
+    "studios": "Studios",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "bookNow": "Jetzt buchen",
+    "toggleMenu": "Menü umschalten"
+  },
+  "Hero": {
+    "title": "Wo Vision auf klangliche Exzellenz trifft",
+    "subtitle": "Ein Premium-Kollektiv erstklassiger Aufnahmestudios, entworfen für Künstler, die nur das Beste verlangen.",
+    "exploreStudios": "Studios entdecken",
+    "bookSession": "Session buchen",
+    "exploreLabel": "Unsere Studios entdecken",
+    "bookLabel": "Eine Aufnahmesession buchen",
+    "scrollLabel": "Zum Studiobereich scrollen",
+    "bgAlt": "Hydra Studios Flur"
+  },
+  "Studios": {
+    "title": "Unsere Premium-Studios",
+    "subtitle": "Entdecken Sie unsere Sammlung sorgfältig gestalteter Aufnahmeräume, jeder mit eigenem Charakter und eigenen Möglichkeiten.",
+    "viewDetails": "Details für {name} anzeigen",
+    "closeModal": "Schließen",
+    "features": "Ausstattung",
+    "bookStudio": "Dieses Studio buchen",
+    "studioImages": "Studiobilder",
+    "andreas": {
+      "name": "Andreas Studio",
+      "description": "Eine geräumige Aufnahmeumgebung mit modernster Akustik und Vintage-Equipment.",
+      "features": ["Neve-Konsole", "Aufnahmeraum", "Isolierkabine", "Vintage-Mikrofone"],
+      "images": ["Andreas Studio Hauptraum", "Andreas Studio Equipment", "Andreas Studio Mixbereich", "Andreas Studio Aufnahmeraum"]
+    },
+    "costa": {
+      "name": "Costa Studio",
+      "description": "Intimer Aufnahmeraum mit Premium-Akustik und einer warmen, einladenden Atmosphäre.",
+      "features": ["SSL-Konsole", "Akustikbehandlung", "Vintage-Synthesizer", "Schlagzeug"],
+      "images": ["Costa Studio", "Costa Studio Equipment"]
+    },
+    "david": {
+      "name": "David Studio",
+      "description": "Moderne Produktionssuite mit modernster Digitaltechnik und analoger Wärme.",
+      "features": ["API-Konsole", "Modulare Synthesizer", "Gitarrensammlung", "Mastering-Kette"],
+      "images": ["David Studio Hauptraum", "David Studio Equipment"]
+    },
+    "dennis": {
+      "name": "Dennis Studio",
+      "description": "Spezialisierte Mix- und Mastering-Suite mit makelloser Abhörumgebung.",
+      "features": ["Mastering-Konsole", "Referenzmonitore", "Analoge EQs", "Vintage-Kompressoren"],
+      "images": ["Dennis Studio Hauptraum", "Dennis Studio Equipment"]
+    },
+    "simon": {
+      "name": "Simon Studio",
+      "description": "Kreativer Produktionsraum mit einer Mischung aus Vintage- und modernem Equipment für einzigartige Klangtexturen.",
+      "features": ["Analoge Synthesizer", "Boutique-Outboard", "Gesangskabine", "Maßgeschneiderte Akustik"],
+      "images": ["Simon Studio Hauptraum", "Simon Studio Equipment"]
+    },
+    "common": {
+      "name": "Gemeinschaftsbereiche",
+      "description": "Gemeinschaftsräume für Zusammenarbeit, Entspannung und Inspiration.",
+      "features": ["Küche", "Lounge", "Besprechungsraum", "Flur"],
+      "images": ["Flur", "Küche", "Thomas Büro", "Peter Studio", "Plack-Bereich"]
+    }
+  },
+  "About": {
+    "title": "Über Hydra",
+    "paragraph1": "Hydra ist ein Kollektiv erstklassiger Aufnahmestudios, gegründet auf einem einfachen Prinzip: Räume zu schaffen, in denen künstlerische Vision und technische Exzellenz zusammentreffen.",
+    "paragraph2": "Unsere Studios sind mehr als nur Räume mit Equipment – sie sind sorgfältig gestaltete Umgebungen, die Kreativität inspirieren und den perfekten Sound einfangen. Jeder Raum hat seinen eigenen Charakter, seine eigene Akustik und Ausstattung, sodass Künstler die perfekte Umgebung für ihr Projekt finden.",
+    "quote": "\"Wir haben Hydra gebaut, um das Studio zu sein, in dem wir schon immer arbeiten wollten – wo technische Exzellenz auf kreative Freiheit trifft.\"",
+    "paragraph3": "Was Hydra auszeichnet, ist unser kollaborativer Ansatz. Als Kollektiv bringen wir einige der talentiertesten Tontechniker, Produzenten und Studiodesigner der Branche zusammen, alle vereint durch eine Leidenschaft für außergewöhnlichen Klang und das Engagement, Künstlern bei der Verwirklichung ihrer Vision zu helfen.",
+    "thomasAlt": "Thomas Büro",
+    "davidAlt": "David Studio",
+    "andreasAlt": "Andreas Studio",
+    "kitchenAlt": "Küche"
+  },
+  "Services": {
+    "title": "Unsere Leistungen",
+    "subtitle": "Von Aufnahme und Mixing bis hin zu Produktion und Mastering bieten wir ein umfassendes Leistungsangebot, um Ihre musikalische Vision zum Leben zu erwecken.",
+    "learnMore": "Mehr erfahren",
+    "recording": {
+      "title": "Aufnahme",
+      "description": "Modernste Aufnahmeeinrichtungen mit Premium-Mikrofonen, Vorverstärkern und akustisch behandelten Räumen, die Ihren Sound mit außergewöhnlicher Klarheit und Charakter einfangen.",
+      "features": [
+        "Mehrere Aufnahmeräume und Isolierkabinen",
+        "Vintage- und moderne Mikrofonsammlung",
+        "Premium analoge Signalketten",
+        "Hochauflösende digitale Aufnahme"
+      ]
+    },
+    "mixing": {
+      "title": "Mixing",
+      "description": "Professionelle Mixing-Services in akustisch optimierten Umgebungen unter Verwendung von Vintage-Analoggeräten und modernsten digitalen Tools.",
+      "features": [
+        "Analog-Digital-Hybrid-Mixing",
+        "Präzisionsabhörumgebungen",
+        "Umfangreiche Outboard-Gerätesammlung",
+        "Remote-Mixing verfügbar"
+      ]
+    },
+    "production": {
+      "title": "Produktion",
+      "description": "Komplette Musikproduktion vom Konzept bis zur Fertigstellung mit Zugang zu unserem Netzwerk erstklassiger Produzenten, Musiker und kreativer Mitarbeiter.",
+      "features": [
+        "Arrangement und Komposition",
+        "Koordination von Studiomusikern",
+        "Vintage- und moderne Instrumentensammlung",
+        "Kreative Leitung und Entwicklung"
+      ]
+    },
+    "mastering": {
+      "title": "Mastering",
+      "description": "Präzises Mastering in einer dedizierten Umgebung mit spezialisierter Ausrüstung und erfahrenen Ingenieuren für den letzten Schliff Ihrer Musik.",
+      "features": [
+        "Dedizierte Mastering-Suiten",
+        "Analoge und digitale Verarbeitung",
+        "Referenzklasse-Monitoring",
+        "Formatspezifische Optimierung"
+      ]
+    },
+    "collaboration": {
+      "title": "Künstlerkooperation",
+      "description": "Vernetzen Sie sich mit anderen Künstlern, Produzenten und Musikern in unserer kreativen Community. Hydra ist mehr als Studios – es ist ein Kollektiv kreativer Profis.",
+      "features": [
+        "Networking-Events",
+        "Kollaborative Arbeitsräume",
+        "Projektübergreifende Möglichkeiten",
+        "Community-Ressourcen"
+      ]
+    },
+    "residency": {
+      "title": "Studio-Residenz",
+      "description": "Langfristiger Studiozugang für Künstler und Produzenten, die eine kreative Heimatbasis mit allen benötigten technischen Ressourcen suchen.",
+      "features": [
+        "Flexible Buchungsvereinbarungen",
+        "Dedizierter Stauraum",
+        "24/7 Zugang möglich",
+        "Vorzugspreise"
+      ]
+    }
+  },
+  "Contact": {
+    "title": "Buchen Sie Ihre Session",
+    "subtitle": "Bereit, Ihr Projekt zum Leben zu erwecken? Kontaktieren Sie uns, um Studiozeit zu buchen oder Ihre Anforderungen mit unserem Team zu besprechen.",
+    "contactInfo": "Kontaktinformationen",
+    "contactDescription": "Füllen Sie das Formular aus und unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.",
+    "email": "E-Mail",
+    "location": "Standort",
+    "followUs": "Folgen Sie uns",
+    "nameLabel": "Ihr Name",
+    "emailLabel": "E-Mail-Adresse",
+    "phoneLabel": "Telefonnummer (optional)",
+    "projectLabel": "Projekttyp",
+    "studioLabel": "Bevorzugtes Studio (optional)",
+    "dateLabel": "Bevorzugte Termine (optional)",
+    "messageLabel": "Projektdetails",
+    "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt und Ihren Anforderungen...",
+    "selectProject": "Projekttyp auswählen",
+    "noPreference": "Keine Präferenz",
+    "projectRecording": "Aufnahme",
+    "projectMixing": "Mixing",
+    "projectMastering": "Mastering",
+    "projectProduction": "Vollständige Produktion",
+    "projectOther": "Sonstiges",
+    "studioAndreas": "Andreas \"Stone\" Johansson",
+    "studioCosta": "Costa Leon",
+    "studioSimon": "Simon Peyron",
+    "studioDavid": "David Fremberg",
+    "studioPeter": "Peter Zimny",
+    "studioJohan": "Johan Lundén",
+    "studioDenniz": "Denniz Jamm",
+    "studioThomas": "Thomas Wallén (Verlag)",
+    "privacyText": "Ich stimme der {link} zu und willige ein, bezüglich meiner Anfrage kontaktiert zu werden.",
+    "privacyLink": "Datenschutzrichtlinie",
+    "successMessage": "Ihre Nachricht wurde erfolgreich gesendet! Wir melden uns bald bei Ihnen.",
+    "errorMessage": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    "formErrorMessage": "Bitte korrigieren Sie die Fehler im Formular.",
+    "submitButton": "Anfrage senden",
+    "submitting": "Wird gesendet...",
+    "errorName": "Name ist erforderlich",
+    "errorEmail": "E-Mail ist erforderlich",
+    "errorEmailInvalid": "E-Mail ist ungültig",
+    "errorProject": "Bitte wählen Sie einen Projekttyp",
+    "errorMessage2": "Nachricht ist erforderlich",
+    "required": "*"
+  },
+  "Footer": {
+    "about": "Ein Premium-Musikstudiokollektiv, in dem künstlerische Vision und technische Exzellenz zusammentreffen.",
+    "quickLinks": "Schnelllinks",
+    "ourStudios": "Unsere Studios",
+    "services": "Leistungen",
+    "aboutUs": "Über uns",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "servicesTitle": "Leistungen",
+    "recording": "Aufnahme",
+    "mixing": "Mixing",
+    "mastering": "Mastering",
+    "production": "Produktion",
+    "studioResidency": "Studio-Residenz",
+    "contactTitle": "Kontakt",
+    "copyright": "© {year} Hydra Studios. Alle Rechte vorbehalten.",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "termsOfService": "Nutzungsbedingungen",
+    "cookiePolicy": "Cookie-Richtlinie"
+  },
+  "LanguageSwitcher": {
+    "label": "Sprache"
+  }
+}

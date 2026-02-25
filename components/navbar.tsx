@@ -5,10 +5,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useTranslations } from "next-intl"
+import LanguageSwitcher from "./language-switcher"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const t = useTranslations("Navbar")
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,7 +22,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Handle ESC key to close mobile menu
   useEffect(() => {
     const handleEscKey = (e: KeyboardEvent) => {
       if (e.key === "Escape" && mobileMenuOpen) {
@@ -31,7 +33,6 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", handleEscKey)
   }, [mobileMenuOpen])
 
-  // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden"
@@ -50,16 +51,15 @@ export default function Navbar() {
         isScrolled ? "bg-[#121212]/80 backdrop-blur-md py-3 shadow-lg" : "bg-transparent py-5",
       )}
     >
-      {/* Skip to content link */}
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-[#121212] focus:text-white focus:rounded"
       >
-        Skip to main content
+        {t("skipToContent")}
       </a>
 
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="relative z-10" aria-label="Hydra Studios - Home">
+        <Link href="/" className="relative z-10" aria-label={t("homeLabel")}>
           <Image
             src="/images/svg/hydra-logo-full-white.svg"
             alt="Hydra Studios"
@@ -69,46 +69,44 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8" aria-label="Main navigation">
           <Link
             href="#studios"
             className="text-white/80 hover:text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#556B2F] after:transition-all after:duration-300 hover:after:w-full text-sm uppercase tracking-wider font-medium transition-all duration-300"
           >
-            Studios
+            {t("studios")}
           </Link>
           <Link
             href="#about"
             className="text-white/80 hover:text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#556B2F] after:transition-all after:duration-300 hover:after:w-full text-sm uppercase tracking-wider font-medium transition-all duration-300"
           >
-            About
+            {t("about")}
           </Link>
           <Link
             href="#services"
             className="text-white/80 hover:text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#556B2F] after:transition-all after:duration-300 hover:after:w-full text-sm uppercase tracking-wider font-medium transition-all duration-300"
           >
-            Services
+            {t("services")}
           </Link>
+          <LanguageSwitcher />
           <Link
             href="#contact"
             className="bg-gradient-to-r from-[#556B2F] to-[#657d38] hover:from-[#657d38] hover:to-[#758e49] text-white px-6 py-2 rounded shadow-[0_0_15px_rgba(85,107,47,0.3)] hover:shadow-[0_0_20px_rgba(85,107,47,0.5)] text-sm uppercase tracking-wider font-medium transition-all duration-300"
           >
-            Book Now
+            {t("bookNow")}
           </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden p-3 rounded-md text-white z-10 focus:outline-none focus:ring-2 focus:ring-[#556B2F]"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
+          aria-label={t("toggleMenu")}
           aria-expanded={mobileMenuOpen}
           aria-controls="mobile-menu"
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Mobile Navigation */}
         <div
           id="mobile-menu"
           className={cn(
@@ -123,28 +121,29 @@ export default function Navbar() {
               className="text-white/80 hover:text-white transition-colors text-xl uppercase tracking-wider font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Studios
+              {t("studios")}
             </Link>
             <Link
               href="#about"
               className="text-white/80 hover:text-white transition-colors text-xl uppercase tracking-wider font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About
+              {t("about")}
             </Link>
             <Link
               href="#services"
               className="text-white/80 hover:text-white transition-colors text-xl uppercase tracking-wider font-medium"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Services
+              {t("services")}
             </Link>
+            <LanguageSwitcher />
             <Link
               href="#contact"
               className="bg-gradient-to-r from-[#556B2F] to-[#657d38] hover:from-[#657d38] hover:to-[#758e49] text-white px-8 py-3 rounded shadow-[0_0_15px_rgba(85,107,47,0.3)] hover:shadow-[0_0_20px_rgba(85,107,47,0.5)] text-xl uppercase tracking-wider font-medium transition-all duration-300 mt-4"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Book Now
+              {t("bookNow")}
             </Link>
           </nav>
         </div>
