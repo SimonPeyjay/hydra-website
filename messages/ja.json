@@ -145,6 +145,12 @@
       ]
     }
   },
+  "Music": {
+    "title": "私たちの作品を聴く",
+    "subtitle": "Hydra Studiosで活動する才能あるソングライター、プロデューサー、ミュージシャンによる厳選されたプロダクション集。",
+    "playerTitle": "Hydra Studios SpotifyプレイリストSpotify",
+    "caption": "Spotifyでさらに多くのトラックを発見"
+  },
   "Contact": {
     "title": "セッションを予約",
     "subtitle": "プロジェクトを実現する準備はできましたか？スタジオタイムの予約やチームとのご相談はこちらから。",

@@ -145,6 +145,12 @@
       ]
     }
   },
+  "Music": {
+    "title": "우리의 작업 듣기",
+    "subtitle": "Hydra Studios에서 활동하는 재능 있는 작곡가, 프로듀서, 뮤지션들의 엄선된 프로덕션 모음.",
+    "playerTitle": "Hydra Studios Spotify 플레이리스트",
+    "caption": "Spotify에서 더 많은 트랙 발견하기"
+  },
   "Contact": {
     "title": "세션 예약",
     "subtitle": "프로젝트를 실현할 준비가 되셨나요? 스튜디오 시간 예약이나 팀과의 상담을 위해 연락해 주세요.",

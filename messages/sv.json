@@ -145,6 +145,12 @@
       ]
     }
   },
+  "Music": {
+    "title": "Lyssna på vårt arbete",
+    "subtitle": "Ett urval av produktioner från våra talangfulla låtskrivare, producenter och musiker som arbetar i Hydra Studios.",
+    "playerTitle": "Hydra Studios spellista på Spotify",
+    "caption": "Lyssna på fler låtar direkt på Spotify"
+  },
   "Contact": {
     "title": "Boka din session",
     "subtitle": "Redo att förverkliga ditt projekt? Kontakta oss för att boka studiotid eller diskutera dina behov med vårt team.",

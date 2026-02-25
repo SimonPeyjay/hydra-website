@@ -145,6 +145,12 @@
       ]
     }
   },
+  "Music": {
+    "title": "Hören Sie unsere Arbeit",
+    "subtitle": "Eine kuratierte Auswahl an Produktionen der talentierten Songwriter, Produzenten und Musiker, die in den Hydra Studios arbeiten.",
+    "playerTitle": "Hydra Studios Playlist auf Spotify",
+    "caption": "Entdecken Sie mehr Tracks auf Spotify"
+  },
   "Contact": {
     "title": "Buchen Sie Ihre Session",
     "subtitle": "Bereit, Ihr Projekt zum Leben zu erwecken? Kontaktieren Sie uns, um Studiozeit zu buchen oder Ihre Anforderungen mit unserem Team zu besprechen.",
