@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server"
 import HeroSection from "@/components/hero-section"
 import StudioGallery from "@/components/studio-gallery"
 import AboutSection from "@/components/about-section"
+import TeamSection from "@/components/team-section"
 import ServicesSection from "@/components/services-section"
 import MusicSection from "@/components/music-section"
 import ContactSection from "@/components/contact-section"
@@ -22,6 +23,7 @@ export default async function Home({
       <HeroSection />
       <StudioGallery />
       <AboutSection />
+      <TeamSection />
       <ServicesSection />
       <MusicSection />
       <ContactSection />

@@ -12,7 +12,7 @@ export default function MusicSection() {
   const t = useTranslations("Music")
 
   return (
-    <section id="music" className="py-24 bg-[#121212] relative overflow-hidden">
+    <section id="music" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#556B2F]/4 blur-[200px]"></div>
 
       <div className="container mx-auto px-4">

@@ -10,6 +10,7 @@
     "studios": "Studios",
     "about": "Om oss",
     "services": "Tjänster",
+    "team": "Teamet",
     "bookNow": "Boka nu",
     "toggleMenu": "Öppna/stäng meny",
     "closeMenu": "Stäng meny"
@@ -145,6 +146,68 @@
       ]
     }
   },
+  "Team": {
+    "title": "Möt teamet",
+    "subtitle": "Människorna bakom musiken. Ett kollektiv av producenter, låtskrivare och musiker med en gemensam passion för ljud.",
+    "loves": "Älskar",
+    "hates": "Hatar",
+    "andreas": {
+      "name": "Andreas \"Stone\" Johansson",
+      "animal": "Hydras egen räv",
+      "description": "Stor flygel, mångårigt renommerad låtskrivare och producent. Fantastisk pianist och stökigt petnoga. I dubbelbemärkelse.",
+      "likes": "Editera, till en punkt där han aldrig slutar.",
+      "hates": "Att spara mejl i inkorgen."
+    },
+    "david": {
+      "name": "David Fremberg",
+      "animal": "Hydras flipper",
+      "description": "Med mångårig artist- och liveerfarenhet, står för flest förstärkare och liveelement i sina inspelningar.",
+      "likes": "KISS mer än något annat, och sin återfunna kärlek till tradjazz.",
+      "hates": "Att slänga mejl i inkorgen."
+    },
+    "denniz": {
+      "name": "Denniz Jamm",
+      "animal": "Hydras kobra",
+      "description": "Lugn, metodisk, nattuggla. Jobbar alltid nattskiftet. Denniz älskar att mixa och har ett särskilt öra för att få mixen att nå nya höjder.",
+      "likes": "Sovmorgon, nattklubben och att mixa dansmusik.",
+      "hates": "Kallt väder — flyr gärna iväg när det inte längre finns värme i Malmö."
+    },
+    "costa": {
+      "name": "Costa Leon",
+      "animal": "Hydras lemur",
+      "description": "Hydras egen DJ, med mångårig erfarenhet som producent och låtskrivare, men har även en artistkarriär vid sidan om sitt skapande. Costa har högt tempo men tar det ändå lugnt. Han är trots allt grek.",
+      "likes": "Att göra dansmusik.",
+      "hates": "Tidiga mornar. Men han tycks ändå alltid vara kvar till morgonen."
+    },
+    "simon": {
+      "name": "Simon Peyron",
+      "animal": "Hydras falk",
+      "description": "Även kallad \"kändis-Simon\", med epiteten \"bagare i barn-tv\" och metalsångare, är Simon en glad fläkt i Hydra. Med lång erfarenhet av produktion, mix och låtskrivande är Simon en nörd ut i fingerspetsarna.",
+      "likes": "Numera också att koda. ADHD.",
+      "hates": "Att denna hemsidan aldrig blir klar, men SNART!"
+    },
+    "peter": {
+      "name": "Peter Zimny",
+      "animal": "Hydras chimpans",
+      "description": "Officiella blåsmästare. Har det ett hål så blåser han i det — och får det att låta bra också. En av Sveriges mest anlitade multiinstrumentalister. Saxofon, flöjt, klarinett — you name it.",
+      "likes": "Vattenfasta, tennis, och att berätta om vattenfasta och tennis.",
+      "hates": "Återuppvärmd kyckling."
+    },
+    "johan": {
+      "name": "Johan Lundén",
+      "animal": "Hydras senaste tillskott",
+      "description": "Han har ännu inte tilldelats ett djur — ceremoni planeras under året. Johan har lång erfarenhet av låtskrivande och ljudbearbetning kopplat till film- och spelbranschen. Vi är väldigt glada att ha honom med i gänget.",
+      "likes": "Att göra stråkarrangemang.",
+      "hates": "Vet inte riktigt, han verkar hela tiden så glad."
+    },
+    "thomas": {
+      "name": "Thomas \"Tomme\" Wallén",
+      "animal": "Hydras Skalman",
+      "description": "Huspappan, den trygga fröken på en stökig rastgård. Thomas är oljan i maskineriet — ser till att låtar träffar artister och att artister faktiskt kommer hit då och då. Utan honom, inget Hydra.",
+      "likes": "Royaltyrapportering och att göra Excel-filer.",
+      "hates": "Royaltyrapportering och att göra Excel-filer — så nu har han ett system för det."
+    }
+  },
   "Music": {
     "title": "Lyssna på vårt arbete",
     "subtitle": "Ett urval av produktioner från våra talangfulla låtskrivare, producenter och musiker som arbetar i Hydra Studios.",
@@ -202,6 +265,7 @@
     "services": "Tjänster",
     "aboutUs": "Om oss",
     "contact": "Kontakt",
+    "team": "Teamet",
     "blog": "Blogg",
     "servicesTitle": "Tjänster",
     "recording": "Inspelning",
