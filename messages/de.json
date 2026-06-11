@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "title": "Hydra Studios | Premium-Musikstudiokollektiv in Malmö",
-    "description": "Ein Premium-Musikstudiokollektiv in Malmö, Schweden, wo künstlerische Vision und technische Exzellenz zusammentreffen. Buchen Sie Ihre Session noch heute.",
-    "ogDescription": "Ein Premium-Musikstudiokollektiv in Malmö, Schweden, wo künstlerische Vision und technische Exzellenz zusammentreffen."
+    "title": "Hydra Studios — Produzentenkollektiv in Malmö, Schweden",
+    "description": "Acht Songwriter, Produzenten und Musiker unter einem Dach in Malmö. Recording, Mixing, Mastering und Produktion in Räumen, gebaut von denen, die darin arbeiten.",
+    "ogDescription": "Ein Produzentenkollektiv in Malmö, Schweden — acht Songwriter, Produzenten und Musiker unter einem Dach."
   },
   "Navbar": {
     "skipToContent": "Zum Hauptinhalt springen",
@@ -16,78 +16,136 @@
     "closeMenu": "Menü schließen"
   },
   "Hero": {
-    "title": "Wo Vision auf klangliche Exzellenz trifft",
-    "subtitle": "Ein Premium-Kollektiv erstklassiger Aufnahmestudios, entworfen für Künstler, die nur das Beste verlangen.",
-    "exploreStudios": "Studios entdecken",
+    "subtitle": "Hydra — das sind acht Songwriter, Produzenten und Musiker unter einem Dach: Räume voller Analog-Equipment und eine Küche, in der die meisten Songs tatsächlich beginnen.",
+    "exploreStudios": "Die Räume ansehen",
     "bookSession": "Session buchen",
     "exploreLabel": "Unsere Studios entdecken",
     "bookLabel": "Eine Aufnahmesession buchen",
     "scrollLabel": "Zum Studiobereich scrollen",
-    "bgAlt": "Hydra Studios Flur"
+    "bgAlt": "Hydra Studios Flur",
+    "kicker": "Produzentenkollektiv — Malmö, Schweden",
+    "titleA": "Wo Musik",
+    "titleB": "<i>entsteht</i>.",
+    "scrollHint": "Scrollen"
   },
   "Studios": {
-    "title": "Unsere Premium-Studios",
-    "subtitle": "Entdecken Sie unsere Sammlung sorgfältig gestalteter Aufnahmeräume, jeder mit eigenem Charakter und eigenen Möglichkeiten.",
+    "title": "Unsere Studios",
+    "subtitle": "Fünf persönliche Studios und die Räume dazwischen — jeder Raum abgestimmt von dem Kopf, der darin arbeitet. Keine zwei klingen gleich. Genau das ist der Punkt.",
     "viewDetails": "Details für {name} anzeigen",
     "closeModal": "Schließen",
-    "features": "Ausstattung",
-    "bookStudio": "Dieses Studio buchen",
+    "features": "Im Raum",
+    "bookStudio": "Diesen Raum buchen",
     "studioImages": "Studiobilder",
     "andreas": {
       "name": "Andreas Studio",
-      "description": "Eine geräumige Aufnahmeumgebung mit modernster Akustik und Vintage-Equipment.",
-      "features": ["Neve-Konsole", "Aufnahmeraum", "Isolierkabine", "Vintage-Mikrofone"],
-      "images": ["Andreas Studio Hauptraum", "Andreas Studio Equipment", "Andreas Studio Mixbereich", "Andreas Studio Aufnahmeraum"]
+      "description": "Der große Raum. Eine Neve-Konsole im Zentrum, ein echter Live-Raum und das Ohr eines Konzertpianisten hinter jeder Entscheidung.",
+      "features": [
+        "Neve-Konsole",
+        "Aufnahmeraum",
+        "Isolierkabine",
+        "Vintage-Mikrofone"
+      ],
+      "images": [
+        "Andreas Studio Hauptraum",
+        "Andreas Studio Equipment",
+        "Andreas Studio Mixbereich",
+        "Andreas Studio Aufnahmeraum"
+      ]
     },
     "costa": {
       "name": "Costa Studio",
-      "description": "Intimer Aufnahmeraum mit Premium-Akustik und einer warmen, einladenden Atmosphäre.",
-      "features": ["SSL-Konsole", "Akustikbehandlung", "Vintage-Synthesizer", "Schlagzeug"],
-      "images": ["Costa Studio", "Costa Studio Equipment"]
+      "description": "Kleiner Raum, hohes Tempo. Warme Akustik, eine SSL und ein steter Strom von Dance-Platten im Entstehen.",
+      "features": [
+        "SSL-Konsole",
+        "Akustikbehandlung",
+        "Vintage-Synthesizer",
+        "Schlagzeug"
+      ],
+      "images": [
+        "Costa Studio",
+        "Costa Studio Equipment"
+      ]
     },
     "david": {
       "name": "David Studio",
-      "description": "Moderne Produktionssuite mit modernster Digitaltechnik und analoger Wärme.",
-      "features": ["API-Konsole", "Modulare Synthesizer", "Gitarrensammlung", "Mastering-Kette"],
-      "images": ["David Studio Hauptraum", "David Studio Equipment"]
+      "description": "Eine API-Konsole, Modularsynths und eine Gitarrensammlung mit echter Bühnenerfahrung. Analoge Wärme in moderner Geschwindigkeit.",
+      "features": [
+        "API-Konsole",
+        "Modulare Synthesizer",
+        "Gitarrensammlung",
+        "Mastering-Kette"
+      ],
+      "images": [
+        "David Studio Hauptraum",
+        "David Studio Equipment"
+      ]
     },
     "dennis": {
       "name": "Dennis Studio",
-      "description": "Spezialisierte Mix- und Mastering-Suite mit makelloser Abhörumgebung.",
-      "features": ["Mastering-Konsole", "Referenzmonitore", "Analoge EQs", "Vintage-Kompressoren"],
-      "images": ["Dennis Studio Hauptraum", "Dennis Studio Equipment"]
+      "description": "Die Nachtschicht. Eine makellose Mixing- und Mastering-Suite, in der Platten ihre letzten zehn Prozent finden.",
+      "features": [
+        "Mastering-Konsole",
+        "Referenzmonitore",
+        "Analoge EQs",
+        "Vintage-Kompressoren"
+      ],
+      "images": [
+        "Dennis Studio Hauptraum",
+        "Dennis Studio Equipment"
+      ]
     },
     "simon": {
       "name": "Simon Studio",
-      "description": "Kreativer Produktionsraum mit einer Mischung aus Vintage- und modernem Equipment für einzigartige Klangtexturen.",
-      "features": ["Analoge Synthesizer", "Boutique-Outboard", "Gesangskabine", "Maßgeschneiderte Akustik"],
-      "images": ["Simon Studio Hauptraum", "Simon Studio Equipment"]
+      "description": "Das Labor. Analogsynths, Boutique-Outboard und maßgeschneiderte Akustik — gebaut für Sounds, die es noch nicht gibt.",
+      "features": [
+        "Analoge Synthesizer",
+        "Boutique-Outboard",
+        "Gesangskabine",
+        "Maßgeschneiderte Akustik"
+      ],
+      "images": [
+        "Simon Studio Hauptraum",
+        "Simon Studio Equipment"
+      ]
     },
     "common": {
       "name": "Gemeinschaftsbereiche",
-      "description": "Gemeinschaftsräume für Zusammenarbeit, Entspannung und Inspiration.",
-      "features": ["Küche", "Lounge", "Besprechungsraum", "Flur"],
-      "images": ["Flur", "Küche", "Thomas Büro", "Peter Studio", "Plack-Bereich"]
-    }
+      "description": "Der Raum zwischen den Türen. Küche, Lounge und Flur — wo Ideen den Besitzer wechseln und die Hälfte des Songwritings tatsächlich passiert.",
+      "features": [
+        "Küche",
+        "Lounge",
+        "Besprechungsraum",
+        "Flur"
+      ],
+      "images": [
+        "Flur",
+        "Küche",
+        "Thomas Büro",
+        "Peter Studio",
+        "Plack-Bereich"
+      ]
+    },
+    "label": "Die Räume",
+    "titleA": "Wähl eine <i>Tür</i>."
   },
   "About": {
-    "title": "Über Hydra",
-    "paragraph1": "Hydra ist ein Kollektiv erstklassiger Aufnahmestudios, gegründet auf einem einfachen Prinzip: Räume zu schaffen, in denen künstlerische Vision und technische Exzellenz zusammentreffen.",
-    "paragraph2": "Unsere Studios sind mehr als nur Räume mit Equipment – sie sind sorgfältig gestaltete Umgebungen, die Kreativität inspirieren und den perfekten Sound einfangen. Jeder Raum hat seinen eigenen Charakter, seine eigene Akustik und Ausstattung, sodass Künstler die perfekte Umgebung für ihr Projekt finden.",
-    "quote": "\"Wir haben Hydra gebaut, um das Studio zu sein, in dem wir schon immer arbeiten wollten – wo technische Exzellenz auf kreative Freiheit trifft.\"",
-    "paragraph3": "Was Hydra auszeichnet, ist unser kollaborativer Ansatz. Als Kollektiv bringen wir einige der talentiertesten Tontechniker, Produzenten und Studiodesigner der Branche zusammen, alle vereint durch eine Leidenschaft für außergewöhnlichen Klang und das Engagement, Künstlern bei der Verwirklichung ihrer Vision zu helfen.",
-    "thomasAlt": "Thomas Büro",
-    "davidAlt": "David Studio",
-    "andreasAlt": "Andreas Studio",
-    "kitchenAlt": "Küche"
+    "paragraph1": "Hydra begann mit einer einfachen Idee: eine Gruppe von Produzenten, die sich wirklich mögen, unter ein Dach bringen — und die Räume den Rest erledigen lassen.",
+    "paragraph2": "Jedes Studio im Haus ist von der Person gebaut und abgestimmt, die darin arbeitet. Keine zwei Räume klingen gleich, und kein Projekt wird in eine Form gepresst — du wählst den Raum und den Kopf, der zur Musik passt.",
+    "quote": "Wir haben das Studio gebaut, in dem wir immer arbeiten wollten. Dann haben wir noch fünf gebaut.",
+    "paragraph3": "Was Hydra aber wirklich ausmacht, ist der Flur zwischen den Türen. Songs reisen hier — eine Topline aus einem Raum, ein Mix aus einem anderen, ein Saxofon von weiter hinten. Du buchst ein Studio; du bekommst ein Kollektiv.",
+    "thomasAlt": "Thomas' Büro",
+    "davidAlt": "Davids Studio",
+    "andreasAlt": "Andreas' Studio",
+    "kitchenAlt": "Die Küche",
+    "label": "Das Haus",
+    "titleA": "Mehr als",
+    "titleB": "<i>Räume</i>."
   },
   "Services": {
-    "title": "Unsere Leistungen",
-    "subtitle": "Von Aufnahme und Mixing bis hin zu Produktion und Mastering bieten wir ein umfassendes Leistungsangebot, um Ihre musikalische Vision zum Leben zu erwecken.",
-    "learnMore": "Mehr erfahren",
+    "subtitle": "Alles, was eine Platte braucht, unter einem Dach — und ein Kopf, der jede Etappe behandelt, als wäre sie der ganze Job.",
     "recording": {
       "title": "Aufnahme",
-      "description": "Modernste Aufnahmeeinrichtungen mit Premium-Mikrofonen, Vorverstärkern und akustisch behandelten Räumen, die Ihren Sound mit außergewöhnlicher Klarheit und Charakter einfangen.",
+      "description": "Akustisch behandelte Räume, ein tiefer Mikrofonschrank und analoge Signalketten, die allem schmeicheln, was du vor sie stellst. Komm mit einem Song; geh mit einer Platte.",
       "features": [
         "Mehrere Aufnahmeräume und Isolierkabinen",
         "Vintage- und moderne Mikrofonsammlung",
@@ -97,7 +155,7 @@
     },
     "mixing": {
       "title": "Mixing",
-      "description": "Professionelle Mixing-Services in akustisch optimierten Umgebungen unter Verwendung von Vintage-Analoggeräten und modernsten digitalen Tools.",
+      "description": "Hybrid-Mixing in präzise abgestimmten Räumen — analoges Herz, digitaler Recall. Wir bringen einen Mix an den Punkt, an dem du nicht aufhören kannst, ihn anzuhören.",
       "features": [
         "Analog-Digital-Hybrid-Mixing",
         "Präzisionsabhörumgebungen",
@@ -107,7 +165,7 @@
     },
     "production": {
       "title": "Produktion",
-      "description": "Komplette Musikproduktion vom Konzept bis zur Fertigstellung mit Zugang zu unserem Netzwerk erstklassiger Produzenten, Musiker und kreativer Mitarbeiter.",
+      "description": "Komplette Produktion vom ersten Summen bis zur letzten Session — Arrangement, Musiker, Instrumente und eine kreative Richtung, die den Song schützt.",
       "features": [
         "Arrangement und Komposition",
         "Koordination von Studiomusikern",
@@ -117,7 +175,7 @@
     },
     "mastering": {
       "title": "Mastering",
-      "description": "Präzises Mastering in einer dedizierten Umgebung mit spezialisierter Ausrüstung und erfahrenen Ingenieuren für den letzten Schliff Ihrer Musik.",
+      "description": "Das letzte Paar Ohren. Dedizierte Suiten, Referenz-Monitoring und formatspezifische Master, die jeden Lautsprecher überleben.",
       "features": [
         "Dedizierte Mastering-Suiten",
         "Analoge und digitale Verarbeitung",
@@ -127,7 +185,7 @@
     },
     "collaboration": {
       "title": "Künstlerkooperation",
-      "description": "Vernetzen Sie sich mit anderen Künstlern, Produzenten und Musikern in unserer kreativen Community. Hydra ist mehr als Studios – es ist ein Kollektiv kreativer Profis.",
+      "description": "Hydra ist mehr als Räume zur Miete — es ist ein arbeitendes Kollektiv. Klink dich in unser Netzwerk aus Songwritern, Musikern und Produzenten ein — oder bleib einfach zum Mittagessen.",
       "features": [
         "Networking-Events",
         "Kollaborative Arbeitsräume",
@@ -137,18 +195,21 @@
     },
     "residency": {
       "title": "Studio-Residenz",
-      "description": "Langfristiger Studiozugang für Künstler und Produzenten, die eine kreative Heimatbasis mit allen benötigten technischen Ressourcen suchen.",
+      "description": "Eine kreative Homebase. Langfristiger Zugang, dein Equipment genau dort, wo du es gelassen hast, und sieben Nachbarn, die zufällig auch Platten machen.",
       "features": [
         "Flexible Buchungsvereinbarungen",
         "Dedizierter Stauraum",
         "24/7 Zugang möglich",
         "Vorzugspreise"
       ]
-    }
+    },
+    "label": "Was wir machen",
+    "titleA": "Von der Idee zum",
+    "titleB": "fertigen <i>Master</i>.",
+    "cta": "Projekt starten"
   },
   "Team": {
-    "title": "Das Team",
-    "subtitle": "Die Menschen hinter der Musik. Ein Kollektiv aus Produzenten, Songwritern und Musikern, vereint durch eine gemeinsame Leidenschaft für Sound.",
+    "subtitle": "Produzenten, Songwriter und Multiinstrumentalisten — jeder mit eigenem Raum, eigenem Tier und starken Meinungen zum Thema Posteingang.",
     "loves": "Liebt",
     "hates": "Hasst",
     "andreas": {
@@ -206,22 +267,27 @@
       "description": "Der Hauspapa, die beruhigende Lehrerin auf einem chaotischen Schulhof. Thomas ist das Öl im Getriebe — sorgt dafür, dass Songs Künstler erreichen und dass Künstler auch tatsächlich ab und zu vorbeikommen. Ohne ihn kein Hydra.",
       "likes": "Tantiemenabrechnung und Excel-Dateien erstellen.",
       "hates": "Tantiemenabrechnung und Excel-Dateien erstellen — deshalb hat er jetzt ein System dafür."
-    }
+    },
+    "label": "Die Köpfe",
+    "titleA": "Acht Köpfe.",
+    "titleB": "Eine <i>Hydra</i>."
   },
   "Music": {
-    "title": "Hören Sie unsere Arbeit",
-    "subtitle": "Eine kuratierte Auswahl an Produktionen der talentierten Songwriter, Produzenten und Musiker, die in den Hydra Studios arbeiten.",
+    "subtitle": "Eine wachsende Playlist mit Musik, die im Haus geschrieben, produziert oder gemischt wurde.",
     "playerTitle": "Hydra Studios Playlist auf Spotify",
-    "caption": "Entdecken Sie mehr Tracks auf Spotify"
+    "caption": "Wird aktualisiert, sobald die Arbeit das Haus verlässt",
+    "label": "Der Output",
+    "titleA": "Hör es dir",
+    "titleB": "selbst <i>an</i>.",
+    "playerLabel": "Ausgewählte Arbeiten"
   },
   "Contact": {
-    "title": "Buchen Sie Ihre Session",
-    "subtitle": "Bereit, Ihr Projekt zum Leben zu erwecken? Kontaktieren Sie uns, um Studiozeit zu buchen oder Ihre Anforderungen mit unserem Team zu besprechen.",
+    "subtitle": "Erzähl uns vom Projekt und wir bringen dich mit dem richtigen Raum zusammen — und dem richtigen Kopf. Wir antworten innerhalb von 24 Stunden.",
     "contactInfo": "Kontaktinformationen",
-    "contactDescription": "Füllen Sie das Formular aus und unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.",
+    "contactDescription": "Lieber per E-Mail? Schreib uns direkt — oder nutz das Formular, und die richtige Person meldet sich innerhalb von 24 Stunden.",
     "email": "E-Mail",
-    "location": "Standort",
-    "followUs": "Folgen Sie uns",
+    "location": "Das Haus",
+    "followUs": "Folge uns",
     "nameLabel": "Ihr Name",
     "emailLabel": "E-Mail-Adresse",
     "phoneLabel": "Telefonnummer (optional)",
@@ -256,17 +322,19 @@
     "errorEmailInvalid": "E-Mail ist ungültig",
     "errorProject": "Bitte wählen Sie einen Projekttyp",
     "errorMessage2": "Nachricht ist erforderlich",
-    "required": "*"
+    "required": "*",
+    "label": "Buchung",
+    "titleA": "Komm und mach",
+    "titleB": "<i>etwas</i>."
   },
   "Footer": {
-    "about": "Ein Premium-Musikstudiokollektiv, in dem künstlerische Vision und technische Exzellenz zusammentreffen.",
-    "quickLinks": "Schnelllinks",
-    "ourStudios": "Unsere Studios",
-    "services": "Leistungen",
-    "aboutUs": "Über uns",
-    "contact": "Kontakt",
-    "team": "Das Team",
-    "blog": "Blog",
+    "about": "Ein Produzentenkollektiv in Malmö, Schweden. Acht Köpfe unter einem Dach.",
+    "quickLinks": "Index",
+    "ourStudios": "Die Räume",
+    "services": "Was wir machen",
+    "aboutUs": "Das Haus",
+    "contact": "Buchung",
+    "team": "Die Köpfe",
     "servicesTitle": "Leistungen",
     "recording": "Aufnahme",
     "mixing": "Mixing",
@@ -276,10 +344,21 @@
     "contactTitle": "Kontakt",
     "copyright": "© {year} Hydra Studios. Alle Rechte vorbehalten.",
     "privacyPolicy": "Datenschutzrichtlinie",
-    "termsOfService": "Nutzungsbedingungen",
-    "cookiePolicy": "Cookie-Richtlinie"
+    "termsOfService": "Nutzungsbedingungen"
   },
   "LanguageSwitcher": {
     "label": "Sprache"
+  },
+  "Marquee": {
+    "items": [
+      "Recording",
+      "Mixing",
+      "Mastering",
+      "Produktion",
+      "Songwriting",
+      "Audio-Post",
+      "Malmö",
+      "Unter einem Dach"
+    ]
   }
 }

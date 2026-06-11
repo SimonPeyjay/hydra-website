@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "title": "Hydra Studios | Premium Music Studio Collective in Malmö",
-    "description": "A premium music studio collective in Malmö, Sweden where artistic vision and technical excellence converge. Book your session today.",
-    "ogDescription": "A premium music studio collective in Malmö, Sweden where artistic vision and technical excellence converge."
+    "title": "Hydra Studios — Producer Collective in Malmö, Sweden",
+    "description": "Eight writers, producers and musicians under one roof in Malmö. Recording, mixing, mastering and production in rooms built by the people who use them.",
+    "ogDescription": "A producer collective in Malmö, Sweden — eight writers, producers and musicians under one roof."
   },
   "Navbar": {
     "skipToContent": "Skip to main content",
@@ -11,83 +11,95 @@
     "about": "About",
     "services": "Services",
     "team": "Team",
-    "bookNow": "Book Now",
+    "bookNow": "Book now",
     "toggleMenu": "Toggle menu",
     "closeMenu": "Close menu"
   },
   "Hero": {
-    "title": "Where Vision Meets Sonic Excellence",
-    "subtitle": "A premium collective of world-class recording studios designed for artists who demand nothing but the best.",
-    "exploreStudios": "Explore Studios",
-    "bookSession": "Book a Session",
+    "kicker": "Producer collective — Malmö, Sweden",
+    "titleA": "Where music",
+    "titleB": "gets <i>made</i>.",
+    "subtitle": "Hydra is eight writers, producers and musicians under one roof — rooms full of analog gear, and a kitchen where most of the songs actually start.",
+    "exploreStudios": "See the rooms",
+    "bookSession": "Book a session",
     "exploreLabel": "Explore our studios",
     "bookLabel": "Book a recording session",
     "scrollLabel": "Scroll to studios section",
-    "bgAlt": "Hydra Studios Hallway"
+    "scrollHint": "Scroll",
+    "bgAlt": "The hallway at Hydra Studios"
+  },
+  "Marquee": {
+    "items": ["Recording", "Mixing", "Mastering", "Production", "Songwriting", "Audio Post", "Malmö", "Under one roof"]
   },
   "Studios": {
-    "title": "Our Premium Studios",
-    "subtitle": "Explore our collection of meticulously designed recording spaces, each with its own unique character and capabilities.",
+    "label": "The Rooms",
+    "title": "Our studios",
+    "titleA": "Pick a <i>door</i>.",
+    "subtitle": "Five personal studios and the spaces between them — every room tuned by the head who works in it. No two sound the same. That's the point.",
     "viewDetails": "View details for {name}",
     "closeModal": "Close modal",
-    "features": "Features",
-    "bookStudio": "Book This Studio",
+    "features": "In the room",
+    "bookStudio": "Book this room",
     "studioImages": "Studio images",
     "andreas": {
       "name": "Andreas Studio",
-      "description": "A spacious recording environment with state-of-the-art acoustics and vintage equipment.",
+      "description": "The big room. A Neve console at the centre, a proper live room, and a grand pianist's ear behind every decision made in it.",
       "features": ["Neve Console", "Live Room", "Isolation Booth", "Vintage Microphones"],
       "images": ["Andreas Studio Main Room", "Andreas Studio Equipment", "Andreas Studio Mixing Area", "Andreas Studio Live Room"]
     },
     "costa": {
       "name": "Costa Studio",
-      "description": "Intimate recording space with premium acoustics and a warm, inviting atmosphere.",
+      "description": "Small room, big tempo. Warm acoustics, an SSL, and a steady supply of dance records in the making.",
       "features": ["SSL Console", "Acoustic Treatment", "Vintage Synths", "Drum Kit"],
       "images": ["Costa Studio", "Costa Studio Equipment"]
     },
     "david": {
       "name": "David Studio",
-      "description": "Modern production suite with cutting-edge digital equipment and analog warmth.",
+      "description": "An API console, modular synths and a guitar collection with real stage mileage. Analog warmth at modern speed.",
       "features": ["API Console", "Modular Synths", "Guitar Collection", "Mastering Chain"],
       "images": ["David Studio Main Room", "David Studio Equipment"]
     },
     "dennis": {
       "name": "Dennis Studio",
-      "description": "Specialized mixing and mastering suite with pristine monitoring environment.",
+      "description": "The night shift. A pristine mixing and mastering suite where records go to find their last ten percent.",
       "features": ["Mastering Console", "Reference Monitors", "Analog EQs", "Vintage Compressors"],
       "images": ["Dennis Studio Main Room", "Dennis Studio Equipment"]
     },
     "simon": {
       "name": "Simon Studio",
-      "description": "Creative production space with a blend of vintage and modern equipment for unique sonic textures.",
+      "description": "The lab. Analog synths, boutique outboard and custom acoustics — built for sounds that don't exist yet.",
       "features": ["Analog Synths", "Boutique Outboard", "Vocal Booth", "Custom Acoustics"],
       "images": ["Simon Studio Main Room", "Simon Studio Equipment"]
     },
     "common": {
       "name": "Common Areas",
-      "description": "Shared spaces designed for collaboration, relaxation, and inspiration.",
+      "description": "The space between the doors. Kitchen, lounge and hallway — where ideas get traded and half the songwriting actually happens.",
       "features": ["Kitchen", "Lounge", "Meeting Room", "Hallway"],
       "images": ["Hallway", "Kitchen", "Thomas Office", "Peter Studio", "Plack Area"]
     }
   },
   "About": {
-    "title": "About Hydra",
-    "paragraph1": "Hydra is a collective of world-class recording studios founded on a simple principle: to create spaces where artistic vision and technical excellence converge.",
-    "paragraph2": "Our studios are more than just rooms with equipment—they're carefully crafted environments designed to inspire creativity and capture the perfect sound. Each space has its own unique character, acoustics, and equipment selection, allowing artists to find the perfect match for their project.",
-    "quote": "\"We built Hydra to be the kind of studio we always wanted to work in—where technical excellence meets creative freedom.\"",
-    "paragraph3": "What sets Hydra apart is our collaborative approach. As a collective, we bring together some of the industry's most talented engineers, producers, and studio designers, all united by a passion for exceptional sound and a commitment to helping artists realize their vision.",
-    "thomasAlt": "Thomas Office",
-    "davidAlt": "David Studio",
-    "andreasAlt": "Andreas Studio",
-    "kitchenAlt": "Kitchen"
+    "label": "The House",
+    "titleA": "More than",
+    "titleB": "<i>rooms</i>.",
+    "paragraph1": "Hydra started with a simple idea: put a group of producers who genuinely like each other under one roof, and let the rooms do the rest.",
+    "paragraph2": "Every studio in the house is built and tuned by the person who works in it. No two rooms sound alike, and no project gets squeezed into a mould — you pick the room, and the head, that fits the music.",
+    "quote": "We built the studio we always wanted to work in. Then we built five more.",
+    "paragraph3": "But what really makes Hydra is the hallway between the doors. Songs travel here — a topline from one room, a mix from another, a saxophone from down the hall. You book a studio; you get a collective.",
+    "thomasAlt": "Thomas's office",
+    "davidAlt": "David's studio",
+    "andreasAlt": "Andreas's studio",
+    "kitchenAlt": "The kitchen"
   },
   "Services": {
-    "title": "Our Services",
-    "subtitle": "From recording and mixing to production and mastering, we offer a complete suite of services to bring your musical vision to life.",
-    "learnMore": "Learn More",
+    "label": "What We Do",
+    "titleA": "First idea to",
+    "titleB": "final <i>master</i>.",
+    "subtitle": "Everything a record needs under one roof — and a head who treats each stage like it's the whole job.",
+    "cta": "Start a project",
     "recording": {
       "title": "Recording",
-      "description": "State-of-the-art recording facilities with premium microphones, preamps, and acoustically-treated spaces designed to capture your sound with exceptional clarity and character.",
+      "description": "Acoustically treated rooms, a deep microphone locker and analog signal chains that flatter whatever you put in front of them. Come in with a song; leave with a record.",
       "features": [
         "Multiple live rooms and isolation booths",
         "Vintage and modern microphone collection",
@@ -97,7 +109,7 @@
     },
     "mixing": {
       "title": "Mixing",
-      "description": "Expert mixing services in acoustically-optimized environments, utilizing both vintage analog gear and cutting-edge digital tools to bring your vision to life.",
+      "description": "Hybrid mixing in precision-tuned rooms — analog heart, digital recall. We take a mix to the point where you can't stop playing it back.",
       "features": [
         "Analog and digital hybrid mixing",
         "Precision monitoring environments",
@@ -107,7 +119,7 @@
     },
     "production": {
       "title": "Production",
-      "description": "Full-service music production from concept to completion, with access to our network of world-class producers, musicians, and creative collaborators.",
+      "description": "Full production from first hum to final session — arrangement, musicians, instruments and a creative direction that protects the song.",
       "features": [
         "Arrangement and composition",
         "Session musicians coordination",
@@ -117,7 +129,7 @@
     },
     "mastering": {
       "title": "Mastering",
-      "description": "Precision mastering services in a dedicated environment with specialized equipment and experienced engineers to give your music its final polish.",
+      "description": "The last set of ears. Dedicated suites, reference monitoring and format-specific masters that survive every speaker they meet.",
       "features": [
         "Dedicated mastering suites",
         "Analog and digital processing",
@@ -127,7 +139,7 @@
     },
     "collaboration": {
       "title": "Artist Collaboration",
-      "description": "Connect with other artists, producers, and musicians in our creative community. Hydra is more than studios—it's a collective of creative professionals.",
+      "description": "Hydra is more than rooms for rent — it's a working collective. Plug into our network of writers, players and producers, or just stay for lunch.",
       "features": [
         "Networking events",
         "Collaborative workspaces",
@@ -137,7 +149,7 @@
     },
     "residency": {
       "title": "Studio Residency",
-      "description": "Long-term studio access for artists and producers looking for a creative home base with all the technical resources needed for extended projects.",
+      "description": "A creative home base. Long-term access, your gear exactly where you left it, and seven neighbours who happen to make records too.",
       "features": [
         "Flexible booking arrangements",
         "Dedicated storage space",
@@ -147,8 +159,10 @@
     }
   },
   "Team": {
-    "title": "Meet the Team",
-    "subtitle": "The people behind the music. A collective of producers, songwriters, and musicians united by a shared passion for sound.",
+    "label": "The Heads",
+    "titleA": "Eight heads.",
+    "titleB": "One <i>Hydra</i>.",
+    "subtitle": "Producers, writers and multi-instrumentalists — each with their own room, their own animal, and strong opinions about inbox management.",
     "loves": "Loves",
     "hates": "Hates",
     "andreas": {
@@ -209,19 +223,24 @@
     }
   },
   "Music": {
-    "title": "Listen to Our Work",
-    "subtitle": "A curated selection of productions from the talented songwriters, producers, and musicians working at Hydra Studios.",
+    "label": "The Output",
+    "titleA": "Hear it for",
+    "titleB": "<i>yourself</i>.",
+    "subtitle": "A rolling playlist of work that's been written, produced or mixed in the house.",
+    "playerLabel": "Selected works",
     "playerTitle": "Hydra Studios playlist on Spotify",
-    "caption": "Discover more tracks on Spotify"
+    "caption": "Updated as the work leaves the building"
   },
   "Contact": {
-    "title": "Book Your Session",
-    "subtitle": "Ready to bring your project to life? Get in touch to book studio time or discuss your needs with our team.",
+    "label": "Booking",
+    "titleA": "Come make",
+    "titleB": "<i>something</i>.",
+    "subtitle": "Tell us about the project and we'll match you with the right room — and the right head. We answer within 24 hours.",
     "contactInfo": "Contact Information",
-    "contactDescription": "Fill out the form and our team will get back to you within 24 hours.",
+    "contactDescription": "Prefer email? Write to us directly — or use the form, and the right person will get back to you within 24 hours.",
     "email": "Email",
-    "location": "Location",
-    "followUs": "Follow Us",
+    "location": "The house",
+    "followUs": "Follow us",
     "nameLabel": "Your Name",
     "emailLabel": "Email Address",
     "phoneLabel": "Phone Number (optional)",
@@ -259,14 +278,13 @@
     "required": "*"
   },
   "Footer": {
-    "about": "A premium music studio collective where artistic vision and technical excellence converge.",
-    "quickLinks": "Quick Links",
-    "ourStudios": "Our Studios",
-    "services": "Services",
-    "aboutUs": "About Us",
-    "contact": "Contact",
-    "team": "The Team",
-    "blog": "Blog",
+    "about": "A producer collective in Malmö, Sweden. Eight heads under one roof.",
+    "quickLinks": "Index",
+    "ourStudios": "The Rooms",
+    "services": "What We Do",
+    "aboutUs": "The House",
+    "contact": "Booking",
+    "team": "The Heads",
     "servicesTitle": "Services",
     "recording": "Recording",
     "mixing": "Mixing",
@@ -276,8 +294,7 @@
     "contactTitle": "Contact",
     "copyright": "© {year} Hydra Studios. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "cookiePolicy": "Cookie Policy"
+    "termsOfService": "Terms of Service"
   },
   "LanguageSwitcher": {
     "label": "Language"

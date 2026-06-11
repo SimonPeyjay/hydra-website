@@ -1,24 +1,15 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import Image from "next/image"
-import { useInView } from "react-intersection-observer"
-import { Mic, Sliders, Music, Headphones, Users, Calendar } from "lucide-react"
+import Link from "next/link"
+import { Plus } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"
+import SectionHeader from "./section-header"
+import { Reveal } from "./motion"
 
 const serviceKeys = ["recording", "mixing", "production", "mastering", "collaboration", "residency"] as const
-
-const serviceIcons: Record<string, React.ReactNode> = {
-  recording: <Mic className="w-6 h-6" />,
-  mixing: <Sliders className="w-6 h-6" />,
-  production: <Music className="w-6 h-6" />,
-  mastering: <Headphones className="w-6 h-6" />,
-  collaboration: <Users className="w-6 h-6" />,
-  residency: <Calendar className="w-6 h-6" />,
-}
 
 const serviceImages: Record<string, string> = {
   recording: "/images/photos/Andreas_studio.webp",
@@ -30,100 +21,121 @@ const serviceImages: Record<string, string> = {
 }
 
 export default function ServicesSection() {
-  const [activeKey, setActiveKey] = useState<string>(serviceKeys[0])
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  })
+  const [openKey, setOpenKey] = useState<string | null>(serviceKeys[0])
   const t = useTranslations("Services")
 
   return (
-    <section id="services" className="py-24 bg-[#121212]">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">{t("title")}</h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">{t("subtitle")}</p>
-        </div>
+    <section id="services" className="py-24 md:py-36 bg-ink scroll-mt-16">
+      <div className="mx-auto max-w-[1600px] px-5 md:px-10">
+        <SectionHeader
+          index="04"
+          label={t("label")}
+          title={[
+            t("titleA"),
+            t.rich("titleB", { i: (c) => <i className="text-brass">{c}</i> }),
+          ]}
+          sub={t("subtitle")}
+        />
 
-        <div
-          ref={ref}
-          className={cn(
-            "transition-all duration-700 ease-out",
-            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
-          )}
-        >
-          <div className="flex overflow-x-auto md:flex-wrap md:justify-center gap-2 mb-12 pb-2 md:pb-0 scrollbar-hide">
-            {serviceKeys.map((key) => (
-              <button
+        <div>
+          {serviceKeys.map((key, index) => {
+            const isOpen = openKey === key
+            const features = t.raw(`${key}.features`) as string[]
+            return (
+              <Reveal
                 key={key}
+                delay={index * 50}
                 className={cn(
-                  "px-4 py-2 rounded-full text-sm md:text-base transition-all duration-300",
-                  activeKey === key
-                    ? "bg-gradient-to-r from-[#556B2F] to-[#657d38] text-white shadow-[0_0_15px_rgba(85,107,47,0.3)]"
-                    : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white",
+                  "border-t border-line",
+                  index === serviceKeys.length - 1 && "border-b",
                 )}
-                onClick={() => setActiveKey(key)}
               >
-                <span className="flex items-center gap-2 whitespace-nowrap">
-                  <span className="hidden md:inline">{serviceIcons[key]}</span>
-                  <span>{t(`${key}.title`)}</span>
-                </span>
-              </button>
-            ))}
-          </div>
+                <h3>
+                  <button
+                    className="group w-full grid grid-cols-12 gap-4 items-center py-6 md:py-8 text-left"
+                    onClick={() => setOpenKey(isOpen ? null : key)}
+                    aria-expanded={isOpen}
+                    aria-controls={`service-panel-${key}`}
+                  >
+                    <span
+                      className={cn(
+                        "col-span-2 md:col-span-1 font-mono text-[11px] transition-colors duration-300",
+                        isOpen ? "text-olive-bright" : "text-bone-faint group-hover:text-olive-bright",
+                      )}
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span
+                      className={cn(
+                        "col-span-8 md:col-span-10 font-display font-normal text-3xl md:text-5xl leading-none transition-all duration-500 ease-out",
+                        isOpen ? "text-bone md:translate-x-3" : "text-bone/70 group-hover:text-bone md:group-hover:translate-x-3",
+                      )}
+                    >
+                      {t(`${key}.title`)}
+                    </span>
+                    <span className="col-span-2 md:col-span-1 flex justify-end">
+                      <Plus
+                        size={22}
+                        strokeWidth={1.5}
+                        className={cn(
+                          "text-bone-dim transition-transform duration-500 ease-out",
+                          isOpen && "rotate-45 text-olive-bright",
+                        )}
+                      />
+                    </span>
+                  </button>
+                </h3>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div className="order-2 lg:order-1">
-              <h3 className="text-2xl font-bold mb-4">{t(`${activeKey}.title`)}</h3>
-              <p className="text-white/80 mb-6">{t(`${activeKey}.description`)}</p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                {(t.raw(`${activeKey}.features`) as string[]).map((feature: string, index: number) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <div className="text-[#556B2F] mt-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
+                <div
+                  id={`service-panel-${key}`}
+                  className={cn(
+                    "grid transition-[grid-template-rows] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]",
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                  )}
+                >
+                  <div className="overflow-hidden">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 md:pb-12 md:pl-[8.333%]">
+                      <div className="md:col-span-6">
+                        <p className="text-bone-dim text-base leading-relaxed mb-8 max-w-lg">
+                          {t(`${key}.description`)}
+                        </p>
+                        <ul className="space-y-2.5 mb-9">
+                          {features.map((feature, i) => (
+                            <li
+                              key={i}
+                              className="flex items-baseline gap-3 font-mono text-[11px] uppercase tracking-wider text-bone-dim"
+                            >
+                              <span className="text-olive-bright" aria-hidden="true">—</span>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                        <Link
+                          href="#contact"
+                          className="link-underline font-mono text-[11px] uppercase tracking-label text-bone pb-1"
+                        >
+                          {t("cta")}
+                        </Link>
+                      </div>
+                      <div className="md:col-span-5 md:col-start-8">
+                        <div className="relative aspect-[16/10] overflow-hidden">
+                          <Image
+                            src={serviceImages[key]}
+                            alt={t(`${key}.title`)}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 40vw"
+                            loading="lazy"
+                            quality={80}
+                          />
+                        </div>
+                      </div>
                     </div>
-                    <span className="text-white/80">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <button className="bg-gradient-to-r from-[#556B2F] to-[#657d38] hover:from-[#657d38] hover:to-[#758e49] text-white px-6 py-3 rounded shadow-[0_0_15px_rgba(85,107,47,0.3)] hover:shadow-[0_0_20px_rgba(85,107,47,0.5)] text-sm uppercase tracking-wider font-medium transition-colors">
-                {t("learnMore")}
-              </button>
-            </div>
-
-            <div className="order-1 lg:order-2">
-              <div className="relative h-[300px] md:h-[400px] rounded overflow-hidden">
-                <Image
-                  src={serviceImages[activeKey] || "/placeholder.svg"}
-                  alt={t(`${activeKey}.title`)}
-                  fill
-                  className="object-cover transition-all duration-500 ease-out"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="flex items-center gap-2">
-                    <div className="bg-[#556B2F] p-2 rounded-full">{serviceIcons[activeKey]}</div>
-                    <h4 className="text-xl font-bold">{t(`${activeKey}.title`)}</h4>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
+              </Reveal>
+            )
+          })}
         </div>
       </div>
     </section>
