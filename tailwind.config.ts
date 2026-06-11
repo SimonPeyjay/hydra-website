@@ -68,6 +68,30 @@ const config: Config = {
           darker: "#0A0A0A",
           light: "#F5F5DC",
         },
+        ink: {
+          DEFAULT: "#0E0D0A",
+          raised: "#15140F",
+          deep: "#0A0908",
+        },
+        bone: {
+          DEFAULT: "#E9E4D8",
+          dim: "#A39E90",
+          faint: "#6E6A5F",
+        },
+        olive: {
+          DEFAULT: "#556B2F",
+          bright: "#A9BC6B",
+        },
+        brass: "#B08D57",
+        line: "rgba(233, 228, 216, 0.12)",
+      },
+      fontFamily: {
+        display: ["var(--font-display)", "Georgia", "Hiragino Mincho ProN", "Apple SD Gothic Neo", "serif"],
+        sans: ["var(--font-sans)", "system-ui", "Hiragino Sans", "Apple SD Gothic Neo", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "monospace"],
+      },
+      letterSpacing: {
+        label: "0.18em",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

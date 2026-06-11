@@ -8,6 +8,13 @@ import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"
 import LanguageSwitcher from "./language-switcher"
 
+const navItems = [
+  { key: "studios", href: "#studios", index: "01" },
+  { key: "about", href: "#about", index: "02" },
+  { key: "team", href: "#team", index: "03" },
+  { key: "services", href: "#services", index: "04" },
+] as const
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -48,64 +55,54 @@ export default function Navbar() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out",
-          isScrolled ? "bg-[#121212]/80 backdrop-blur-md py-3 shadow-lg" : "bg-transparent py-5",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out",
+          isScrolled
+            ? "bg-ink/85 backdrop-blur-md py-3 border-b border-line"
+            : "bg-transparent py-5 border-b border-transparent",
         )}
       >
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-[#121212] focus:text-white focus:rounded"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-ink focus:text-bone"
         >
           {t("skipToContent")}
         </a>
 
-        <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className="mx-auto max-w-[1600px] px-5 md:px-10 flex justify-between items-center">
           <Link href="/" className="relative z-10" aria-label={t("homeLabel")}>
             <Image
               src="/images/svg/hydra-logo-full-white.svg"
               alt="Hydra Studios"
               width={120}
               height={40}
-              className="h-10 w-auto"
+              className="h-9 w-auto"
             />
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-8" aria-label="Main navigation">
-            <Link
-              href="#studios"
-              className="text-white/80 hover:text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#556B2F] after:transition-all after:duration-300 hover:after:w-full text-sm uppercase tracking-wider font-medium transition-colors duration-300"
-            >
-              {t("studios")}
-            </Link>
-            <Link
-              href="#about"
-              className="text-white/80 hover:text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#556B2F] after:transition-all after:duration-300 hover:after:w-full text-sm uppercase tracking-wider font-medium transition-colors duration-300"
-            >
-              {t("about")}
-            </Link>
-            <Link
-              href="#team"
-              className="text-white/80 hover:text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#556B2F] after:transition-all after:duration-300 hover:after:w-full text-sm uppercase tracking-wider font-medium transition-colors duration-300"
-            >
-              {t("team")}
-            </Link>
-            <Link
-              href="#services"
-              className="text-white/80 hover:text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#556B2F] after:transition-all after:duration-300 hover:after:w-full text-sm uppercase tracking-wider font-medium transition-colors duration-300"
-            >
-              {t("services")}
-            </Link>
+          <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
+            {navItems.map((item) => (
+              <Link
+                key={item.key}
+                href={item.href}
+                className="group font-mono text-[11px] uppercase tracking-label text-bone-dim hover:text-bone transition-colors duration-300"
+              >
+                <span className="text-bone-faint group-hover:text-olive-bright transition-colors duration-300 mr-1.5">
+                  {item.index}
+                </span>
+                <span className="link-underline pb-0.5">{t(item.key)}</span>
+              </Link>
+            ))}
             <LanguageSwitcher />
             <Link
               href="#contact"
-              className="bg-gradient-to-r from-[#556B2F] to-[#657d38] hover:from-[#657d38] hover:to-[#758e49] text-white px-6 py-2 rounded shadow-[0_0_15px_rgba(85,107,47,0.3)] hover:shadow-[0_0_20px_rgba(85,107,47,0.5)] text-sm uppercase tracking-wider font-medium transition-colors duration-300"
+              className="font-mono text-[11px] uppercase tracking-label bg-bone text-ink px-5 py-2.5 rounded-full hover:bg-olive-bright transition-colors duration-300"
             >
               {t("bookNow")}
             </Link>
           </nav>
 
           <button
-            className="md:hidden relative z-[60] p-3 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-[#556B2F]"
+            className="md:hidden relative z-[60] p-3 text-bone"
             onClick={() => setMobileMenuOpen(true)}
             aria-label={t("toggleMenu")}
             aria-expanded={mobileMenuOpen}
@@ -119,60 +116,71 @@ export default function Navbar() {
       <div
         id="mobile-menu"
         className={cn(
-          "fixed inset-0 z-[55] md:hidden",
-          "bg-[#0A0A0A] flex flex-col items-center justify-center",
-          "transition-[opacity,transform] duration-200 ease-out",
-          mobileMenuOpen
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-2 pointer-events-none",
+          "fixed inset-0 z-[55] md:hidden bg-ink flex flex-col",
+          "transition-opacity duration-300 ease-out",
+          mobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none",
         )}
         aria-hidden={!mobileMenuOpen}
       >
         <button
-          className="absolute top-5 right-4 p-3 text-white hover:text-white/80 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-[#556B2F] rounded-md"
+          className="absolute top-4 right-3 p-4 text-bone hover:text-bone-dim transition-colors duration-150"
           onClick={closeMenu}
           aria-label={t("closeMenu")}
         >
-          <X size={24} />
+          <X size={26} />
         </button>
-        <nav className="flex flex-col items-center space-y-8 pb-[env(safe-area-inset-bottom)]" aria-label="Mobile navigation">
-          <Link
-            href="#studios"
-            className="text-white/80 hover:text-white transition-colors duration-150 text-xl uppercase tracking-wider font-medium"
-            onClick={closeMenu}
+
+        <nav
+          className="flex-1 flex flex-col justify-center px-8 gap-1"
+          aria-label="Mobile navigation"
+        >
+          {navItems.map((item, i) => (
+            <Link
+              key={item.key}
+              href={item.href}
+              className={cn(
+                "group flex items-baseline gap-4 py-3 border-b border-line",
+                "transition-all duration-500 ease-out",
+                mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
+              )}
+              style={{ transitionDelay: mobileMenuOpen ? `${120 + i * 70}ms` : "0ms" }}
+              onClick={closeMenu}
+            >
+              <span className="font-mono text-[11px] text-olive-bright">{item.index}</span>
+              <span className="font-display text-5xl text-bone leading-none">
+                {t(item.key)}
+              </span>
+            </Link>
+          ))}
+
+          <div
+            className={cn(
+              "flex items-center justify-between pt-10 transition-all duration-500 ease-out",
+              mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
+            )}
+            style={{ transitionDelay: mobileMenuOpen ? "420ms" : "0ms" }}
           >
-            {t("studios")}
-          </Link>
-          <Link
-            href="#about"
-            className="text-white/80 hover:text-white transition-colors duration-150 text-xl uppercase tracking-wider font-medium"
-            onClick={closeMenu}
-          >
-            {t("about")}
-          </Link>
-          <Link
-            href="#team"
-            className="text-white/80 hover:text-white transition-colors duration-150 text-xl uppercase tracking-wider font-medium"
-            onClick={closeMenu}
-          >
-            {t("team")}
-          </Link>
-          <Link
-            href="#services"
-            className="text-white/80 hover:text-white transition-colors duration-150 text-xl uppercase tracking-wider font-medium"
-            onClick={closeMenu}
-          >
-            {t("services")}
-          </Link>
-          <LanguageSwitcher />
-          <Link
-            href="#contact"
-            className="bg-gradient-to-r from-[#556B2F] to-[#657d38] hover:from-[#657d38] hover:to-[#758e49] text-white px-8 py-3 rounded shadow-[0_0_15px_rgba(85,107,47,0.3)] hover:shadow-[0_0_20px_rgba(85,107,47,0.5)] text-xl uppercase tracking-wider font-medium transition-colors duration-150 mt-4"
-            onClick={closeMenu}
-          >
-            {t("bookNow")}
-          </Link>
+            <LanguageSwitcher />
+            <Link
+              href="#contact"
+              className="font-mono text-[11px] uppercase tracking-label bg-bone text-ink px-6 py-3 rounded-full"
+              onClick={closeMenu}
+            >
+              {t("bookNow")}
+            </Link>
+          </div>
         </nav>
+
+        <div
+          className={cn(
+            "px-8 pb-8 pb-[max(2rem,env(safe-area-inset-bottom))] font-mono text-[10px] uppercase tracking-label text-bone-faint",
+            "transition-opacity duration-500",
+            mobileMenuOpen ? "opacity-100" : "opacity-0",
+          )}
+          style={{ transitionDelay: mobileMenuOpen ? "500ms" : "0ms" }}
+        >
+          Fredriksbergsgatan 7A — Malmö, SE
+        </div>
       </div>
     </>
   )

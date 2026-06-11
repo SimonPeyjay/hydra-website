@@ -1,9 +1,9 @@
 "use client"
 
 import Image from "next/image"
-import { useInView } from "react-intersection-observer"
-import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"
+import SectionHeader from "./section-header"
+import { Reveal } from "./motion"
 
 const teamMembers = [
   "andreas",
@@ -17,114 +17,100 @@ const teamMembers = [
 ] as const
 
 export default function TeamSection() {
-  const { ref: sectionRef, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  })
   const t = useTranslations("Team")
 
   return (
-    <section id="team" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#556B2F]/5 blur-[150px] transform -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-[#B08D57]/5 blur-[100px] transform translate-x-1/2 translate-y-1/2" />
+    <section id="team" className="py-24 md:py-36 bg-ink scroll-mt-16">
+      <div className="mx-auto max-w-[1600px] px-5 md:px-10">
+        <SectionHeader
+          index="03"
+          label={t("label")}
+          title={[
+            t("titleA"),
+            t.rich("titleB", { i: (c) => <i className="text-brass">{c}</i> }),
+          ]}
+          sub={t("subtitle")}
+        />
 
-      <div className="container mx-auto px-4">
-        <div
-          ref={sectionRef}
-          className={cn(
-            "text-center mb-16 transition-all duration-700 ease-out",
-            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
-          )}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-            {t("title")}
-          </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            {t("subtitle")}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-12">
           {teamMembers.map((member, index) => (
-            <div
+            <Reveal
               key={member}
-              className={cn(
-                "group rounded-lg transition-all duration-700 ease-out outline-none",
-                inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
-              )}
-              style={{ transitionDelay: inView ? `${index * 100}ms` : "0ms" }}
-              tabIndex={0}
-              role="article"
-              aria-label={t(`${member}.name`)}
+              delay={(index % 4) * 90}
+              className="group outline-none"
             >
-              {/* Image card with overlay */}
-              <div className="relative aspect-square rounded-lg overflow-hidden bg-[#111]">
-                {/* Profile image — grayscale default on desktop, color on hover/focus */}
-                <Image
-                  src={`/images/photos/team/${member}.webp`}
-                  alt={t(`${member}.name`)}
-                  fill
-                  className={cn(
-                    "object-cover object-top transition-all duration-700 ease-out",
-                    "md:grayscale md:brightness-75 md:group-hover:grayscale-0 md:group-hover:brightness-100",
-                    "md:group-focus-within:grayscale-0 md:group-focus-within:brightness-100",
-                    "md:scale-100 md:group-hover:scale-105 md:group-focus-within:scale-105",
-                  )}
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                />
+              <article tabIndex={0} aria-label={t(`${member}.name`)}>
+                {/* Portrait */}
+                <div className="relative aspect-[3/4] overflow-hidden bg-ink-raised">
+                  <Image
+                    src={`/images/photos/team/${member}.webp`}
+                    alt={t(`${member}.name`)}
+                    fill
+                    className="object-cover object-top transition-all duration-700 ease-out grayscale group-hover:grayscale-0 group-focus-within:grayscale-0 group-hover:scale-[1.03] group-focus-within:scale-[1.03]"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    loading="lazy"
+                    quality={82}
+                  />
 
-                {/* Hover overlay with description — desktop only */}
-                <div className={cn(
-                  "absolute inset-0 hidden md:flex flex-col justify-end",
-                  "bg-gradient-to-t from-black/90 via-black/40 to-transparent",
-                  "opacity-0 group-hover:opacity-100 group-focus-within:opacity-100",
-                  "transition-opacity duration-700 ease-out",
-                )}>
-                  <div className="p-4 space-y-2">
-                    <p className="text-sm text-white/80 leading-relaxed line-clamp-4">
-                      {t(`${member}.description`)}
-                    </p>
-                    <div className="space-y-1">
-                      <p className="text-xs text-white/70">
-                        <span className="text-[#556B2F] font-medium">{t("loves")}:</span>{" "}
-                        {t(`${member}.likes`)}
+                  {/* Index chip */}
+                  <span className="absolute top-3 left-3 font-mono text-[10px] tracking-label text-bone bg-ink/60 backdrop-blur-sm px-2 py-1">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  {/* Hover dossier — desktop */}
+                  <div className="absolute inset-0 hidden md:flex flex-col justify-end bg-gradient-to-t from-ink via-ink/55 to-transparent opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-500 ease-out">
+                    <div className="p-5 space-y-3 translate-y-3 group-hover:translate-y-0 group-focus-within:translate-y-0 transition-transform duration-500 ease-out">
+                      <p className="text-[13px] text-bone/90 leading-relaxed">
+                        {t(`${member}.description`)}
                       </p>
-                      <p className="text-xs text-white/70">
-                        <span className="text-red-400/70 font-medium">{t("hates")}:</span>{" "}
-                        {t(`${member}.hates`)}
-                      </p>
+                      <div className="space-y-1.5 border-t border-line pt-3">
+                        <p className="text-xs text-bone-dim leading-relaxed">
+                          <span className="font-mono text-[10px] uppercase tracking-label text-olive-bright mr-2">
+                            {t("loves")}
+                          </span>
+                          {t(`${member}.likes`)}
+                        </p>
+                        <p className="text-xs text-bone-dim leading-relaxed">
+                          <span className="font-mono text-[10px] uppercase tracking-label text-[#C07A5B] mr-2">
+                            {t("hates")}
+                          </span>
+                          {t(`${member}.hates`)}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Name + animal — always visible */}
-              <div className="mt-3 px-1">
-                <h3 className="!text-base md:!text-lg font-bold text-white">
-                  {t(`${member}.name`)}
-                </h3>
-                <p className="!text-sm text-[#556B2F] font-medium">
-                  {t(`${member}.animal`)}
-                </p>
-
-                {/* Description — mobile only */}
-                <div className="md:hidden mt-2">
-                  <p className="text-sm text-white/80 leading-relaxed">
-                    {t(`${member}.description`)}
+                {/* Name + call sign */}
+                <div className="mt-4">
+                  <p className="font-mono text-[10px] uppercase tracking-label text-olive-bright mb-1.5">
+                    {t(`${member}.animal`)}
                   </p>
-                  <div className="mt-2 space-y-1">
-                    <p className="text-xs text-white/70">
-                      <span className="text-[#556B2F]">{t("loves")}:</span>{" "}
+                  <h3 className="font-display font-normal text-2xl leading-tight text-bone">
+                    {t(`${member}.name`)}
+                  </h3>
+
+                  {/* Dossier — mobile */}
+                  <div className="md:hidden mt-3 space-y-2.5">
+                    <p className="text-sm text-bone-dim leading-relaxed">
+                      {t(`${member}.description`)}
+                    </p>
+                    <p className="text-xs text-bone-dim leading-relaxed">
+                      <span className="font-mono text-[10px] uppercase tracking-label text-olive-bright mr-2">
+                        {t("loves")}
+                      </span>
                       {t(`${member}.likes`)}
                     </p>
-                    <p className="text-xs text-white/70">
-                      <span className="text-red-400/70">{t("hates")}:</span>{" "}
+                    <p className="text-xs text-bone-dim leading-relaxed">
+                      <span className="font-mono text-[10px] uppercase tracking-label text-[#C07A5B] mr-2">
+                        {t("hates")}
+                      </span>
                       {t(`${member}.hates`)}
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>

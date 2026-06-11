@@ -1,90 +1,139 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, type CSSProperties } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronDown } from "lucide-react"
+import { ArrowDown } from "lucide-react"
 import { useTranslations } from "next-intl"
 
+function rise(delay: number): CSSProperties {
+  return { "--rise-delay": `${delay}ms` } as CSSProperties
+}
+
 export default function HeroSection() {
-  const heroRef = useRef<HTMLDivElement>(null)
+  const bgRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
   const t = useTranslations("Hero")
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (!heroRef.current) return
-      const scrollY = window.scrollY
-      const opacity = 1 - Math.min(scrollY / 500, 0.5)
-      const translateY = scrollY * 0.4
-
-      heroRef.current.style.opacity = opacity.toString()
-      heroRef.current.style.transform = `translateY(${translateY}px)`
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+    let raf = 0
+    const update = () => {
+      raf = 0
+      const y = window.scrollY
+      if (bgRef.current) {
+        bgRef.current.style.transform = `translate3d(0, ${(y * 0.3).toFixed(1)}px, 0)`
+      }
+      if (contentRef.current) {
+        contentRef.current.style.opacity = `${Math.max(1 - y / 600, 0)}`
+        contentRef.current.style.transform = `translate3d(0, ${(y * 0.15).toFixed(1)}px, 0)`
+      }
     }
-
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update)
+    }
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+      if (raf) cancelAnimationFrame(raf)
+    }
   }, [])
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden" id="main-content">
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/photos/Hallway_logo.webp"
-          alt={t("bgAlt")}
-          fill
-          priority
-          className="object-cover object-center filter brightness-75 saturate-75"
-          sizes="100vw"
-          quality={85}
-        />
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+    <section
+      className="relative h-[100svh] min-h-[640px] overflow-hidden"
+      id="main-content"
+    >
+      {/* Background with parallax drift + slow settle on load */}
+      <div ref={bgRef} className="absolute inset-0 z-0 will-change-transform">
+        <div className="absolute inset-[-10%] animate-hero-zoom">
+          <Image
+            src="/images/photos/Hallway_logo.webp"
+            alt={t("bgAlt")}
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+            quality={85}
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/45 to-ink/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/60 via-transparent to-transparent" />
       </div>
 
-      <div ref={heroRef} className="container mx-auto px-4 relative z-10 text-center">
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8 tracking-tight text-white max-w-4xl leading-tight">
-            {t("title")}
-          </h1>
-
-          <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10">
-            {t("subtitle")}
+      {/* Content, anchored low like a record sleeve */}
+      <div
+        ref={contentRef}
+        className="absolute inset-0 z-10 flex flex-col justify-end"
+      >
+        <div className="mx-auto w-full max-w-[1600px] px-5 md:px-10 pb-10 md:pb-14">
+          <p
+            className="animate-rise font-mono text-[11px] md:text-xs uppercase tracking-label text-olive-bright mb-5 md:mb-7"
+            style={rise(150)}
+          >
+            {t("kicker")}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+          <h1 className="font-display font-normal text-[clamp(3.3rem,11.5vw,10.5rem)] leading-[0.92] tracking-[-0.01em] text-bone mb-8 md:mb-12">
+            <span className="mask-lines">
+              <span className="block animate-rise" style={rise(280)}>
+                {t("titleA")}
+              </span>
+            </span>
+            <span className="mask-lines">
+              <span className="block animate-rise" style={rise(400)}>
+                {t.rich("titleB", {
+                  i: (chunks) => <i className="text-brass">{chunks}</i>,
+                })}
+              </span>
+            </span>
+          </h1>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6 items-end">
+            <p
+              className="animate-rise md:col-span-5 text-base md:text-lg text-bone/75 leading-relaxed max-w-md"
+              style={rise(550)}
+            >
+              {t("subtitle")}
+            </p>
+
+            <div
+              className="animate-rise md:col-span-7 flex items-center gap-7 md:justify-end"
+              style={rise(650)}
+            >
+              <Link
+                href="#studios"
+                className="font-mono text-[11px] uppercase tracking-label bg-bone text-ink px-7 py-4 rounded-full hover:bg-olive-bright transition-colors duration-300"
+                aria-label={t("exploreLabel")}
+              >
+                {t("exploreStudios")}
+              </Link>
+              <Link
+                href="#contact"
+                className="link-underline font-mono text-[11px] uppercase tracking-label text-bone pb-1"
+                aria-label={t("bookLabel")}
+              >
+                {t("bookSession")}
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Mono metadata strip */}
+        <div className="animate-fade-in border-t border-line" style={rise(900)}>
+          <div className="mx-auto w-full max-w-[1600px] px-5 md:px-10 py-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-label text-bone-faint">
+            <span>55.60°N — 13.00°E</span>
+            <span className="hidden md:inline">Fredriksbergsgatan 7A, Malmö</span>
             <Link
               href="#studios"
-              className="bg-gradient-to-r from-[#556B2F] to-[#657d38] hover:from-[#657d38] hover:to-[#758e49] text-white px-8 py-3 rounded shadow-[0_0_15px_rgba(85,107,47,0.3)] hover:shadow-[0_0_20px_rgba(85,107,47,0.5)] text-lg font-medium transition-all duration-300 ease-in-out transform hover:translate-y-[-2px]"
-              aria-label={t("exploreLabel")}
+              className="flex items-center gap-2 text-bone-dim hover:text-bone transition-colors"
+              aria-label={t("scrollLabel")}
             >
-              {t("exploreStudios")}
-            </Link>
-            <Link
-              href="#contact"
-              className="bg-transparent hover:bg-white/10 text-white border border-white/30 px-8 py-3 rounded text-lg font-medium transition-all duration-300 ease-in-out transform hover:translate-y-[-2px]"
-              aria-label={t("bookLabel")}
-            >
-              {t("bookSession")}
+              {t("scrollHint")}
+              <ArrowDown size={11} className="animate-bounce" />
             </Link>
           </div>
         </div>
-      </div>
-
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-        <Link
-          href="#studios"
-          className="text-white/70 hover:text-white transition-colors"
-          aria-label={t("scrollLabel")}
-        >
-          <ChevronDown size={32} />
-        </Link>
-      </div>
-
-      <div className="absolute inset-0 z-[5] pointer-events-none">
-        <div className="absolute left-1/4 top-1/3 w-[300px] h-[300px] rounded-full bg-[#556B2F]/10 blur-[100px] animate-pulse"></div>
-        <div
-          className="absolute right-1/4 bottom-1/3 w-[250px] h-[250px] rounded-full bg-[#B08D57]/10 blur-[80px] animate-pulse"
-          style={{ animationDelay: "1s" }}
-        ></div>
       </div>
     </section>
   )

@@ -44,7 +44,7 @@ export default function LanguageSwitcher() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 text-white/80 hover:text-white text-sm uppercase tracking-wider font-medium transition-all duration-300 px-2 py-1"
+        className="flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-label text-bone-dim hover:text-bone transition-all duration-300 px-2 py-1"
         aria-expanded={open}
         aria-haspopup="listbox"
       >
@@ -84,7 +84,7 @@ export default function LanguageSwitcher() {
 
       {open && (
         <div
-          className="absolute right-0 top-full mt-2 bg-[#1A1A1A] border border-white/10 rounded shadow-xl min-w-[140px] py-1 z-50"
+          className="absolute right-0 top-full mt-3 bg-ink-raised border border-line shadow-xl min-w-[150px] py-1 z-50"
           role="listbox"
           aria-label="Select language"
         >
@@ -94,8 +94,8 @@ export default function LanguageSwitcher() {
               role="option"
               aria-selected={l.code === locale}
               className={cn(
-                "w-full text-left px-4 py-2 text-sm transition-colors hover:bg-white/10",
-                l.code === locale ? "text-[#556B2F] font-medium" : "text-white/80",
+                "w-full text-left px-4 py-2.5 text-sm transition-colors hover:bg-bone/5",
+                l.code === locale ? "text-olive-bright" : "text-bone-dim hover:text-bone",
               )}
               onClick={() => {
                 router.replace(pathname, { locale: l.code })

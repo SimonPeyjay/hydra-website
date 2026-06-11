@@ -1,5 +1,6 @@
 import { setRequestLocale } from "next-intl/server"
 import HeroSection from "@/components/hero-section"
+import MarqueeBanner from "@/components/marquee-banner"
 import StudioGallery from "@/components/studio-gallery"
 import AboutSection from "@/components/about-section"
 import TeamSection from "@/components/team-section"
@@ -18,9 +19,10 @@ export default async function Home({
   setRequestLocale(locale)
 
   return (
-    <main className="min-h-screen bg-[#121212] text-white overflow-hidden">
+    <main className="min-h-screen bg-ink text-bone overflow-hidden">
       <Navbar />
       <HeroSection />
+      <MarqueeBanner />
       <StudioGallery />
       <AboutSection />
       <TeamSection />

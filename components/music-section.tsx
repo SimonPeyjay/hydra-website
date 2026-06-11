@@ -1,60 +1,80 @@
 "use client"
 
-import { useInView } from "react-intersection-observer"
-import { cn } from "@/lib/utils"
+import { useEffect, useRef, useState } from "react"
 import { useTranslations } from "next-intl"
+import SectionHeader from "./section-header"
+import { Reveal } from "./motion"
 
 export default function MusicSection() {
-  const { ref: sectionRef, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  })
   const t = useTranslations("Music")
+  const frameRef = useRef<HTMLDivElement>(null)
+  const [showEmbed, setShowEmbed] = useState(false)
+
+  // Mount the Spotify iframe only when the section approaches the viewport —
+  // the embed steals focus on load, which would otherwise yank the scroll position.
+  useEffect(() => {
+    const el = frameRef.current
+    if (!el) return
+    if (typeof IntersectionObserver === "undefined") {
+      setShowEmbed(true)
+      return
+    }
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowEmbed(true)
+          io.disconnect()
+        }
+      },
+      { rootMargin: "400px 0px" },
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
 
   return (
-    <section id="music" className="py-24 bg-[#0A0A0A] relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#556B2F]/4 blur-[200px]"></div>
+    <section id="music" className="py-24 md:py-36 bg-ink scroll-mt-16">
+      <div className="mx-auto max-w-[1600px] px-5 md:px-10">
+        <SectionHeader
+          index="05"
+          label={t("label")}
+          title={[
+            t("titleA"),
+            t.rich("titleB", { i: (c) => <i className="text-brass">{c}</i> }),
+          ]}
+          sub={t("subtitle")}
+        />
 
-      <div className="container mx-auto px-4">
-        <div
-          ref={sectionRef}
-          className={cn(
-            "text-center mb-12 transition-all duration-700 ease-out",
-            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
-          )}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-            {t("title")}
-          </h2>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            {t("subtitle")}
-          </p>
-        </div>
-
-        <div
-          className={cn(
-            "max-w-3xl mx-auto transition-all duration-700 ease-out delay-200",
-            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10",
-          )}
-        >
-          <div className="rounded-2xl bg-white/[0.03] border border-white/[0.06] p-4 sm:p-6">
-            <iframe
-              title={t("playerTitle")}
-              style={{ borderRadius: "12px" }}
-              src="https://open.spotify.com/embed/playlist/3YNq9Bo45MkK1Eg4rRGrxS?utm_source=generator&theme=0"
-              width="100%"
-              height="352"
-              frameBorder="0"
-              allowFullScreen
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            />
+        <Reveal delay={150} className="max-w-3xl">
+          <div ref={frameRef} className="relative border border-line p-3 md:p-5">
+            <span className="absolute -top-[9px] left-5 bg-ink px-3 font-mono text-[10px] uppercase tracking-label text-olive-bright">
+              {t("playerLabel")}
+            </span>
+            {showEmbed ? (
+              <iframe
+                title={t("playerTitle")}
+                src="https://open.spotify.com/embed/playlist/3YNq9Bo45MkK1Eg4rRGrxS?utm_source=generator&theme=0"
+                width="100%"
+                height="352"
+                frameBorder="0"
+                allowFullScreen
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              />
+            ) : (
+              <div
+                className="h-[352px] flex items-center justify-center font-mono text-[10px] uppercase tracking-label text-bone-faint"
+                aria-hidden="true"
+              >
+                ●
+              </div>
+            )}
           </div>
 
-          <p className="text-center text-white/40 text-sm mt-6">
+          <p className="mt-5 font-mono text-[10px] uppercase tracking-label text-bone-faint">
             {t("caption")}
           </p>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

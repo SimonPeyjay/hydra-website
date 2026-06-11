@@ -1,111 +1,140 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { ArrowUpRight } from "lucide-react"
 import { useTranslations } from "next-intl"
+import { Reveal, MaskLine } from "./motion"
+
+const monoLink =
+  "font-mono text-[11px] uppercase tracking-label text-bone-dim hover:text-bone transition-colors duration-300"
 
 export default function Footer() {
   const t = useTranslations("Footer")
+  const [time, setTime] = useState<string | null>(null)
+
+  useEffect(() => {
+    const formatter = new Intl.DateTimeFormat("sv-SE", {
+      hour: "2-digit",
+      minute: "2-digit",
+      timeZone: "Europe/Stockholm",
+    })
+    const tick = () => setTime(formatter.format(new Date()))
+    tick()
+    const id = setInterval(tick, 30_000)
+    return () => clearInterval(id)
+  }, [])
 
   return (
-    <footer className="bg-[#0A0A0A] border-t border-white/10 pt-16 pb-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div className="lg:col-span-1">
+    <footer className="bg-ink border-t border-line pt-16 md:pt-24 overflow-hidden">
+      <div className="mx-auto max-w-[1600px] px-5 md:px-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-12 mb-20 md:mb-28">
+          <Reveal className="col-span-2 md:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <Image
                 src="/images/svg/hydra-logo-full-white.svg"
                 alt="Hydra Studios"
-                width={140}
-                height={50}
-                className="h-12 w-auto"
+                width={130}
+                height={44}
+                className="h-10 w-auto"
               />
             </Link>
-            <p className="text-white/70 mb-6">{t("about")}</p>
-            <div className="flex gap-4">
-              <a
-                href="https://www.facebook.com/hydrasweden"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/hydrasweden"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-              </a>
-            </div>
-          </div>
+            <p className="text-sm text-bone-dim leading-relaxed max-w-[260px]">
+              {t("about")}
+            </p>
+          </Reveal>
 
-          <div>
-            <h3 className="text-lg font-bold mb-4">{t("quickLinks")}</h3>
+          <Reveal delay={80}>
+            <h3 className="font-mono text-[10px] uppercase tracking-label text-olive-bright mb-5">
+              {t("quickLinks")}
+            </h3>
             <ul className="space-y-3">
-              <li><Link href="#studios" className="text-white/70 hover:text-white transition-colors">{t("ourStudios")}</Link></li>
-              <li><Link href="#services" className="text-white/70 hover:text-white transition-colors">{t("services")}</Link></li>
-              <li><Link href="#about" className="text-white/70 hover:text-white transition-colors">{t("aboutUs")}</Link></li>
-              <li><Link href="#team" className="text-white/70 hover:text-white transition-colors">{t("team")}</Link></li>
-              <li><Link href="#contact" className="text-white/70 hover:text-white transition-colors">{t("contact")}</Link></li>
-              <li><Link href="#" className="text-white/70 hover:text-white transition-colors">{t("blog")}</Link></li>
+              <li><Link href="#studios" className={monoLink}>{t("ourStudios")}</Link></li>
+              <li><Link href="#about" className={monoLink}>{t("aboutUs")}</Link></li>
+              <li><Link href="#team" className={monoLink}>{t("team")}</Link></li>
+              <li><Link href="#services" className={monoLink}>{t("services")}</Link></li>
+              <li><Link href="#contact" className={monoLink}>{t("contact")}</Link></li>
             </ul>
-          </div>
+          </Reveal>
 
-          <div>
-            <h3 className="text-lg font-bold mb-4">{t("servicesTitle")}</h3>
+          <Reveal delay={140}>
+            <h3 className="font-mono text-[10px] uppercase tracking-label text-olive-bright mb-5">
+              {t("servicesTitle")}
+            </h3>
             <ul className="space-y-3">
-              <li><Link href="#services" className="text-white/70 hover:text-white transition-colors">{t("recording")}</Link></li>
-              <li><Link href="#services" className="text-white/70 hover:text-white transition-colors">{t("mixing")}</Link></li>
-              <li><Link href="#services" className="text-white/70 hover:text-white transition-colors">{t("mastering")}</Link></li>
-              <li><Link href="#services" className="text-white/70 hover:text-white transition-colors">{t("production")}</Link></li>
-              <li><Link href="#services" className="text-white/70 hover:text-white transition-colors">{t("studioResidency")}</Link></li>
+              <li><Link href="#services" className={monoLink}>{t("recording")}</Link></li>
+              <li><Link href="#services" className={monoLink}>{t("mixing")}</Link></li>
+              <li><Link href="#services" className={monoLink}>{t("mastering")}</Link></li>
+              <li><Link href="#services" className={monoLink}>{t("production")}</Link></li>
+              <li><Link href="#services" className={monoLink}>{t("studioResidency")}</Link></li>
             </ul>
-          </div>
+          </Reveal>
 
-          <div>
-            <h3 className="text-lg font-bold mb-4">{t("contactTitle")}</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <div className="text-[#556B2F] mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
-                </div>
-                <span className="text-white/70">
-                  Fredriksbergsgatan 7 A<br />212 11 Malmö<br />SWEDEN
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <div className="text-[#556B2F] mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
-                </div>
-                <span className="text-white/70">info@hydrastudios.se</span>
-              </li>
-            </ul>
-          </div>
+          <Reveal delay={200}>
+            <h3 className="font-mono text-[10px] uppercase tracking-label text-olive-bright mb-5">
+              {t("contactTitle")}
+            </h3>
+            <address className="not-italic space-y-3">
+              <p className="text-sm text-bone-dim leading-relaxed">
+                Fredriksbergsgatan 7 A<br />
+                212 11 Malmö, Sweden
+              </p>
+              <p>
+                <a href="mailto:info@hydrastudios.se" className={monoLink}>
+                  info@hydrastudios.se
+                </a>
+              </p>
+              <div className="flex flex-col gap-2 pt-2">
+                <a
+                  href="https://www.instagram.com/hydrasweden"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${monoLink} group inline-flex items-center gap-1.5`}
+                >
+                  Instagram
+                  <ArrowUpRight size={11} className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </a>
+                <a
+                  href="https://www.facebook.com/hydrasweden"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${monoLink} group inline-flex items-center gap-1.5`}
+                >
+                  Facebook
+                  <ArrowUpRight size={11} className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </a>
+              </div>
+            </address>
+          </Reveal>
         </div>
+      </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/50 text-sm mb-4 md:mb-0">
+      {/* Giant wordmark */}
+      <div className="mx-auto max-w-[1600px] px-5 md:px-10" aria-hidden="true">
+        <h2 className="font-display font-normal text-[clamp(4rem,14.5vw,15rem)] leading-[0.8] tracking-[-0.02em] text-bone whitespace-nowrap select-none">
+          <MaskLine>
+            Hydra <i className="text-brass">Studios</i>
+          </MaskLine>
+        </h2>
+      </div>
+
+      {/* Legal strip */}
+      <div className="border-t border-line mt-[-2px]">
+        <div className="mx-auto max-w-[1600px] px-5 md:px-10 py-5 flex flex-col md:flex-row gap-4 justify-between items-start md:items-center">
+          <p className="font-mono text-[10px] uppercase tracking-label text-bone-faint">
             {t("copyright", { year: new Date().getFullYear() })}
           </p>
+          <p className="font-mono text-[10px] uppercase tracking-label text-bone-faint order-first md:order-none">
+            Malmö, SE {time ? `— ${time}` : ""}
+          </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-white/50 hover:text-white/70 text-sm">{t("privacyPolicy")}</Link>
-            <Link href="#" className="text-white/50 hover:text-white/70 text-sm">{t("termsOfService")}</Link>
-            <Link href="#" className="text-white/50 hover:text-white/70 text-sm">{t("cookiePolicy")}</Link>
+            <Link href="#" className="font-mono text-[10px] uppercase tracking-label text-bone-faint hover:text-bone-dim transition-colors">
+              {t("privacyPolicy")}
+            </Link>
+            <Link href="#" className="font-mono text-[10px] uppercase tracking-label text-bone-faint hover:text-bone-dim transition-colors">
+              {t("termsOfService")}
+            </Link>
           </div>
         </div>
       </div>
