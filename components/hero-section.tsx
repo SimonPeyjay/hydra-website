@@ -33,6 +33,7 @@ export default function HeroSection() {
           alt={t("bgAlt")}
           fill
           priority
+          fetchPriority="high"
           className="object-cover object-center filter brightness-75 saturate-75"
           sizes="100vw"
           quality={85}
