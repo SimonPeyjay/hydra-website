@@ -25,6 +25,14 @@
     "scrollLabel": "Scrolla till studiosektionen",
     "bgAlt": "Hydra Studios korridor"
   },
+  "Work": {
+    "title": "Vårt arbete",
+    "subtitle": "Ett urval av släpp som våra låtskrivare och producenter har jobbat med.",
+    "carouselLabel": "Släpp – scrolla i sidled",
+    "coverAlt": "Omslag till {title} av {artist}",
+    "listen": "Lyssna",
+    "listenLabel": "Lyssna på {title} av {artist} på Spotify (öppnas i ny flik)"
+  },
   "Studios": {
     "title": "Våra premiumstudios",
     "subtitle": "Utforska vår samling av noggrant designade inspelningsutrymmen, var och en med sin unika karaktär och kapacitet.",

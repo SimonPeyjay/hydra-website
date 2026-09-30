@@ -25,6 +25,14 @@
     "scrollLabel": "Zum Studiobereich scrollen",
     "bgAlt": "Hydra Studios Flur"
   },
+  "Work": {
+    "title": "Unsere Arbeit",
+    "subtitle": "Eine Auswahl an Releases, an denen unsere Songwriter und Produzenten mitgewirkt haben.",
+    "carouselLabel": "Releases – seitlich scrollen",
+    "coverAlt": "Cover von {title} von {artist}",
+    "listen": "Anhören",
+    "listenLabel": "{title} von {artist} auf Spotify anhören (öffnet in neuem Tab)"
+  },
   "Studios": {
     "title": "Unsere Premium-Studios",
     "subtitle": "Entdecken Sie unsere Sammlung sorgfältig gestalteter Aufnahmeräume, jeder mit eigenem Charakter und eigenen Möglichkeiten.",

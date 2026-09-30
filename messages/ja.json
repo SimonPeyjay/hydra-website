@@ -25,6 +25,14 @@
     "scrollLabel": "スタジオセクションへスクロール",
     "bgAlt": "Hydra Studios 廊下"
   },
+  "Work": {
+    "title": "私たちの作品",
+    "subtitle": "ソングライターとプロデューサーが手がけたリリースの一部をご紹介します。",
+    "carouselLabel": "リリース一覧（横にスクロール）",
+    "coverAlt": "{artist}「{title}」のジャケット",
+    "listen": "聴く",
+    "listenLabel": "Spotifyで{artist}「{title}」を聴く（新しいタブで開きます）"
+  },
   "Studios": {
     "title": "プレミアムスタジオ",
     "subtitle": "それぞれ独自の個性と機能を持つ、細部にまでこだわったレコーディングスペースのコレクションをご覧ください。",
