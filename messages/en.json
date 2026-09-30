@@ -25,6 +25,14 @@
     "scrollLabel": "Scroll to studios section",
     "bgAlt": "Hydra Studios Hallway"
   },
+  "Work": {
+    "title": "Our Work",
+    "subtitle": "A selection of releases our songwriters and producers have worked on.",
+    "carouselLabel": "Releases – scroll sideways",
+    "coverAlt": "Cover art for {title} by {artist}",
+    "listen": "Listen",
+    "listenLabel": "Listen to {title} by {artist} on Spotify (opens in a new tab)"
+  },
   "Studios": {
     "title": "Our Premium Studios",
     "subtitle": "Explore our collection of meticulously designed recording spaces, each with its own unique character and capabilities.",
