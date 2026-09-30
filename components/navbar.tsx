@@ -5,13 +5,15 @@ import Image from "next/image"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
+import { localePath } from "@/lib/site"
 import LanguageSwitcher from "./language-switcher"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const t = useTranslations("Navbar")
+  const home = localePath(useLocale())
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,12 +62,13 @@ export default function Navbar() {
         </a>
 
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <Link href="/" className="relative z-10" aria-label={t("homeLabel")}>
+          <Link href={home} className="relative z-10" aria-label={t("homeLabel")}>
             <Image
               src="/images/svg/hydra-logo-full-white.svg"
               alt="Hydra Studios"
               width={120}
               height={40}
+              loading="eager"
               className="h-10 w-auto"
             />
           </Link>

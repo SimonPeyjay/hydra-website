@@ -192,6 +192,9 @@ export default function WorkSection() {
             <div className="mt-4 px-1">
               <p className="!text-base md:!text-lg font-semibold text-white leading-snug">{release.title}</p>
               <p className="!text-sm text-white/55 mt-0.5">{release.artist}</p>
+              {release.contests && (
+                <p className="!text-xs uppercase tracking-wider text-[#B08D57] mt-2">{release.contests.join(" · ")}</p>
+              )}
             </div>
             </a>
           </li>

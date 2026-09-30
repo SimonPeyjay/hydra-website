@@ -1,8 +1,9 @@
 {
   "Metadata": {
-    "title": "Hydra Studios | Premium Music Studio Collective in Malmö",
-    "description": "A premium music studio collective in Malmö, Sweden where artistic vision and technical excellence converge. Book your session today.",
-    "ogDescription": "A premium music studio collective in Malmö, Sweden where artistic vision and technical excellence converge."
+    "title": "Recording Studio in Malmö, Sweden – Music Production & Mixing | Hydra Studios",
+    "description": "Hydra Studios is a collective of music and recording studios in Malmö, Sweden. Recording, production, mixing and mastering – with songs in Melodifestivalen and Eurovision. Book your session.",
+    "ogDescription": "A collective of music and recording studios in Malmö, Sweden – recording, production, mixing and mastering, with songs in Melodifestivalen and Eurovision.",
+    "ogImageAlt": "Hydra Studios, recording studio in Malmö"
   },
   "Navbar": {
     "skipToContent": "Skip to main content",
@@ -16,6 +17,7 @@
     "closeMenu": "Close menu"
   },
   "Hero": {
+    "kicker": "Recording studio in Malmö, Sweden",
     "title": "Where Vision Meets Sonic Excellence",
     "subtitle": "A premium collective of world-class recording studios designed for artists who demand nothing but the best.",
     "exploreStudios": "Explore Studios",
@@ -27,7 +29,7 @@
   },
   "Work": {
     "title": "Our Work",
-    "subtitle": "A selection of releases our songwriters and producers have worked on.",
+    "subtitle": "A selection of releases our songwriters and producers have worked on – from K-pop and Swedish pop to Melodifestivalen and Eurovision.",
     "carouselLabel": "Releases – scroll sideways",
     "coverAlt": "Cover art for {title} by {artist}",
     "listen": "Listen",
@@ -80,7 +82,7 @@
   },
   "About": {
     "title": "About Hydra",
-    "paragraph1": "Hydra is a collective of world-class recording studios founded on a simple principle: to create spaces where artistic vision and technical excellence converge.",
+    "paragraph1": "Hydra is a collective of world-class music and recording studios in Malmö, Sweden, founded on a simple principle: to create spaces where artistic vision and technical excellence converge.",
     "paragraph2": "Our studios are more than just rooms with equipment—they're carefully crafted environments designed to inspire creativity and capture the perfect sound. Each space has its own unique character, acoustics, and equipment selection, allowing artists to find the perfect match for their project.",
     "quote": "\"We built Hydra to be the kind of studio we always wanted to work in—where technical excellence meets creative freedom.\"",
     "paragraph3": "What sets Hydra apart is our collaborative approach. As a collective, we bring together some of the industry's most talented engineers, producers, and studio designers, all united by a passion for exceptional sound and a commitment to helping artists realize their vision.",
@@ -91,7 +93,7 @@
   },
   "Services": {
     "title": "Our Services",
-    "subtitle": "From recording and mixing to production and mastering, we offer a complete suite of services to bring your musical vision to life.",
+    "subtitle": "From recording and mixing to production and mastering, our Malmö recording studio offers a complete suite of services to bring your musical vision to life.",
     "learnMore": "Learn More",
     "recording": {
       "title": "Recording",
@@ -228,6 +230,7 @@
     "contactInfo": "Contact Information",
     "contactDescription": "Fill out the form and our team will get back to you within 24 hours.",
     "email": "Email",
+    "phone": "Phone",
     "location": "Location",
     "followUs": "Follow Us",
     "nameLabel": "Your Name",
@@ -289,5 +292,18 @@
   },
   "LanguageSwitcher": {
     "label": "Language"
+  },
+  "Blog": {
+    "title": "Blog",
+    "metaTitle": "Blog on Melodifestivalen, Eurovision and music production | Hydra Studios",
+    "metaDescription": "Tips from a recording studio in Malmö, Sweden: writing songs for Melodifestivalen and Eurovision, how national selections work, and building your career as an artist.",
+    "intro": "Tips and insights from our songwriters and producers – on Melodifestivalen, Eurovision and life in the studio.",
+    "readMore": "Read more",
+    "backHome": "Back to home",
+    "allPosts": "All posts",
+    "swedishOnly": "Our articles are currently in Swedish.",
+    "ctaTitle": "Want to work with us?",
+    "ctaText": "Hydra Studios is a collective of recording studios in Malmö, Sweden. We help with recording, production, mixing and mastering.",
+    "ctaButton": "Book a session"
   }
 }

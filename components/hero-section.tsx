@@ -33,6 +33,7 @@ export default function HeroSection() {
           alt={t("bgAlt")}
           fill
           priority
+          fetchPriority="high"
           className="object-cover object-center filter brightness-75 saturate-75"
           sizes="100vw"
           quality={85}
@@ -42,8 +43,13 @@ export default function HeroSection() {
 
       <div ref={heroRef} className="container mx-auto px-4 relative z-10 text-center">
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8 tracking-tight text-white max-w-4xl leading-tight">
-            {t("title")}
+          <h1 className="mb-8 max-w-4xl">
+            <span className="block text-sm md:text-base font-medium uppercase tracking-[0.25em] text-white/70 mb-4">
+              {t("kicker")}
+            </span>
+            <span className="block text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white leading-tight">
+              {t("title")}
+            </span>
           </h1>
 
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10">

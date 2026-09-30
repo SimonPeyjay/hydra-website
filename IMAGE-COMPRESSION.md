@@ -1,69 +1,38 @@
-# Image Compression for Hydra Studios Website
+# Images
 
-This document explains how to use the image compression script to optimize images for the website.
+The site is a static export (`output: 'export'`), so Next.js can't resize images at
+request time. Responsive variants are generated ahead of time with `cwebp` and
+committed. Both scripts need `brew install webp`.
 
-## Overview
+## Photos (`public/images/photos`, `public/images/photos/team`)
 
-The image compression script:
-- Takes images from `/assets/images`
-- Compresses them to WebP format with 75% quality
-- Also creates compressed versions with original file extensions
-- Saves all compressed images to `/public/images-compressed`
-- Maintains a mapping log of original to compressed files
-- Skips already compressed files unless forced
+`next/image` uses the custom loader in `lib/photo-loader.ts`, which points every
+srcset entry at `{name}-{width}.webp` next to the original. After adding or
+replacing a photo, regenerate the variants:
 
-## Requirements
+```bash
+node scripts/optimize-photos.mjs
+```
 
-The script requires Node.js and the Squoosh CLI package, which is included in the project's devDependencies.
+Widths live in `PHOTO_WIDTHS` (`lib/photo-loader.ts`) and must match
+`deviceSizes` + `imageSizes` in `next.config.mjs`. `lib/photos.test.ts` fails if a
+variant is missing or over its byte budget.
 
-## Usage
+## Release covers (`public/images/covers`)
 
-### Basic Compression
+The work carousel builds its own srcset (`COVER_WIDTHS` in `lib/releases.ts`):
 
-To compress all images:
+```bash
+node scripts/optimize-covers.mjs "<folder with covers>"
+```
 
-\`\`\`bash
-npm run compress-images
-\`\`\`
+`lib/releases.test.ts` checks every cover's variants against a byte budget.
 
-This will compress all images that haven't been compressed before.
+## Tests against the exported site
 
-### Force Compression
+```bash
+npm run test:build
+```
 
-To force compression of all images, even if they've been compressed before:
-
-\`\`\`bash
-npm run compress-images:force
-\`\`\`
-
-### Build Process
-
-Image compression is automatically run before the build process when you run:
-
-\`\`\`bash
-npm run build
-\`\`\`
-
-## Mapping Log
-
-The script creates a file called `image-compression-mapping.json` in the project root. This file maps original image paths to their compressed versions, which helps the script determine which files have already been compressed.
-
-## Customization
-
-If you need to change compression settings, edit the `scripts/compress-images.js` file:
-
-- `SOURCE_DIR`: Source directory for original images
-- `TARGET_DIR`: Target directory for compressed images
-- `QUALITY`: WebP compression quality (0-100)
-
-## Troubleshooting
-
-If you encounter issues:
-
-1. Make sure the `/assets/images` directory exists and contains images
-2. Check that you have write permissions to the `/public/images-compressed` directory
-3. Try running with the `--force` flag to bypass the cache
-4. Delete the `image-compression-mapping.json` file to start fresh
-\`\`\`
-
-Let's create a simple directory structure to ensure the script works properly:
+Builds the site and checks `out/`: srcsets, hero preload priority, and that the
+`.htaccess` redirect and cache rules are exported.

@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:build": "next build && vitest run -c vitest.build.config.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

@@ -2,17 +2,20 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
+import { PHONE_DISPLAY, PHONE_E164, localePath } from "@/lib/site"
 
 export default function Footer() {
   const t = useTranslations("Footer")
+  // Absolute links so the footer also works on blog pages
+  const home = localePath(useLocale())
 
   return (
     <footer className="bg-[#0A0A0A] border-t border-white/10 pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-6">
+            <Link href={home} className="inline-block mb-6">
               <Image
                 src="/images/svg/hydra-logo-full-white.svg"
                 alt="Hydra Studios"
@@ -51,23 +54,23 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">{t("quickLinks")}</h3>
             <ul className="space-y-3">
-              <li><Link href="#studios" className="text-white/70 hover:text-white transition-colors">{t("ourStudios")}</Link></li>
-              <li><Link href="#services" className="text-white/70 hover:text-white transition-colors">{t("services")}</Link></li>
-              <li><Link href="#about" className="text-white/70 hover:text-white transition-colors">{t("aboutUs")}</Link></li>
-              <li><Link href="#team" className="text-white/70 hover:text-white transition-colors">{t("team")}</Link></li>
-              <li><Link href="#contact" className="text-white/70 hover:text-white transition-colors">{t("contact")}</Link></li>
-              <li><Link href="#" className="text-white/70 hover:text-white transition-colors">{t("blog")}</Link></li>
+              <li><Link href={`${home}#studios`} className="text-white/70 hover:text-white transition-colors">{t("ourStudios")}</Link></li>
+              <li><Link href={`${home}#services`} className="text-white/70 hover:text-white transition-colors">{t("services")}</Link></li>
+              <li><Link href={`${home}#about`} className="text-white/70 hover:text-white transition-colors">{t("aboutUs")}</Link></li>
+              <li><Link href={`${home}#team`} className="text-white/70 hover:text-white transition-colors">{t("team")}</Link></li>
+              <li><Link href={`${home}#contact`} className="text-white/70 hover:text-white transition-colors">{t("contact")}</Link></li>
+              <li><Link href={`${home}blogg/`} className="text-white/70 hover:text-white transition-colors">{t("blog")}</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-bold mb-4">{t("servicesTitle")}</h3>
             <ul className="space-y-3">
-              <li><Link href="#services" className="text-white/70 hover:text-white transition-colors">{t("recording")}</Link></li>
-              <li><Link href="#services" className="text-white/70 hover:text-white transition-colors">{t("mixing")}</Link></li>
-              <li><Link href="#services" className="text-white/70 hover:text-white transition-colors">{t("mastering")}</Link></li>
-              <li><Link href="#services" className="text-white/70 hover:text-white transition-colors">{t("production")}</Link></li>
-              <li><Link href="#services" className="text-white/70 hover:text-white transition-colors">{t("studioResidency")}</Link></li>
+              <li><Link href={`${home}#services`} className="text-white/70 hover:text-white transition-colors">{t("recording")}</Link></li>
+              <li><Link href={`${home}#services`} className="text-white/70 hover:text-white transition-colors">{t("mixing")}</Link></li>
+              <li><Link href={`${home}#services`} className="text-white/70 hover:text-white transition-colors">{t("mastering")}</Link></li>
+              <li><Link href={`${home}#services`} className="text-white/70 hover:text-white transition-colors">{t("production")}</Link></li>
+              <li><Link href={`${home}#services`} className="text-white/70 hover:text-white transition-colors">{t("studioResidency")}</Link></li>
             </ul>
           </div>
 
@@ -82,7 +85,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <span className="text-white/70">
-                  Fredriksbergsgatan 7 A<br />212 11 Malmö<br />SWEDEN
+                  Fredriksbergsgatan 7A<br />212 11 Malmö<br />SWEDEN
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -93,6 +96,14 @@ export default function Footer() {
                   </svg>
                 </div>
                 <span className="text-white/70">info@hydrastudios.se</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="text-[#556B2F] mt-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <a href={`tel:${PHONE_E164}`} className="text-white/70 hover:text-white transition-colors">{PHONE_DISPLAY}</a>
               </li>
             </ul>
           </div>
