@@ -3,21 +3,11 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Send / to a locale on the server instead of via the JS redirect in app/page.tsx.
-# 302 + Vary because the target depends on the browser's first language.
-RewriteCond %{HTTP:Accept-Language} ^en [NC]
-RewriteRule ^$ /en/ [R=302,L,E=LANG_REDIRECT:1]
-RewriteCond %{HTTP:Accept-Language} ^de [NC]
-RewriteRule ^$ /de/ [R=302,L,E=LANG_REDIRECT:1]
-RewriteCond %{HTTP:Accept-Language} ^ja [NC]
-RewriteRule ^$ /ja/ [R=302,L,E=LANG_REDIRECT:1]
-RewriteCond %{HTTP:Accept-Language} ^ko [NC]
-RewriteRule ^$ /ko/ [R=302,L,E=LANG_REDIRECT:1]
-RewriteRule ^$ /sv/ [R=302,L,E=LANG_REDIRECT:1]
+# Swedish moved from /sv/ to the site root. Permanent redirect so Google moves
+# rankings and links over to the new URLs.
+RewriteRule ^sv(?:/(.*))?$ /$1 [R=301,L]
 
 <IfModule mod_headers.c>
-  Header always append Vary Accept-Language env=LANG_REDIRECT
-
   # HTML isn't content-hashed: browsers revalidate every time, while the edge
   # cache (Varnish at one.com) may serve it for 10 minutes so rarely visited
   # locales aren't cold.
@@ -27,7 +17,7 @@ RewriteRule ^$ /sv/ [R=302,L,E=LANG_REDIRECT:1]
 </IfModule>
 
 # Custom 404
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404/index.html
 
 # MIME types for Next.js static assets
 <IfModule mod_mime.c>

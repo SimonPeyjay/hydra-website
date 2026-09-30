@@ -1,4 +1,3 @@
-import { setRequestLocale } from "next-intl/server"
 import HeroSection from "@/components/hero-section"
 import WorkSection from "@/components/work-section"
 import StudioGallery from "@/components/studio-gallery"
@@ -10,14 +9,7 @@ import ContactSection from "@/components/contact-section"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 
-export default async function Home({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}) {
-  const { locale } = await params
-  setRequestLocale(locale)
-
+export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#121212] text-white overflow-hidden">
       <Navbar />

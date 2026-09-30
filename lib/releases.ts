@@ -4,6 +4,8 @@ export type Release = {
   /** Basename of the cover files in /public/images/covers (`{cover}-{width}.webp`). */
   cover: string
   spotify: string
+  /** Contests the song competed in, e.g. "Melodifestivalen 2019". Shown under the caption. */
+  contests?: string[]
 }
 
 /** Widths generated for every cover by scripts/optimize-covers.mjs. */
@@ -11,11 +13,11 @@ export const COVER_WIDTHS = [400, 640, 960] as const
 
 export const releases: Release[] = [
   { artist: "Laurell", title: "Habit", cover: "laurell-habit", spotify: "https://open.spotify.com/track/4bnutybG1itDcpyoQo2Uoc" },
-  { artist: "John Lundvik", title: "Too Late For Love", cover: "john-lundvik-too-late-for-love", spotify: "https://open.spotify.com/track/6kIdjk3D8XxA2UafE0THGK" },
+  { artist: "John Lundvik", title: "Too Late For Love", cover: "john-lundvik-too-late-for-love", spotify: "https://open.spotify.com/track/6kIdjk3D8XxA2UafE0THGK", contests: ["Melodifestivalen 2019", "Eurovision 2019"] },
   { artist: "CD9", title: "ROCKSTAR", cover: "cd9-rockstar", spotify: "https://open.spotify.com/track/2cmtrnmQcChmE0Pb4cmO0L" },
   { artist: "Dhurata Dora, INNA", title: "Ale Ale (feat. INNA)", cover: "dhurata-dora-inna-ale-ale-feat-inna", spotify: "https://open.spotify.com/track/49jBY6EH8v94kloRQbZv7i" },
   { artist: "CD9", title: "Otra Vez (One More Time)", cover: "cd9-otra-vez-one-more-time", spotify: "https://open.spotify.com/track/0nbxWA3JkDrg7x5fBFMnaj" },
-  { artist: "Samir & Viktor", title: "Shuffla", cover: "samir-viktor-shuffla", spotify: "https://open.spotify.com/track/3bnS9O5Q9Zn9MD4Z3zDV62" },
+  { artist: "Samir & Viktor", title: "Shuffla", cover: "samir-viktor-shuffla", spotify: "https://open.spotify.com/track/3bnS9O5Q9Zn9MD4Z3zDV62", contests: ["Melodifestivalen 2018"] },
   { artist: "Imminence", title: "This Is Goodbye", cover: "imminence-this-is-goodbye", spotify: "https://open.spotify.com/track/64hjZJqbq6Q4h4u3AcDfN6" },
   { artist: "OH MY GIRL", title: "Nonstop", cover: "oh-my-girl-nonstop", spotify: "https://open.spotify.com/track/4ljXOIFNSjnGA2VuCYHQTS" },
   { artist: "NCT DREAM", title: "Dream Run", cover: "nct-dream-dream-run", spotify: "https://open.spotify.com/track/6ByGZGm5Y5VwrQheIUlw1N" },

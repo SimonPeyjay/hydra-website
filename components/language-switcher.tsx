@@ -2,7 +2,8 @@
 
 import { useState, useRef, useEffect } from "react"
 import { useLocale } from "next-intl"
-import { useRouter, usePathname } from "@/i18n/navigation"
+import { usePathname } from "@/i18n/navigation"
+import { localePath } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
 const locales = [
@@ -15,7 +16,6 @@ const locales = [
 
 export default function LanguageSwitcher() {
   const locale = useLocale()
-  const router = useRouter()
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -98,7 +98,12 @@ export default function LanguageSwitcher() {
                 l.code === locale ? "text-[#556B2F] font-medium" : "text-white/80",
               )}
               onClick={() => {
-                router.replace(pathname, { locale: l.code })
+                // Blog posts are Swedish only, so other languages land on their blog index
+                const isPost = /^\/blogg\/[^/]+/.test(pathname)
+                const path = isPost && l.code !== "sv" ? "/blogg/" : pathname.endsWith("/") ? pathname : `${pathname}/`
+                // Full page load: Swedish and the other locales are separate root layouts, and
+                // next-intl's router would add a /sv prefix that only exists as a redirect.
+                window.location.assign(localePath(l.code, path))
                 setOpen(false)
               }}
             >

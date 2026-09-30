@@ -10,8 +10,8 @@ function page(route: string): Document {
   return new JSDOM(html).window.document
 }
 
-describe("exported /sv/ page", () => {
-  const doc = page("sv")
+describe("exported Swedish home page", () => {
+  const doc = page("")
 
   it("serves studio photos as resized variants instead of the original", () => {
     const img = doc.querySelector<HTMLImageElement>('img[srcset*="Dennis_studio"]')
@@ -41,17 +41,95 @@ describe("exported /sv/ page", () => {
 describe("exported .htaccess", () => {
   const htaccess = fs.readFileSync(path.join(outDir, ".htaccess"), "utf8")
 
-  it("redirects the root on the server, by browser language, falling back to Swedish", () => {
-    for (const locale of ["en", "de", "ja", "ko"]) {
-      expect(htaccess).toContain(`RewriteCond %{HTTP:Accept-Language} ^${locale} [NC]`)
-      expect(htaccess).toContain(`RewriteRule ^$ /${locale}/ [R=302,L,E=LANG_REDIRECT:1]`)
-    }
-    expect(htaccess).toContain("RewriteRule ^$ /sv/ [R=302,L,E=LANG_REDIRECT:1]")
+  it("permanently redirects the old /sv/ URLs to the Swedish root", () => {
+    expect(htaccess).toContain("RewriteRule ^sv(?:/(.*))?$ /$1 [R=301,L]")
+    expect(htaccess).not.toContain("Accept-Language")
   })
 
   it("lets the edge cache keep HTML pages warm while browsers always revalidate", () => {
     expect(htaccess).toMatch(
       /<FilesMatch "\\\.html\$">\s*Header set Cache-Control "public, max-age=0, s-maxage=600, must-revalidate"/,
     )
+  })
+})
+
+// Google reads the search result favicon from the home page and wants a square
+// icon in a multiple of 48px; many crawlers ask for /favicon.ico directly.
+describe("exported favicons and crawler files", () => {
+  it("serves /favicon.ico and links icons from the home page itself", () => {
+    expect(fs.existsSync(path.join(outDir, "favicon.ico"))).toBe(true)
+
+    const doc = page("")
+    expect(doc.querySelector('link[rel="icon"][href="/favicon.ico"]')).not.toBeNull()
+    expect(doc.querySelector('link[rel="icon"][href="/icon-48.png"][sizes="48x48"]')).not.toBeNull()
+    expect(doc.querySelector('meta[http-equiv="refresh"]')).toBeNull()
+  })
+
+  it("publishes robots.txt pointing at the sitemap, which lists every locale and blog post", () => {
+    expect(fs.readFileSync(path.join(outDir, "robots.txt"), "utf8")).toContain(
+      "Sitemap: https://hydrastudios.se/sitemap.xml",
+    )
+
+    const sitemap = fs.readFileSync(path.join(outDir, "sitemap.xml"), "utf8")
+    expect(sitemap).toContain("<loc>https://hydrastudios.se/</loc>")
+    for (const locale of ["en", "de", "ja", "ko"]) {
+      expect(sitemap).toContain(`<loc>https://hydrastudios.se/${locale}/</loc>`)
+    }
+    expect(sitemap).toContain("<loc>https://hydrastudios.se/blogg/skriva-lat-till-melodifestivalen/</loc>")
+    expect(sitemap).not.toContain("hydrastudios.se/sv/")
+  })
+})
+
+describe("exported locale pages", () => {
+  it("sets lang, canonical and hreflang in the HTML itself, with trailing slashes", () => {
+    const doc = page("en")
+
+    expect(doc.documentElement.lang).toBe("en")
+    expect(doc.querySelector('link[rel="canonical"]')?.getAttribute("href")).toBe("https://hydrastudios.se/en/")
+    expect(doc.querySelector('link[rel="alternate"][hreflang="sv"]')?.getAttribute("href")).toBe(
+      "https://hydrastudios.se/",
+    )
+    expect(doc.querySelector('link[rel="alternate"][hreflang="x-default"]')?.getAttribute("href")).toBe(
+      "https://hydrastudios.se/",
+    )
+  })
+
+  it("serves Swedish at the root, not under /sv/", () => {
+    const doc = page("")
+
+    expect(doc.documentElement.lang).toBe("sv")
+    expect(doc.querySelector('link[rel="canonical"]')?.getAttribute("href")).toBe("https://hydrastudios.se/")
+    expect(fs.existsSync(path.join(outDir, "sv"))).toBe(false)
+  })
+
+  it("names the studio's location in the h1 and describes it as a LocalBusiness with phone and hours", () => {
+    const doc = page("")
+
+    expect(doc.querySelector("h1")?.textContent).toContain("Musikstudio i Malmö")
+    const jsonLd = JSON.parse(doc.querySelector('script[type="application/ld+json"]')!.textContent!)
+    expect(jsonLd[0]["@type"]).toBe("LocalBusiness")
+    expect(jsonLd[0].telephone).toBe("+46707485294")
+    expect(jsonLd[0].openingHoursSpecification[0]).toMatchObject({ opens: "09:00", closes: "20:00" })
+  })
+
+  it("publishes blog posts with their own title and BlogPosting data", () => {
+    const doc = page("blogg/hur-kommer-man-med-i-eurovision")
+
+    expect(doc.title).toContain("Eurovision")
+    const types = [...doc.querySelectorAll('script[type="application/ld+json"]')].map(
+      (script) => JSON.parse(script.textContent!)["@type"],
+    )
+    expect(types).toContain("BlogPosting")
+  })
+})
+
+describe("exported 404 page", () => {
+  it("is served by Apache with the site's layout and kept out of the index", () => {
+    expect(fs.readFileSync(path.join(outDir, ".htaccess"), "utf8")).toContain("ErrorDocument 404 /404/index.html")
+
+    const doc = page("404")
+    expect(doc.documentElement.lang).toBe("sv")
+    expect(doc.querySelector('meta[name="robots"]')?.getAttribute("content")).toContain("noindex")
+    expect(doc.querySelector('link[rel="icon"][href="/favicon.ico"]')).not.toBeNull()
   })
 })

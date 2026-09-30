@@ -1,8 +1,9 @@
 {
   "Metadata": {
-    "title": "Hydra Studios | Premiumstudiokollektiv för musik i Malmö",
-    "description": "Ett premiumstudiokollektiv i Malmö, Sverige där konstnärlig vision och teknisk excellens möts. Boka din session idag.",
-    "ogDescription": "Ett premiumstudiokollektiv i Malmö, Sverige där konstnärlig vision och teknisk excellens möts."
+    "title": "Musikstudio i Malmö – inspelning, produktion & mix | Hydra Studios",
+    "description": "Hydra Studios är ett kollektiv av musikstudior och inspelningsstudior i Malmö. Inspelning, produktion, mix och mastering – med låtar i Melodifestivalen och Eurovision. Boka din session.",
+    "ogDescription": "Kollektiv av musikstudior och inspelningsstudior i Malmö – inspelning, produktion, mix och mastering, med låtar i Melodifestivalen och Eurovision.",
+    "ogImageAlt": "Hydra Studios, musikstudio i Malmö"
   },
   "Navbar": {
     "skipToContent": "Hoppa till huvudinnehåll",
@@ -16,6 +17,7 @@
     "closeMenu": "Stäng meny"
   },
   "Hero": {
+    "kicker": "Musikstudio i Malmö",
     "title": "Där vision möter ljudmässig excellens",
     "subtitle": "Ett premiumkollektiv av inspelningsstudior i världsklass, designade för artister som inte nöjer sig med något annat än det bästa.",
     "exploreStudios": "Utforska studios",
@@ -27,7 +29,7 @@
   },
   "Work": {
     "title": "Vårt arbete",
-    "subtitle": "Ett urval av släpp som våra låtskrivare och producenter har jobbat med.",
+    "subtitle": "Ett urval av släpp som våra låtskrivare och producenter har jobbat med – från K-pop och svensk pop till Melodifestivalen och Eurovision.",
     "carouselLabel": "Släpp – scrolla i sidled",
     "coverAlt": "Omslag till {title} av {artist}",
     "listen": "Lyssna",
@@ -80,7 +82,7 @@
   },
   "About": {
     "title": "Om Hydra",
-    "paragraph1": "Hydra är ett kollektiv av inspelningsstudior i världsklass grundat på en enkel princip: att skapa utrymmen där konstnärlig vision och teknisk excellens möts.",
+    "paragraph1": "Hydra är ett kollektiv av musikstudior och inspelningsstudior i världsklass i Malmö, grundat på en enkel princip: att skapa utrymmen där konstnärlig vision och teknisk excellens möts.",
     "paragraph2": "Våra studios är mer än bara rum med utrustning – de är noggrant utformade miljöer designade för att inspirera kreativitet och fånga det perfekta ljudet. Varje utrymme har sin egen unika karaktär, akustik och utrustningsval, vilket låter artister hitta den perfekta matchningen för sitt projekt.",
     "quote": "\"Vi byggde Hydra för att vara den typen av studio vi alltid ville arbeta i – där teknisk excellens möter kreativ frihet.\"",
     "paragraph3": "Det som skiljer Hydra från mängden är vårt samarbetsinriktade tillvägagångssätt. Som kollektiv samlar vi några av branschens mest talangfulla ljudtekniker, producenter och studiodesigners, alla förenade av en passion för exceptionellt ljud och ett engagemang för att hjälpa artister förverkliga sin vision.",
@@ -91,7 +93,7 @@
   },
   "Services": {
     "title": "Våra tjänster",
-    "subtitle": "Från inspelning och mixning till produktion och mastering erbjuder vi en komplett uppsättning tjänster för att förverkliga din musikaliska vision.",
+    "subtitle": "Från inspelning och mixning till produktion och mastering erbjuder vi i vår musikstudio i Malmö en komplett uppsättning tjänster för att förverkliga din musikaliska vision.",
     "learnMore": "Läs mer",
     "recording": {
       "title": "Inspelning",
@@ -228,6 +230,7 @@
     "contactInfo": "Kontaktinformation",
     "contactDescription": "Fyll i formuläret så återkommer vårt team inom 24 timmar.",
     "email": "E-post",
+    "phone": "Telefon",
     "location": "Plats",
     "followUs": "Följ oss",
     "nameLabel": "Ditt namn",
@@ -289,5 +292,18 @@
   },
   "LanguageSwitcher": {
     "label": "Språk"
+  },
+  "Blog": {
+    "title": "Blogg",
+    "metaTitle": "Blogg om Melodifestivalen, Eurovision och musikproduktion | Hydra Studios",
+    "metaDescription": "Tips från en musikstudio i Malmö: så skriver du en låt till Melodifestivalen, hur uttagningen till Eurovision fungerar och hur du bygger din karriär som artist.",
+    "intro": "Tips och insikter från våra låtskrivare och producenter – om Melodifestivalen, Eurovision och livet i studion.",
+    "readMore": "Läs mer",
+    "backHome": "Till startsidan",
+    "allPosts": "Alla inlägg",
+    "swedishOnly": "Artiklarna är just nu på svenska.",
+    "ctaTitle": "Vill du jobba med oss?",
+    "ctaText": "Hydra Studios är ett kollektiv av musikstudior i Malmö. Vi hjälper dig med inspelning, produktion, mix och mastering.",
+    "ctaButton": "Boka en session"
   }
 }

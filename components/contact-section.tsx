@@ -9,6 +9,7 @@ import { Loader } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { contactSchema, type ContactFormData } from "@/lib/validations/contact"
 import { useTranslations } from "next-intl"
+import { PHONE_DISPLAY, PHONE_E164 } from "@/lib/site"
 import {
   STUDIO_MAP,
   PROJECT_TYPE_MAP,
@@ -181,6 +182,31 @@ export default function ContactSection() {
                       strokeLinejoin="round"
                       aria-hidden="true"
                     >
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-xs font-medium text-white/50 uppercase tracking-wider mb-1">{t("phone")}</h4>
+                    <a href={`tel:${PHONE_E164}`} className="text-sm text-white/80 hover:text-white transition-colors">
+                      {PHONE_DISPLAY}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="text-[#556B2F] mt-0.5 shrink-0">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                       <circle cx="12" cy="10" r="3"></circle>
                     </svg>
@@ -188,7 +214,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="text-xs font-medium text-white/50 uppercase tracking-wider mb-1">{t("location")}</h4>
                     <address className="text-sm text-white/80 not-italic leading-relaxed">
-                      Fredriksbergsgatan 7 A<br />
+                      Fredriksbergsgatan 7A<br />
                       212 11 Malmö<br />
                       SWEDEN
                     </address>
