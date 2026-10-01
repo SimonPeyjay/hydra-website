@@ -41,3 +41,12 @@ export const STUDIO_MAP: Record<StudioId, string> = {
   denniz: "Denniz Jamm",
   thomas: "Thomas Wallén (Publishing)",
 }
+
+export const SERVICE_KEYS = [
+  "songwriting",
+  "production",
+  "recording",
+  "mixing",
+  "mastering",
+  "collaboration",
+] as const

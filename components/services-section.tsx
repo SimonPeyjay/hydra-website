@@ -8,8 +8,7 @@ import { useInView } from "react-intersection-observer"
 import { PenLine, Music, Mic, Sliders, Headphones, Handshake } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"
-
-const serviceKeys = ["songwriting", "production", "recording", "mixing", "mastering", "collaboration"] as const
+import { SERVICE_KEYS as serviceKeys } from "@/lib/constants"
 
 const serviceIcons: Record<string, React.ReactNode> = {
   songwriting: <PenLine className="w-6 h-6" />,
