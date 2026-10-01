@@ -4,9 +4,11 @@ import Image from "next/image"
 import Link from "next/link"
 import { useLocale, useTranslations } from "next-intl"
 import { PHONE_DISPLAY, PHONE_E164, localePath } from "@/lib/site"
+import { SERVICE_KEYS } from "@/lib/constants"
 
 export default function Footer() {
   const t = useTranslations("Footer")
+  const tServices = useTranslations("Services")
   // Absolute links so the footer also works on blog pages
   const home = localePath(useLocale())
 
@@ -66,11 +68,9 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">{t("servicesTitle")}</h3>
             <ul className="space-y-3">
-              <li><Link href={`${home}#services`} className="text-white/70 hover:text-white transition-colors">{t("recording")}</Link></li>
-              <li><Link href={`${home}#services`} className="text-white/70 hover:text-white transition-colors">{t("mixing")}</Link></li>
-              <li><Link href={`${home}#services`} className="text-white/70 hover:text-white transition-colors">{t("mastering")}</Link></li>
-              <li><Link href={`${home}#services`} className="text-white/70 hover:text-white transition-colors">{t("production")}</Link></li>
-              <li><Link href={`${home}#services`} className="text-white/70 hover:text-white transition-colors">{t("studioResidency")}</Link></li>
+              {SERVICE_KEYS.map((key) => (
+                <li key={key}><Link href={`${home}#services`} className="text-white/70 hover:text-white transition-colors">{tServices(`${key}.title`)}</Link></li>
+              ))}
             </ul>
           </div>
 

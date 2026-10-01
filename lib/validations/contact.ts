@@ -29,10 +29,6 @@ export const contactSchema = z.object({
   studio: z
     .union([z.enum(STUDIO_IDS), z.literal("")])
     .default(""),
-  dateRange: z
-    .string()
-    .max(200, "Date range must be at most 200 characters")
-    .default(""),
   privacy: z.literal(true, {
     errorMap: () => ({ message: "You must accept the privacy policy" }),
   }),

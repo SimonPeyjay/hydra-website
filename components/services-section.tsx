@@ -5,28 +5,27 @@ import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
 import { useInView } from "react-intersection-observer"
-import { Mic, Sliders, Music, Headphones, Users, Calendar } from "lucide-react"
+import { PenLine, Music, Mic, Sliders, Headphones, Handshake } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"
-
-const serviceKeys = ["recording", "mixing", "production", "mastering", "collaboration", "residency"] as const
+import { SERVICE_KEYS as serviceKeys } from "@/lib/constants"
 
 const serviceIcons: Record<string, React.ReactNode> = {
+  songwriting: <PenLine className="w-6 h-6" />,
+  production: <Music className="w-6 h-6" />,
   recording: <Mic className="w-6 h-6" />,
   mixing: <Sliders className="w-6 h-6" />,
-  production: <Music className="w-6 h-6" />,
   mastering: <Headphones className="w-6 h-6" />,
-  collaboration: <Users className="w-6 h-6" />,
-  residency: <Calendar className="w-6 h-6" />,
+  collaboration: <Handshake className="w-6 h-6" />,
 }
 
 const serviceImages: Record<string, string> = {
+  songwriting: "/images/photos/Simon_studio.webp",
+  production: "/images/photos/David_studio2.webp",
   recording: "/images/photos/Andreas_studio.webp",
   mixing: "/images/photos/Dennis_studio.webp",
-  production: "/images/photos/David_studio2.webp",
   mastering: "/images/photos/Peter_studio.webp",
-  collaboration: "/images/photos/Kitchen.webp",
-  residency: "/images/photos/Hallway.webp",
+  collaboration: "/images/photos/Hallway.webp",
 }
 
 export default function ServicesSection() {
@@ -100,9 +99,12 @@ export default function ServicesSection() {
                 ))}
               </div>
 
-              <button className="bg-gradient-to-r from-[#556B2F] to-[#657d38] hover:from-[#657d38] hover:to-[#758e49] text-white px-6 py-3 rounded shadow-[0_0_15px_rgba(85,107,47,0.3)] hover:shadow-[0_0_20px_rgba(85,107,47,0.5)] text-sm uppercase tracking-wider font-medium transition-colors">
+              <a
+                href="#contact"
+                className="inline-block bg-gradient-to-r from-[#556B2F] to-[#657d38] hover:from-[#657d38] hover:to-[#758e49] text-white px-6 py-3 rounded shadow-[0_0_15px_rgba(85,107,47,0.3)] hover:shadow-[0_0_20px_rgba(85,107,47,0.5)] text-sm uppercase tracking-wider font-medium transition-colors"
+              >
                 {t("learnMore")}
-              </button>
+              </a>
             </div>
 
             <div className="order-1 lg:order-2">

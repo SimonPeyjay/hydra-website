@@ -12,18 +12,18 @@
     "about": "Om oss",
     "services": "Tjänster",
     "team": "Teamet",
-    "bookNow": "Boka nu",
+    "bookNow": "Hör av dig",
     "toggleMenu": "Öppna/stäng meny",
     "closeMenu": "Stäng meny"
   },
   "Hero": {
     "kicker": "Musikstudio i Malmö",
-    "title": "Där vision möter ljudmässig excellens",
-    "subtitle": "Ett premiumkollektiv av inspelningsstudior i världsklass, designade för artister som inte nöjer sig med något annat än det bästa.",
+    "title": "Låtar gör man bäst ihop",
+    "subtitle": "Hydra är ett gäng låtskrivare, producenter och musiker som delar studios, kök och kaffe. Varje rum har sin egen karaktär. Precis som vi.",
     "exploreStudios": "Utforska studios",
-    "bookSession": "Boka en session",
+    "bookSession": "Hör av dig",
     "exploreLabel": "Utforska våra studios",
-    "bookLabel": "Boka en inspelningssession",
+    "bookLabel": "Gå till kontaktformuläret",
     "scrollLabel": "Scrolla till studiosektionen",
     "bgAlt": "Hydra Studios korridor"
   },
@@ -36,123 +36,116 @@
     "listenLabel": "Lyssna på {title} av {artist} på Spotify (öppnas i ny flik)"
   },
   "Studios": {
-    "title": "Våra premiumstudios",
-    "subtitle": "Utforska vår samling av noggrant designade inspelningsutrymmen, var och en med sin unika karaktär och kapacitet.",
+    "title": "Studiorna",
+    "subtitle": "Varje studio heter som den som jobbar där, och låter därefter.",
     "viewDetails": "Visa detaljer för {name}",
     "closeModal": "Stäng",
     "features": "Utrustning",
-    "bookStudio": "Boka denna studio",
+    "bookStudio": "Hör av dig",
     "studioImages": "Studiobilder",
     "andreas": {
       "name": "Andreas Studio",
-      "description": "En rymlig inspelningsmiljö med toppmodern akustik och vintage-utrustning.",
-      "features": ["Neve-konsol", "Live-rum", "Isoleringsrum", "Vintage-mikrofoner"],
+      "description": "Här står flygeln. Rummet för sång, piano och allt med strängar, från banjo till en specialbyggd Taylor från Nashville.",
+      "features": ["Yamaha-flygel", "Manley Reference C", "Manley Vox Box", "Taylor custom", "Ibanez Prestige-bas", "Banjo och ukulele"],
       "images": ["Andreas Studio huvudrum", "Andreas Studio utrustning", "Andreas Studio mixområde", "Andreas Studio live-rum"]
     },
     "costa": {
       "name": "Costa Studio",
-      "description": "Intimt inspelningsutrymme med premiumakustik och en varm, inbjudande atmosfär.",
-      "features": ["SSL-konsol", "Akustisk behandling", "Vintage-syntar", "Trumset"],
+      "description": "Rummet för house och klubbmusik. Costa jobbar mest i datorn, på Neumann-monitorer och med DJ-setet nära till hands.",
+      "features": ["Neumann-monitorer", "DJ-set", "Produktion i datorn"],
       "images": ["Costa Studio", "Costa Studio utrustning"]
     },
     "david": {
       "name": "David Studio",
-      "description": "Modern produktionssvit med banbrytande digital utrustning och analog värme.",
-      "features": ["API-konsol", "Modulära syntar", "Gitarrsamling", "Masteringkedja"],
+      "description": "Gitarrernas rum. Les Paul, Flying V, Strat, tolvsträngat och lapsteel, plus DX7 och Model D för det som inte går att spela med plektrum.",
+      "features": ["Gibson Les Paul Studio och Flying V", "Fender Stratocaster", "Solar med True Temperament och EverTune", "Marshall JCM 800", "DX7 och Model D", "Adam A77H och Sub10"],
       "images": ["David Studio huvudrum", "David Studio utrustning"]
     },
     "dennis": {
       "name": "Dennis Studio",
-      "description": "Specialiserad mix- och masteringsvit med perfekt avlyssningsmiljö.",
-      "features": ["Masteringkonsol", "Referensmonitorer", "Analoga EQ:er", "Vintage-kompressorer"],
+      "description": "Rummet för sång och mix, gärna mitt i natten. Stoltheten är en Tube-Tech CL 1B, och Denniz lyssnar på ett par gamla Mackie som han inte byter mot något.",
+      "features": ["Tube-Tech CL 1B", "Neumann-mikrofon", "Mackie och sub"],
       "images": ["Dennis Studio huvudrum", "Dennis Studio utrustning"]
     },
     "simon": {
       "name": "Simon Studio",
-      "description": "Kreativt produktionsutrymme med en blandning av vintage- och modern utrustning för unika ljudtexturer.",
-      "features": ["Analoga syntar", "Boutique-outboard", "Sångbås", "Skräddarsydd akustik"],
+      "description": "Synthar, gitarrer och punchiga trummor. Rummet där indiemelodierna blir till.",
+      "features": ["Dave Smith OB-6", "Yamaha DX7", "Behringer Model D", "Yamaha NS-10", "Fender Strat och Jazz Bass", "Squier Bass VI"],
       "images": ["Simon Studio huvudrum", "Simon Studio utrustning"]
     },
     "common": {
       "name": "Gemensamma utrymmen",
-      "description": "Delade utrymmen designade för samarbete, avkoppling och inspiration.",
+      "description": "Kök, lounge och plats att andas mellan tagningarna. Här diskuteras låtarna, och här tar kaffet slut.",
       "features": ["Kök", "Lounge", "Mötesrum", "Korridor"],
       "images": ["Korridor", "Kök", "Thomas kontor", "Peter Studio", "Plackområde"]
     }
   },
   "About": {
     "title": "Om Hydra",
-    "paragraph1": "Hydra är ett kollektiv av musikstudior och inspelningsstudior i världsklass i Malmö, grundat på en enkel princip: att skapa utrymmen där konstnärlig vision och teknisk excellens möts.",
-    "paragraph2": "Våra studios är mer än bara rum med utrustning – de är noggrant utformade miljöer designade för att inspirera kreativitet och fånga det perfekta ljudet. Varje utrymme har sin egen unika karaktär, akustik och utrustningsval, vilket låter artister hitta den perfekta matchningen för sitt projekt.",
-    "quote": "\"Vi byggde Hydra för att vara den typen av studio vi alltid ville arbeta i – där teknisk excellens möter kreativ frihet.\"",
-    "paragraph3": "Det som skiljer Hydra från mängden är vårt samarbetsinriktade tillvägagångssätt. Som kollektiv samlar vi några av branschens mest talangfulla ljudtekniker, producenter och studiodesigners, alla förenade av en passion för exceptionellt ljud och ett engagemang för att hjälpa artister förverkliga sin vision.",
+    "paragraph1": "På Fredriksbergsgatan i Malmö har ett gäng låtskrivare och producenter sina musikstudios, och delar på resten. Det är Hydra.",
+    "paragraph2": "Alla rum och alla i gänget har sin egen grej, och det använder vi fullt ut så att varje låt och varje detalj får det den förtjänar. Vi vänder på varje sten.",
+    "quote": "\"Vi byggde Hydra för att det var den studion vi själva alltid velat jobba i.\"",
+    "paragraph3": "Det bästa verktyget i en studio är inte konsolen, utan ett par andra öron. Här finns allt från punchiga trummor och distade JCM 800-gitarrer till flygel, blås och dansmusik, och allt finns en dörr bort.",
     "thomasAlt": "Thomas kontor",
     "davidAlt": "David Studio",
     "andreasAlt": "Andreas Studio",
     "kitchenAlt": "Kök"
   },
   "Services": {
-    "title": "Våra tjänster",
-    "subtitle": "Från inspelning och mixning till produktion och mastering erbjuder vi i vår musikstudio i Malmö en komplett uppsättning tjänster för att förverkliga din musikaliska vision.",
-    "learnMore": "Läs mer",
-    "recording": {
-      "title": "Inspelning",
-      "description": "Toppmoderna inspelningsfaciliteter med premiummikrofoner, förförstärkare och akustiskt behandlade utrymmen designade för att fånga ditt ljud med exceptionell klarhet och karaktär.",
+    "title": "Så jobbar vi",
+    "subtitle": "Vi säger nej oftare än ja. Inte för att vara svåra, utan för att vi vill att varje låt ska gå hela vägen. Det kräver rätt förutsättningar: artister som vet vad de vill säga, och tid och resurser att göra det ordentligt.",
+    "learnMore": "Hör av dig",
+    "songwriting": {
+      "title": "Låtskrivande",
+      "description": "Det är där allt börjar, och det vi gör mest. Vi skriver tillsammans med artisten och tar in fler från gänget när låten behöver en ny infallsvinkel.",
       "features": [
-        "Flera live-rum och isoleringsrum",
-        "Vintage- och moderna mikrofonsamlingar",
-        "Premium analoga signalkedjor",
-        "Högupplöst digital inspelning"
-      ]
-    },
-    "mixing": {
-      "title": "Mixning",
-      "description": "Expertmixningstjänster i akustiskt optimerade miljöer, med användning av både vintage analog utrustning och banbrytande digitala verktyg för att förverkliga din vision.",
-      "features": [
-        "Analog och digital hybridmixning",
-        "Precisionslyssningsmiljöer",
-        "Omfattande outboard-utrustningssamling",
-        "Distansmixning tillgänglig"
+        "Melodi och text",
+        "Arrangemang",
+        "Flera skribenter när det behövs"
       ]
     },
     "production": {
       "title": "Produktion",
-      "description": "Fullservicemusikproduktion från koncept till färdig produkt, med tillgång till vårt nätverk av producenter, musiker och kreativa samarbetspartners i världsklass.",
+      "description": "Från första idé till färdig låt. Instrumenten och musikerna finns i huset, så idéerna kan prövas direkt.",
       "features": [
-        "Arrangemang och komposition",
-        "Koordinering av sessionmusiker",
-        "Vintage- och moderna instrumentsamlingar",
-        "Kreativ riktning och utveckling"
+        "OB-6, DX7 och Model D",
+        "Gitarrer, basar och flygel",
+        "Musiker i huset"
+      ]
+    },
+    "recording": {
+      "title": "Inspelning",
+      "description": "Sång och instrument spelar vi in hos oss. Behöver låten ett liverum, till exempel för trummor, går vi till någon av våra partnerstudios.",
+      "features": [
+        "Manley Reference C och Vox Box",
+        "Tube-Tech CL 1B",
+        "Liverum hos partnerstudios"
+      ]
+    },
+    "mixing": {
+      "title": "Mix",
+      "description": "Alla i huset mixar, och ibland delar vi upp jobbet mellan oss eller tar in en tekniker utifrån. Det som avgör är vad låten behöver.",
+      "features": [
+        "Mix i huset",
+        "NS-10, Adam, Neumann och Mackie",
+        "Externa tekniker vid behov"
       ]
     },
     "mastering": {
       "title": "Mastering",
-      "description": "Precisionsmasteringtjänster i en dedikerad miljö med specialiserad utrustning och erfarna tekniker för att ge din musik den sista finishen.",
+      "description": "Sista steget gör vi också själva. Ibland tar vi hjälp utifrån, och då väljer vi någon som passar just den låten.",
       "features": [
-        "Dedikerade masteringsviter",
-        "Analog och digital bearbetning",
-        "Referensklassig avlyssning",
-        "Formatspecifik optimering"
+        "Mastering i huset",
+        "Externa masteringtekniker vid behov"
       ]
     },
     "collaboration": {
-      "title": "Artistsamarbete",
-      "description": "Knyt kontakt med andra artister, producenter och musiker i vår kreativa gemenskap. Hydra är mer än studios – det är ett kollektiv av kreativa proffs.",
+      "title": "Samarbeten",
+      "description": "Vi gör hela kedjan själva, men plockar gärna in andra studios och tekniker när det finns anledning. Det viktigaste är att låten får all uppmärksamhet den förtjänar.",
       "features": [
-        "Nätverksevent",
-        "Kollaborativa arbetsytor",
-        "Tvärprojektmöjligheter",
-        "Gemenskapsresurser"
-      ]
-    },
-    "residency": {
-      "title": "Studioboende",
-      "description": "Långsiktig studiotillgång för artister och producenter som söker en kreativ hemmabas med alla tekniska resurser som krävs för utökade projekt.",
-      "features": [
-        "Flexibla bokningsarrangemang",
-        "Dedikerat förvaringsutrymme",
-        "24/7 tillgång",
-        "Förmånliga priser"
+        "Gula Studion",
+        "Tambourine Studios",
+        "Rhubarb Park, Harplinge"
       ]
     }
   },
@@ -225,10 +218,10 @@
     "caption": "Lyssna på fler låtar direkt på Spotify"
   },
   "Contact": {
-    "title": "Boka din session",
-    "subtitle": "Redo att förverkliga ditt projekt? Kontakta oss för att boka studiotid eller diskutera dina behov med vårt team.",
+    "title": "Berätta om ditt projekt",
+    "subtitle": "Skriv lite om dig och vad du jobbar med, och skicka gärna med en länk till din musik. Vi lyssnar på allt.",
     "contactInfo": "Kontaktinformation",
-    "contactDescription": "Fyll i formuläret så återkommer vårt team inom 24 timmar.",
+    "contactDescription": "Fyll i formuläret så hör vi av oss.",
     "email": "E-post",
     "phone": "Telefon",
     "location": "Plats",
@@ -238,11 +231,11 @@
     "phoneLabel": "Telefonnummer (valfritt)",
     "projectLabel": "Projekttyp",
     "studioLabel": "Önskad studio (valfritt)",
-    "dateLabel": "Önskade datum (valfritt)",
     "messageLabel": "Projektdetaljer",
-    "messagePlaceholder": "Berätta om ditt projekt och dina behov...",
+    "messagePlaceholder": "Vem är du, vad jobbar du med, och har du en länk till din musik?",
     "selectProject": "Välj projekttyp",
     "noPreference": "Ingen preferens",
+    "projectSongwriting": "Låtskrivande",
     "projectRecording": "Inspelning",
     "projectMixing": "Mixning",
     "projectMastering": "Mastering",
@@ -270,7 +263,7 @@
     "required": "*"
   },
   "Footer": {
-    "about": "Ett premiumstudiokollektiv för musik där konstnärlig vision och teknisk excellens möts.",
+    "about": "Ett gäng låtskrivare och producenter som gör musik ihop i Malmö.",
     "quickLinks": "Snabblänkar",
     "ourStudios": "Våra studios",
     "services": "Tjänster",
@@ -279,11 +272,6 @@
     "team": "Teamet",
     "blog": "Blogg",
     "servicesTitle": "Tjänster",
-    "recording": "Inspelning",
-    "mixing": "Mixning",
-    "mastering": "Mastering",
-    "production": "Produktion",
-    "studioResidency": "Studioboende",
     "contactTitle": "Kontakt",
     "copyright": "© {year} Hydra Studios. Alla rättigheter förbehållna.",
     "privacyPolicy": "Integritetspolicy",
@@ -303,7 +291,7 @@
     "allPosts": "Alla inlägg",
     "swedishOnly": "Artiklarna är just nu på svenska.",
     "ctaTitle": "Vill du jobba med oss?",
-    "ctaText": "Hydra Studios är ett kollektiv av musikstudior i Malmö. Vi hjälper dig med inspelning, produktion, mix och mastering.",
-    "ctaButton": "Boka en session"
+    "ctaText": "Vi är ett gäng låtskrivare och producenter i Malmö. Vi tar inte alla projekt, men vi lyssnar på allt som kommer in.",
+    "ctaButton": "Hör av dig"
   }
 }

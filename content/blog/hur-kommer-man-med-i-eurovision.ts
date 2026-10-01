@@ -42,7 +42,7 @@ const post: Post = {
     },
     {
       type: "p",
-      text: "Vi på Hydra Studios har jobbat med låtar i både Melodifestivalen och Eurovision. [Läs också hur du skriver en låt till Melodifestivalen](/blogg/skriva-lat-till-melodifestivalen/) eller [kontakta oss](/#contact) om du vill spela in eller producera din tävlingslåt i Malmö.",
+      text: "Själva har vi sett hela resan: Too Late for Love, som Andreas ”Stone” Johansson var med och skrev, gick från vinst i Melodifestivalen 2019 till en femteplats i Eurovision. Läs också [hur du skriver en låt till Melodifestivalen](/blogg/skriva-lat-till-melodifestivalen/) och [vägen dit som independent-artist](/blogg/independent-eller-major-melodifestivalen/).",
     },
   ],
 }

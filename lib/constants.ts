@@ -1,4 +1,5 @@
 export const PROJECT_TYPES = [
+  "songwriting",
   "recording",
   "mixing",
   "mastering",
@@ -9,6 +10,7 @@ export const PROJECT_TYPES = [
 export type ProjectType = (typeof PROJECT_TYPES)[number]
 
 export const PROJECT_TYPE_MAP: Record<ProjectType, string> = {
+  songwriting: "Songwriting",
   recording: "Recording",
   mixing: "Mixing",
   mastering: "Mastering",
@@ -39,3 +41,12 @@ export const STUDIO_MAP: Record<StudioId, string> = {
   denniz: "Denniz Jamm",
   thomas: "Thomas Wallén (Publishing)",
 }
+
+export const SERVICE_KEYS = [
+  "songwriting",
+  "production",
+  "recording",
+  "mixing",
+  "mastering",
+  "collaboration",
+] as const
