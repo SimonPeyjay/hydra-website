@@ -43,7 +43,6 @@ describe("ContactSection", () => {
     expect(screen.getByLabelText(/phone number/i)).toBeInTheDocument()
     expect(screen.getByLabelText(/project type/i)).toBeInTheDocument()
     expect(screen.getByLabelText(/preferred studio/i)).toBeInTheDocument()
-    expect(screen.getByLabelText(/preferred dates/i)).toBeInTheDocument()
     expect(screen.getByLabelText(/project details/i)).toBeInTheDocument()
     expect(screen.getByLabelText(/i agree to the/i)).toBeInTheDocument()
     expect(screen.getByRole("button", { name: /send inquiry/i })).toBeInTheDocument()

@@ -60,7 +60,7 @@ const post: Post = {
     },
     {
       type: "p",
-      text: "Saknas det bockar? Det är helt normalt. Läs mer om [hur du skriver en tävlingslåt](/blogg/skriva-lat-till-melodifestivalen/), [hur uttagningen skiljer sig mellan länder](/blogg/hur-kommer-man-med-i-eurovision/) och [vägen som independent-artist](/blogg/independent-eller-major-melodifestivalen/). Vill du ha hjälp med låten eller produktionen är du välkommen att [kontakta oss](/#contact) på Hydra Studios i Malmö.",
+      text: "Saknas det bockar? Det är helt normalt. Läs mer om [hur du skriver en tävlingslåt](/blogg/skriva-lat-till-melodifestivalen/), [hur uttagningen skiljer sig mellan länder](/blogg/hur-kommer-man-med-i-eurovision/) och [vägen som independent-artist](/blogg/independent-eller-major-melodifestivalen/). Har du bockat av det mesta och letar efter låtskrivare och producenter som kan ta låten hela vägen? Då vill vi gärna [höra från dig](/#contact).",
     },
   ],
 }

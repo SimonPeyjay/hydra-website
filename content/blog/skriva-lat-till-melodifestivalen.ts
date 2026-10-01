@@ -5,7 +5,7 @@ const post: Post = {
   locale: "sv",
   title: "Så skriver du en låt till Melodifestivalen – vad letar man efter?",
   description:
-    "Rätt röst, rätt story och en låt som är lätt för media att bevaka. Så tänker du när du skriver en låt till Melodifestivalen, från en musikstudio i Malmö.",
+    "Rätt röst, rätt story och en låt som är lätt för media att bevaka. Så tänker du när du skriver en låt till Melodifestivalen.",
   published: "2026-09-30",
   blocks: [
     {
@@ -46,7 +46,7 @@ const post: Post = {
     },
     {
       type: "p",
-      text: "Våra låtskrivare och producenter har jobbat med låtar i både Melodifestivalen och Eurovision. [Se ett urval av vårt arbete](/#work) eller [hör av dig om en session](/#contact) i någon av våra musikstudior i Malmö.",
+      text: "Andreas ”Stone” Johansson var med och skrev Too Late for Love, som vann Melodifestivalen 2019 och kom femma i Eurovision. Året innan skrev han Shuffla tillsammans med Denniz Jamm, Costa Leon och Samir & Viktor. Den vann sin deltävling och slutade fyra i finalen. [Se fler låtar vi jobbat med](/#work).",
     },
     { type: "h2", text: "Kom ihåg reglerna" },
     {

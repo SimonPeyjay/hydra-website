@@ -12,18 +12,18 @@
     "about": "소개",
     "services": "서비스",
     "team": "팀",
-    "bookNow": "예약하기",
+    "bookNow": "문의하기",
     "toggleMenu": "메뉴 전환",
     "closeMenu": "메뉴 닫기"
   },
   "Hero": {
     "kicker": "스웨덴 말뫼의 레코딩 스튜디오",
-    "title": "비전과 음향의 탁월함이 만나는 곳",
-    "subtitle": "최고만을 요구하는 아티스트를 위해 설계된 세계 최고 수준의 레코딩 스튜디오 프리미엄 컬렉티브.",
+    "title": "곡은 함께 만들 때 가장 좋다",
+    "subtitle": "Hydra는 스튜디오와 주방, 그리고 조금 과한 양의 커피를 함께 나누는 작곡가, 프로듀서, 뮤지션들의 모임입니다. 방마다 저마다의 개성이 있죠. 우리처럼요.",
     "exploreStudios": "스튜디오 둘러보기",
-    "bookSession": "세션 예약",
+    "bookSession": "문의하기",
     "exploreLabel": "스튜디오 탐색하기",
-    "bookLabel": "레코딩 세션 예약하기",
+    "bookLabel": "문의 양식으로 이동",
     "scrollLabel": "스튜디오 섹션으로 스크롤",
     "bgAlt": "Hydra Studios 복도"
   },
@@ -36,123 +36,116 @@
     "listenLabel": "Spotify에서 {artist} - {title} 듣기 (새 탭에서 열림)"
   },
   "Studios": {
-    "title": "프리미엄 스튜디오",
-    "subtitle": "각각 고유한 특성과 기능을 갖춘 정교하게 디자인된 레코딩 공간 컬렉션을 탐색해 보세요.",
+    "title": "스튜디오",
+    "subtitle": "모든 스튜디오에는 그곳에서 일하는 사람의 이름이 붙어 있고, 소리도 그 사람을 닮았습니다.",
     "viewDetails": "{name} 상세 보기",
     "closeModal": "닫기",
     "features": "장비",
-    "bookStudio": "이 스튜디오 예약",
+    "bookStudio": "문의하기",
     "studioImages": "스튜디오 이미지",
     "andreas": {
       "name": "Andreas Studio",
-      "description": "최첨단 음향과 빈티지 장비를 갖춘 넓은 레코딩 환경.",
-      "features": ["Neve 콘솔", "라이브 룸", "아이솔레이션 부스", "빈티지 마이크"],
+      "description": "그랜드 피아노가 있는 방. 보컬과 피아노, 그리고 밴조부터 내슈빌에서 맞춤 제작한 Taylor까지, 현악기라면 무엇이든 위한 방입니다.",
+      "features": ["야마하 그랜드 피아노", "Manley Reference C", "Manley Vox Box", "Taylor 커스텀", "Ibanez Prestige 베이스", "밴조와 우쿨렐레"],
       "images": ["Andreas Studio 메인 룸", "Andreas Studio 장비", "Andreas Studio 믹싱 에리어", "Andreas Studio 라이브 룸"]
     },
     "costa": {
       "name": "Costa Studio",
-      "description": "프리미엄 음향과 따뜻하고 아늑한 분위기의 친밀한 레코딩 공간.",
-      "features": ["SSL 콘솔", "음향 처리", "빈티지 신스", "드럼 키트"],
+      "description": "하우스와 클럽 음악을 위한 방. Costa는 주로 컴퓨터 안에서 작업하며, Neumann 모니터와 손 닿는 곳의 DJ 세트를 씁니다.",
+      "features": ["Neumann 모니터", "DJ 세트", "컴퓨터 기반 프로덕션"],
       "images": ["Costa Studio", "Costa Studio 장비"]
     },
     "david": {
       "name": "David Studio",
-      "description": "최첨단 디지털 장비와 아날로그 따뜻함을 갖춘 모던 프로덕션 스위트.",
-      "features": ["API 콘솔", "모듈러 신스", "기타 컬렉션", "마스터링 체인"],
+      "description": "기타의 방. 레스폴, 플라잉 V, 스트랫, 12현, 랩 스틸, 그리고 피크로는 칠 수 없는 소리를 위한 DX7과 Model D.",
+      "features": ["Gibson Les Paul Studio & Flying V", "Fender Stratocaster", "Solar (True Temperament & EverTune)", "Marshall JCM 800", "DX7 & Model D", "Adam A77H & Sub10"],
       "images": ["David Studio 메인 룸", "David Studio 장비"]
     },
     "dennis": {
       "name": "Dennis Studio",
-      "description": "완벽한 모니터링 환경을 갖춘 전문 믹싱 & 마스터링 스위트.",
-      "features": ["마스터링 콘솔", "레퍼런스 모니터", "아날로그 EQ", "빈티지 컴프레서"],
+      "description": "보컬과 믹스를 위한 방, 되도록이면 한밤중에. 자랑거리는 Tube-Tech CL 1B이고, Denniz는 무엇과도 바꾸지 않을 오래된 Mackie 모니터로 듣습니다.",
+      "features": ["Tube-Tech CL 1B", "Neumann 마이크", "Mackie 모니터 & 서브"],
       "images": ["Dennis Studio 메인 룸", "Dennis Studio 장비"]
     },
     "simon": {
       "name": "Simon Studio",
-      "description": "독특한 사운드 텍스처를 위해 빈티지와 현대 장비를 조합한 크리에이티브 프로덕션 공간.",
-      "features": ["아날로그 신스", "부티크 아웃보드", "보컬 부스", "맞춤 음향"],
+      "description": "신스, 기타, 그리고 펀치감 있는 드럼. 인디 멜로디가 태어나는 방입니다.",
+      "features": ["Dave Smith OB-6", "Yamaha DX7", "Behringer Model D", "Yamaha NS-10", "Fender Strat & Jazz Bass", "Squier Bass VI"],
       "images": ["Simon Studio 메인 룸", "Simon Studio 장비"]
     },
     "common": {
       "name": "공용 공간",
-      "description": "협업, 휴식, 영감을 위해 디자인된 공유 공간.",
+      "description": "주방, 라운지, 그리고 테이크 사이에 숨 돌릴 공간. 여기서 곡 이야기를 나누고, 여기서 커피가 떨어집니다.",
       "features": ["주방", "라운지", "회의실", "복도"],
       "images": ["복도", "주방", "Thomas 오피스", "Peter Studio", "플라크 에리어"]
     }
   },
   "About": {
     "title": "Hydra 소개",
-    "paragraph1": "Hydra는 스웨덴 말뫼에 있는 세계 최고 수준의 음악·레코딩 스튜디오 컬렉티브로, 예술적 비전과 기술적 탁월함이 만나는 공간을 만든다는 단순한 원칙 위에 설립되었습니다.",
-    "paragraph2": "우리 스튜디오는 단순한 장비가 있는 방 이상입니다. 창의성을 영감하고 완벽한 사운드를 포착하도록 세심하게 조성된 환경입니다. 각 공간은 고유한 개성, 음향, 장비 선택을 갖추고 있어 아티스트가 프로젝트에 완벽한 매칭을 찾을 수 있습니다.",
-    "quote": "\"우리는 항상 일하고 싶었던 스튜디오, 즉 기술적 탁월함과 창작의 자유가 만나는 스튜디오로 Hydra를 만들었습니다.\"",
-    "paragraph3": "Hydra를 차별화하는 것은 협력적인 접근 방식입니다. 컬렉티브로서 업계에서 가장 재능 있는 엔지니어, 프로듀서, 스튜디오 디자이너를 한데 모아 탁월한 사운드에 대한 열정과 아티스트의 비전 실현에 대한 헌신으로 하나 되어 있습니다.",
+    "paragraph1": "말뫼의 Fredriksbergsgatan에서 작곡가와 프로듀서들이 각자의 스튜디오를 두고, 나머지는 모두 함께 나눕니다. 그게 바로 Hydra입니다.",
+    "paragraph2": "방마다, 사람마다 저마다의 강점이 있습니다. 우리는 그것을 최대한 살려 모든 곡, 모든 디테일에 걸맞은 결과를 만들어 냅니다. 할 수 있는 건 다 시도해 봅니다.",
+    "quote": "\"우리가 늘 일하고 싶었던 스튜디오, 그래서 Hydra를 만들었습니다.\"",
+    "paragraph3": "스튜디오에서 가장 좋은 도구는 콘솔이 아니라 또 하나의 귀입니다. 펀치감 있는 드럼과 디스토션 걸린 JCM 800 기타부터 그랜드 피아노, 관악기, 댄스 음악까지, 모든 것이 문 하나 건너에 있습니다.",
     "thomasAlt": "Thomas 오피스",
     "davidAlt": "David Studio",
     "andreasAlt": "Andreas Studio",
     "kitchenAlt": "주방"
   },
   "Services": {
-    "title": "서비스",
-    "subtitle": "레코딩과 믹싱부터 프로덕션과 마스터링까지, 말뫼의 저희 스튜디오가 음악적 비전을 실현하기 위한 종합 서비스를 제공합니다.",
-    "learnMore": "자세히 보기",
+    "title": "우리가 일하는 방식",
+    "subtitle": "우리는 '예'보다 '아니요'라고 말할 때가 더 많습니다. 까다로워서가 아니라, 모든 곡이 끝까지 가길 바라기 때문입니다. 그러려면 제대로 된 조건이 필요합니다. 하고 싶은 말이 분명한 아티스트, 그리고 제대로 해낼 시간과 자원입니다.",
+    "learnMore": "문의하기",
+    "songwriting": {
+      "title": "송라이팅",
+      "description": "모든 것이 시작되는 곳이자, 우리가 가장 많이 하는 일입니다. 아티스트와 함께 곡을 쓰고, 새로운 시각이 필요할 땐 팀의 다른 멤버도 불러들입니다.",
+      "features": [
+        "멜로디와 가사",
+        "편곡",
+        "필요할 때는 여러 작곡가와 함께"
+      ]
+    },
+    "production": {
+      "title": "프로듀싱",
+      "description": "첫 아이디어부터 완성된 곡까지. 악기와 뮤지션이 모두 이곳에 있어, 아이디어를 바로 시도해 볼 수 있습니다.",
+      "features": [
+        "OB-6, DX7, Model D",
+        "기타, 베이스, 그랜드 피아노",
+        "함께하는 뮤지션들"
+      ]
+    },
     "recording": {
       "title": "레코딩",
-      "description": "프리미엄 마이크, 프리앰프, 음향 처리된 공간을 갖춘 최첨단 레코딩 시설로 탁월한 선명도와 특성으로 사운드를 포착합니다.",
+      "description": "보컬과 악기는 이곳에서 녹음합니다. 드럼처럼 라이브 룸이 필요한 곡은 파트너 스튜디오에서 작업합니다.",
       "features": [
-        "다수의 라이브 룸 및 아이솔레이션 부스",
-        "빈티지 & 모던 마이크 컬렉션",
-        "프리미엄 아날로그 시그널 체인",
-        "하이레졸루션 디지털 레코딩"
+        "Manley Reference C & Vox Box",
+        "Tube-Tech CL 1B",
+        "파트너 스튜디오의 라이브 룸"
       ]
     },
     "mixing": {
       "title": "믹싱",
-      "description": "빈티지 아날로그 장비와 최첨단 디지털 도구를 모두 활용하여 음향 최적화된 환경에서 전문적인 믹싱 서비스를 제공합니다.",
+      "description": "이곳의 모두가 믹스를 합니다. 때로는 작업을 나누기도 하고, 외부 엔지니어를 부르기도 합니다. 결정하는 건 곡이 무엇을 필요로 하느냐입니다.",
       "features": [
-        "아날로그 & 디지털 하이브리드 믹싱",
-        "정밀 모니터링 환경",
-        "풍부한 아웃보드 장비 컬렉션",
-        "원격 믹싱 가능"
-      ]
-    },
-    "production": {
-      "title": "프로덕션",
-      "description": "컨셉부터 완성까지, 세계적인 프로듀서, 뮤지션, 크리에이티브 협력자 네트워크에 접근할 수 있는 풀 서비스 음악 프로덕션.",
-      "features": [
-        "편곡 & 작곡",
-        "세션 뮤지션 코디네이션",
-        "빈티지 & 모던 악기 컬렉션",
-        "크리에이티브 디렉션 & 개발"
+        "자체 믹싱",
+        "NS-10, Adam, Neumann, Mackie",
+        "필요 시 외부 엔지니어"
       ]
     },
     "mastering": {
       "title": "마스터링",
-      "description": "전용 환경에서 전문 장비와 숙련된 엔지니어가 음악에 최종 마무리를 더하는 정밀 마스터링 서비스.",
+      "description": "마지막 단계도 직접 합니다. 외부의 도움을 받을 때는 그 곡에 꼭 맞는 사람을 고릅니다.",
       "features": [
-        "전용 마스터링 스위트",
-        "아날로그 & 디지털 처리",
-        "레퍼런스급 모니터링",
-        "포맷별 최적화"
+        "자체 마스터링",
+        "필요 시 외부 마스터링 엔지니어"
       ]
     },
     "collaboration": {
-      "title": "아티스트 콜라보레이션",
-      "description": "크리에이티브 커뮤니티에서 다른 아티스트, 프로듀서, 뮤지션과 연결하세요. Hydra는 스튜디오 그 이상, 크리에이티브 전문가들의 컬렉티브입니다.",
+      "title": "협업",
+      "description": "모든 과정을 직접 하지만, 이유가 있다면 다른 스튜디오와 엔지니어도 기꺼이 함께합니다. 가장 중요한 건 곡이 받아야 할 관심과 애정을 모두 받는 것입니다.",
       "features": [
-        "네트워킹 이벤트",
-        "협업 워크스페이스",
-        "크로스 프로젝트 기회",
-        "커뮤니티 리소스"
-      ]
-    },
-    "residency": {
-      "title": "스튜디오 레지던시",
-      "description": "장기 프로젝트에 필요한 모든 기술 리소스를 갖춘 크리에이티브 홈베이스를 찾는 아티스트와 프로듀서를 위한 장기 스튜디오 접근.",
-      "features": [
-        "유연한 예약 방식",
-        "전용 스토리지 공간",
-        "24시간 접근 옵션",
-        "우대 요금"
+        "Gula Studion",
+        "Tambourine Studios",
+        "Rhubarb Park, Harplinge"
       ]
     }
   },
@@ -225,10 +218,10 @@
     "caption": "Spotify에서 더 많은 트랙 발견하기"
   },
   "Contact": {
-    "title": "세션 예약",
-    "subtitle": "프로젝트를 실현할 준비가 되셨나요? 스튜디오 시간 예약이나 팀과의 상담을 위해 연락해 주세요.",
+    "title": "프로젝트에 대해 알려주세요",
+    "subtitle": "자신과 지금 하고 있는 작업에 대해 간단히 적어 주시고, 음악 링크도 함께 보내 주세요. 모두 들어 봅니다.",
     "contactInfo": "연락처 정보",
-    "contactDescription": "양식을 작성해 주시면 24시간 이내에 팀이 연락드리겠습니다.",
+    "contactDescription": "양식을 작성해 주시면 연락드리겠습니다.",
     "email": "이메일",
     "phone": "전화",
     "location": "위치",
@@ -238,11 +231,11 @@
     "phoneLabel": "전화번호 (선택)",
     "projectLabel": "프로젝트 유형",
     "studioLabel": "선호 스튜디오 (선택)",
-    "dateLabel": "선호 날짜 (선택)",
     "messageLabel": "프로젝트 상세",
-    "messagePlaceholder": "프로젝트와 요구 사항에 대해 알려주세요...",
+    "messagePlaceholder": "어떤 분인지, 어떤 작업을 하고 있는지, 그리고 음악 링크가 있다면 알려 주세요.",
     "selectProject": "프로젝트 유형 선택",
     "noPreference": "선호 없음",
+    "projectSongwriting": "송라이팅",
     "projectRecording": "레코딩",
     "projectMixing": "믹싱",
     "projectMastering": "마스터링",
@@ -270,7 +263,7 @@
     "required": "*"
   },
   "Footer": {
-    "about": "예술적 비전과 기술적 탁월함이 만나는 프리미엄 음악 스튜디오 컬렉티브.",
+    "about": "말뫼에서 함께 음악을 만드는 작곡가와 프로듀서들.",
     "quickLinks": "빠른 링크",
     "ourStudios": "스튜디오",
     "services": "서비스",
@@ -303,7 +296,7 @@
     "allPosts": "모든 글",
     "swedishOnly": "현재 글은 스웨덴어로만 제공됩니다.",
     "ctaTitle": "함께 작업하고 싶으신가요?",
-    "ctaText": "Hydra Studios는 스웨덴 말뫼의 레코딩 스튜디오 컬렉티브입니다. 레코딩, 프로덕션, 믹싱, 마스터링을 도와드립니다.",
-    "ctaButton": "세션 예약"
+    "ctaText": "우리는 말뫼의 작곡가와 프로듀서들입니다. 모든 프로젝트를 맡지는 않지만, 들어오는 음악은 모두 들어 봅니다.",
+    "ctaButton": "문의하기"
   }
 }

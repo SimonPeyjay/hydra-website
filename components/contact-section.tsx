@@ -58,7 +58,6 @@ export default function ContactSection() {
       project: undefined,
       message: "",
       studio: "",
-      dateRange: "",
       privacy: undefined as unknown as true,
     },
   })
@@ -77,7 +76,7 @@ export default function ContactSection() {
 
       const payload = {
         access_key: WEB3FORMS_ACCESS_KEY,
-        subject: "Ny bokningsförfrågan via Hydra Studios",
+        subject: "Ny förfrågan via Hydra Studios",
         from_name: formFields.name,
         ...formFields,
         studio: formFields.studio
@@ -368,6 +367,7 @@ export default function ContactSection() {
                         <option value="" disabled>
                           {t("selectProject")}
                         </option>
+                        <option value="songwriting">{t("projectSongwriting")}</option>
                         <option value="recording">{t("projectRecording")}</option>
                         <option value="mixing">{t("projectMixing")}</option>
                         <option value="mastering">{t("projectMastering")}</option>
@@ -383,40 +383,26 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
-                  <div>
-                    <label htmlFor="studio" className="block text-xs font-medium text-white/60 uppercase tracking-wider mb-2">
-                      {t("studioLabel")}
-                    </label>
-                    <SelectWrapper>
-                      <select
-                        id="studio"
-                        {...register("studio")}
-                        className={cn(selectBase, inputNormal)}
-                      >
-                        <option value="">{t("noPreference")}</option>
-                        <option value="andreas">{t("studioAndreas")}</option>
-                        <option value="costa">{t("studioCosta")}</option>
-                        <option value="simon">{t("studioSimon")}</option>
-                        <option value="david">{t("studioDavid")}</option>
-                        <option value="peter">{t("studioPeter")}</option>
-                        <option value="denniz">{t("studioDenniz")}</option>
-                        <option value="thomas">{t("studioThomas")}</option>
-                      </select>
-                    </SelectWrapper>
-                  </div>
-                  <div>
-                    <label htmlFor="dateRange" className="block text-xs font-medium text-white/60 uppercase tracking-wider mb-2">
-                      {t("dateLabel")}
-                    </label>
-                    <input
-                      type="text"
-                      id="dateRange"
-                      {...register("dateRange")}
-                      className={cn(inputBase, inputNormal)}
-                      placeholder=""
-                    />
-                  </div>
+                <div>
+                  <label htmlFor="studio" className="block text-xs font-medium text-white/60 uppercase tracking-wider mb-2">
+                    {t("studioLabel")}
+                  </label>
+                  <SelectWrapper>
+                    <select
+                      id="studio"
+                      {...register("studio")}
+                      className={cn(selectBase, inputNormal)}
+                    >
+                      <option value="">{t("noPreference")}</option>
+                      <option value="andreas">{t("studioAndreas")}</option>
+                      <option value="costa">{t("studioCosta")}</option>
+                      <option value="simon">{t("studioSimon")}</option>
+                      <option value="david">{t("studioDavid")}</option>
+                      <option value="peter">{t("studioPeter")}</option>
+                      <option value="denniz">{t("studioDenniz")}</option>
+                      <option value="thomas">{t("studioThomas")}</option>
+                    </select>
+                  </SelectWrapper>
                 </div>
 
                 <div>

@@ -12,18 +12,18 @@
     "about": "About",
     "services": "Services",
     "team": "Team",
-    "bookNow": "Book Now",
+    "bookNow": "Get in Touch",
     "toggleMenu": "Toggle menu",
     "closeMenu": "Close menu"
   },
   "Hero": {
     "kicker": "Recording studio in Malmö, Sweden",
-    "title": "Where Vision Meets Sonic Excellence",
-    "subtitle": "A premium collective of world-class recording studios designed for artists who demand nothing but the best.",
+    "title": "Songs are better made together",
+    "subtitle": "Hydra is a bunch of songwriters, producers and musicians sharing studios, a kitchen and far too much coffee. Every room has its own character. Just like us.",
     "exploreStudios": "Explore Studios",
-    "bookSession": "Book a Session",
+    "bookSession": "Get in Touch",
     "exploreLabel": "Explore our studios",
-    "bookLabel": "Book a recording session",
+    "bookLabel": "Go to the contact form",
     "scrollLabel": "Scroll to studios section",
     "bgAlt": "Hydra Studios Hallway"
   },
@@ -36,123 +36,116 @@
     "listenLabel": "Listen to {title} by {artist} on Spotify (opens in a new tab)"
   },
   "Studios": {
-    "title": "Our Premium Studios",
-    "subtitle": "Explore our collection of meticulously designed recording spaces, each with its own unique character and capabilities.",
+    "title": "The Studios",
+    "subtitle": "Each studio is named after the person who works in it, and sounds like it.",
     "viewDetails": "View details for {name}",
     "closeModal": "Close modal",
     "features": "Features",
-    "bookStudio": "Book This Studio",
+    "bookStudio": "Get in Touch",
     "studioImages": "Studio images",
     "andreas": {
       "name": "Andreas Studio",
-      "description": "A spacious recording environment with state-of-the-art acoustics and vintage equipment.",
-      "features": ["Neve Console", "Live Room", "Isolation Booth", "Vintage Microphones"],
+      "description": "This is where the grand piano lives. The room for vocals, piano and anything with strings, from banjo to a custom Taylor built in Nashville.",
+      "features": ["Yamaha grand piano", "Manley Reference C", "Manley Vox Box", "Custom Taylor", "Ibanez Prestige bass", "Banjo and ukulele"],
       "images": ["Andreas Studio Main Room", "Andreas Studio Equipment", "Andreas Studio Mixing Area", "Andreas Studio Live Room"]
     },
     "costa": {
       "name": "Costa Studio",
-      "description": "Intimate recording space with premium acoustics and a warm, inviting atmosphere.",
-      "features": ["SSL Console", "Acoustic Treatment", "Vintage Synths", "Drum Kit"],
+      "description": "The room for house and club music. Costa works mostly in the box, on Neumann monitors with the DJ setup close at hand.",
+      "features": ["Neumann monitors", "DJ setup", "In-the-box production"],
       "images": ["Costa Studio", "Costa Studio Equipment"]
     },
     "david": {
       "name": "David Studio",
-      "description": "Modern production suite with cutting-edge digital equipment and analog warmth.",
-      "features": ["API Console", "Modular Synths", "Guitar Collection", "Mastering Chain"],
+      "description": "The guitar room. Les Paul, Flying V, Strat, twelve-string and lap steel, plus a DX7 and Model D for whatever you can't play with a pick.",
+      "features": ["Gibson Les Paul Studio & Flying V", "Fender Stratocaster", "Solar with True Temperament & EverTune", "Marshall JCM 800", "DX7 & Model D", "Adam A77H & Sub10"],
       "images": ["David Studio Main Room", "David Studio Equipment"]
     },
     "dennis": {
       "name": "Dennis Studio",
-      "description": "Specialized mixing and mastering suite with pristine monitoring environment.",
-      "features": ["Mastering Console", "Reference Monitors", "Analog EQs", "Vintage Compressors"],
+      "description": "The room for vocals and mixing, preferably in the middle of the night. Its pride and joy is a Tube-Tech CL 1B, and Denniz listens on a pair of old Mackies he wouldn't trade for anything.",
+      "features": ["Tube-Tech CL 1B", "Neumann microphone", "Mackie monitors & sub"],
       "images": ["Dennis Studio Main Room", "Dennis Studio Equipment"]
     },
     "simon": {
       "name": "Simon Studio",
-      "description": "Creative production space with a blend of vintage and modern equipment for unique sonic textures.",
-      "features": ["Analog Synths", "Boutique Outboard", "Vocal Booth", "Custom Acoustics"],
+      "description": "Synths, guitars and punchy drums. The room where the indie melodies happen.",
+      "features": ["Dave Smith OB-6", "Yamaha DX7", "Behringer Model D", "Yamaha NS-10", "Fender Strat & Jazz Bass", "Squier Bass VI"],
       "images": ["Simon Studio Main Room", "Simon Studio Equipment"]
     },
     "common": {
       "name": "Common Areas",
-      "description": "Shared spaces designed for collaboration, relaxation, and inspiration.",
+      "description": "A kitchen, a lounge and room to breathe between takes. This is where songs get talked through, and where the coffee runs out.",
       "features": ["Kitchen", "Lounge", "Meeting Room", "Hallway"],
       "images": ["Hallway", "Kitchen", "Thomas Office", "Peter Studio", "Plack Area"]
     }
   },
   "About": {
     "title": "About Hydra",
-    "paragraph1": "Hydra is a collective of world-class music and recording studios in Malmö, Sweden, founded on a simple principle: to create spaces where artistic vision and technical excellence converge.",
-    "paragraph2": "Our studios are more than just rooms with equipment—they're carefully crafted environments designed to inspire creativity and capture the perfect sound. Each space has its own unique character, acoustics, and equipment selection, allowing artists to find the perfect match for their project.",
-    "quote": "\"We built Hydra to be the kind of studio we always wanted to work in—where technical excellence meets creative freedom.\"",
-    "paragraph3": "What sets Hydra apart is our collaborative approach. As a collective, we bring together some of the industry's most talented engineers, producers, and studio designers, all united by a passion for exceptional sound and a commitment to helping artists realize their vision.",
+    "paragraph1": "On Fredriksbergsgatan in Malmö, a bunch of songwriters and producers have their own studios and share everything else. That's Hydra.",
+    "paragraph2": "Every room and everyone here has their own thing, and we make the most of it so every song and every detail gets what it deserves. We leave no stone unturned.",
+    "quote": "\"We built Hydra because it was the studio we'd always wanted to work in ourselves.\"",
+    "paragraph3": "The best tool in a studio isn't the console, it's another pair of ears. Here you'll find everything from punchy drums and cranked JCM 800 guitars to a grand piano, horns and dance music, all just one door away.",
     "thomasAlt": "Thomas Office",
     "davidAlt": "David Studio",
     "andreasAlt": "Andreas Studio",
     "kitchenAlt": "Kitchen"
   },
   "Services": {
-    "title": "Our Services",
-    "subtitle": "From recording and mixing to production and mastering, our Malmö recording studio offers a complete suite of services to bring your musical vision to life.",
-    "learnMore": "Learn More",
-    "recording": {
-      "title": "Recording",
-      "description": "State-of-the-art recording facilities with premium microphones, preamps, and acoustically-treated spaces designed to capture your sound with exceptional clarity and character.",
+    "title": "How We Work",
+    "subtitle": "We say no more often than yes. Not to be difficult, but because we want every song to go all the way. That takes the right conditions: artists who know what they want to say, and the time and resources to do it properly.",
+    "learnMore": "Get in Touch",
+    "songwriting": {
+      "title": "Songwriting",
+      "description": "It's where everything starts, and what we do most. We write together with the artist and bring in more of the crew when a song needs a fresh angle.",
       "features": [
-        "Multiple live rooms and isolation booths",
-        "Vintage and modern microphone collection",
-        "Premium analog signal chains",
-        "High-resolution digital recording"
-      ]
-    },
-    "mixing": {
-      "title": "Mixing",
-      "description": "Expert mixing services in acoustically-optimized environments, utilizing both vintage analog gear and cutting-edge digital tools to bring your vision to life.",
-      "features": [
-        "Analog and digital hybrid mixing",
-        "Precision monitoring environments",
-        "Extensive outboard gear collection",
-        "Remote mixing options available"
+        "Melody and lyrics",
+        "Arrangement",
+        "Co-writers when needed"
       ]
     },
     "production": {
       "title": "Production",
-      "description": "Full-service music production from concept to completion, with access to our network of world-class producers, musicians, and creative collaborators.",
+      "description": "From first idea to finished song. The instruments and the musicians are in the building, so ideas can be tried on the spot.",
       "features": [
-        "Arrangement and composition",
-        "Session musicians coordination",
-        "Vintage and modern instrument collection",
-        "Creative direction and development"
+        "OB-6, DX7 and Model D",
+        "Guitars, basses and grand piano",
+        "Musicians in-house"
+      ]
+    },
+    "recording": {
+      "title": "Recording",
+      "description": "We record vocals and instruments here. When a song needs a live room, for drums for example, we go to one of our partner studios.",
+      "features": [
+        "Manley Reference C & Vox Box",
+        "Tube-Tech CL 1B",
+        "Live rooms at partner studios"
+      ]
+    },
+    "mixing": {
+      "title": "Mixing",
+      "description": "Everyone here mixes, and sometimes we split the work between us or bring in an outside engineer. What decides it is what the song needs.",
+      "features": [
+        "Mixing in-house",
+        "NS-10, Adam, Neumann and Mackie",
+        "Outside engineers when needed"
       ]
     },
     "mastering": {
       "title": "Mastering",
-      "description": "Precision mastering services in a dedicated environment with specialized equipment and experienced engineers to give your music its final polish.",
+      "description": "We handle the last step ourselves too. Sometimes we bring in outside help, and then we pick someone who suits that particular song.",
       "features": [
-        "Dedicated mastering suites",
-        "Analog and digital processing",
-        "Reference-grade monitoring",
-        "Format-specific optimization"
+        "Mastering in-house",
+        "Outside mastering engineers when needed"
       ]
     },
     "collaboration": {
-      "title": "Artist Collaboration",
-      "description": "Connect with other artists, producers, and musicians in our creative community. Hydra is more than studios—it's a collective of creative professionals.",
+      "title": "Collaborations",
+      "description": "We do the whole chain ourselves, but we happily bring in other studios and engineers when there's a reason to. What matters most is that the song gets all the attention it deserves.",
       "features": [
-        "Networking events",
-        "Collaborative workspaces",
-        "Cross-project opportunities",
-        "Community resources"
-      ]
-    },
-    "residency": {
-      "title": "Studio Residency",
-      "description": "Long-term studio access for artists and producers looking for a creative home base with all the technical resources needed for extended projects.",
-      "features": [
-        "Flexible booking arrangements",
-        "Dedicated storage space",
-        "24/7 access options",
-        "Preferential rates"
+        "Gula Studion",
+        "Tambourine Studios",
+        "Rhubarb Park, Harplinge"
       ]
     }
   },
@@ -225,10 +218,10 @@
     "caption": "Discover more tracks on Spotify"
   },
   "Contact": {
-    "title": "Book Your Session",
-    "subtitle": "Ready to bring your project to life? Get in touch to book studio time or discuss your needs with our team.",
+    "title": "Tell Us About Your Project",
+    "subtitle": "Write a little about yourself and what you're working on, and feel free to include a link to your music. We listen to everything.",
     "contactInfo": "Contact Information",
-    "contactDescription": "Fill out the form and our team will get back to you within 24 hours.",
+    "contactDescription": "Fill in the form and we'll get back to you.",
     "email": "Email",
     "phone": "Phone",
     "location": "Location",
@@ -238,11 +231,11 @@
     "phoneLabel": "Phone Number (optional)",
     "projectLabel": "Project Type",
     "studioLabel": "Preferred Studio (optional)",
-    "dateLabel": "Preferred Dates (optional)",
     "messageLabel": "Project Details",
-    "messagePlaceholder": "Tell us about your project and requirements...",
+    "messagePlaceholder": "Who are you, what are you working on, and do you have a link to your music?",
     "selectProject": "Select project type",
     "noPreference": "No preference",
+    "projectSongwriting": "Songwriting",
     "projectRecording": "Recording",
     "projectMixing": "Mixing",
     "projectMastering": "Mastering",
@@ -270,7 +263,7 @@
     "required": "*"
   },
   "Footer": {
-    "about": "A premium music studio collective where artistic vision and technical excellence converge.",
+    "about": "A bunch of songwriters and producers making music together in Malmö.",
     "quickLinks": "Quick Links",
     "ourStudios": "Our Studios",
     "services": "Services",
@@ -303,7 +296,7 @@
     "allPosts": "All posts",
     "swedishOnly": "Our articles are currently in Swedish.",
     "ctaTitle": "Want to work with us?",
-    "ctaText": "Hydra Studios is a collective of recording studios in Malmö, Sweden. We help with recording, production, mixing and mastering.",
-    "ctaButton": "Book a session"
+    "ctaText": "We're a bunch of songwriters and producers in Malmö, Sweden. We don't take on every project, but we listen to everything that comes in.",
+    "ctaButton": "Get in Touch"
   }
 }

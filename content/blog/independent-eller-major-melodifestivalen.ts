@@ -10,7 +10,7 @@ const post: Post = {
   blocks: [
     {
       type: "p",
-      text: "Om du vill tävla med en låt i ditt hemland börjar allt med en fråga: vem är artisten? Är det du själv, eller skriver du för någon annan? Svaret avgör vilken väg som är realistisk. Här är vad vi ser hos de artister som faktiskt tar sig in i tävlingarna.",
+      text: "Om du vill tävla med en låt i ditt hemland börjar allt med en fråga: vem är artisten? Är det du själv, eller skriver du för någon annan? Svaret avgör vilken väg som är realistisk. Simon Peyron i vårt gäng har själv tävlat två gånger, med Outtrigger 2014 och med Ellen Benediktson 2020, och båda gångerna tog det stopp i Andra chansen. En del av det här har vi alltså lärt oss den hårda vägen. Här är vad vi ser hos de artister som faktiskt tar sig in i tävlingarna.",
     },
     { type: "h2", text: "Varför majorbolag ofta premieras" },
     {
@@ -43,7 +43,7 @@ const post: Post = {
     },
     {
       type: "p",
-      text: "Vill du komma igång? [Gå igenom vår checklista](/blogg/checklista-melodifestivalen/) för att se var du står, eller [boka en session](/#contact) i någon av våra musikstudior i Malmö.",
+      text: "Vill du veta var du står? [Gå igenom vår checklista](/blogg/checklista-melodifestivalen/) innan du tar nästa steg.",
     },
   ],
 }

@@ -11,7 +11,6 @@ function validData(overrides: Partial<ContactFormData> = {}): ContactFormData {
     project: "recording",
     message: "I want to record an album.",
     studio: "",
-    dateRange: "",
     privacy: true,
     ...overrides,
   }
@@ -29,7 +28,6 @@ describe("contactSchema", () => {
       validData({
         phone: "+46 70 123 4567",
         studio: "costa",
-        dateRange: "March 15-20, 2026",
       }),
     )
     expect(result.success).toBe(true)
@@ -221,23 +219,6 @@ describe("contactSchema", () => {
     it.each(STUDIO_IDS)("accepts studio id: %s", (id) => {
       const result = contactSchema.safeParse(validData({ studio: id }))
       expect(result.success).toBe(true)
-    })
-  })
-
-  describe("dateRange", () => {
-    it("defaults to empty string when omitted", () => {
-      const data = validData()
-      delete (data as any).dateRange
-      const result = contactSchema.safeParse(data)
-      expect(result.success).toBe(true)
-      if (result.success) {
-        expect(result.data.dateRange).toBe("")
-      }
-    })
-
-    it("rejects strings exceeding 200 chars", () => {
-      const result = contactSchema.safeParse(validData({ dateRange: "A".repeat(201) }))
-      expect(result.success).toBe(false)
     })
   })
 })
